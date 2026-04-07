@@ -52,9 +52,9 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="relative w-32 h-16 sm:w-40 sm:h-20">
+            <div className="relative w-40 h-20 sm:w-48 sm:h-24">
               <Image
-                src="/images/logo.png"
+                src="/images/carter-electric-logo.png"
                 alt="Carter Electric Logo"
                 fill
                 className="object-contain"

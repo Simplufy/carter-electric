@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 // Social media icons as SVG since lucide-react doesn't include them
@@ -47,17 +48,16 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-emerald-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">C</span>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold">Carter Electric</h3>
-                <p className="text-xs text-slate-400">of Southwest Florida</p>
-              </div>
+            <div className="relative w-48 h-24 mb-4">
+              <Image
+                src="/images/carter-electric-logo.png"
+                alt="Carter Electric Logo"
+                fill
+                className="object-contain"
+              />
             </div>
             <p className="text-slate-400 text-sm mb-4">
-              Family-owned electrical services serving Southwest Florida with excellence since 2010. Licensed, insured, and committed to your safety.
+              We've been operating in Florida since 2026, but have ran electrical companies for 15+ years, starting in the Chicagoland area. Licensed, insured, and committed to your safety.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-sky-500 transition-colors">
