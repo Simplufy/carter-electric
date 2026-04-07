@@ -76,10 +76,7 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
               {services.map((service) => (
                 <li key={service}>
                   <button
-                    onClick={() => {
-                      const lcw = (window as any).lcw;
-                      if (lcw?.open) lcw.open();
-                    }}
+                    onClick={() => (window as any).openGHLChat?.()}
                     className="text-slate-400 hover:text-sky-400 transition-colors text-sm"
                   >
                     {service}

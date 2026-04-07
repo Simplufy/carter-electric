@@ -71,8 +71,7 @@ const milestones = [
 
 export default function AboutPage() {
   const openChat = () => {
-    const lcw = (window as any).lcw;
-    if (lcw?.open) lcw.open();
+    (window as any).openGHLChat?.();
   };
 
   return (

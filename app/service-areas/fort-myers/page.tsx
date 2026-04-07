@@ -62,7 +62,7 @@ const otherCities = [
 ];
 
 export default function FortMyersPage() {
-  const openChat = () => { const lcw = (window as any).lcw; if (lcw?.open) lcw.open(); };
+  const openChat = () => { (window as any).openGHLChat?.(); };
 
   return (
     <main className="min-h-screen">

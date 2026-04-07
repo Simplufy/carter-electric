@@ -135,8 +135,7 @@ export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const openChat = () => {
-    const lcw = (window as any).lcw;
-    if (lcw?.open) lcw.open();
+    (window as any).openGHLChat?.();
   };
 
   useEffect(() => {
