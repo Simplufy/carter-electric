@@ -31,37 +31,43 @@ const services = [
     icon: Lightbulb,
     title: "Indoor Lighting",
     description: "Transform your home with custom indoor lighting solutions. From recessed lighting to statement fixtures, we bring your vision to life.",
-    color: "from-amber-400 to-orange-500",
+    color: "from-sky-400 to-sky-500",
+    image: "/images/service-indoor.jpg",
   },
   {
     icon: HomeIcon,
     title: "Outdoor Lighting",
     description: "Enhance curb appeal and security with professional landscape lighting, pathway lights, and architectural illumination.",
-    color: "from-emerald-400 to-green-500",
+    color: "from-sky-400 to-sky-500",
+    image: "/images/service-outdoor.jpg",
   },
   {
     icon: Car,
     title: "EV Charger Installation",
     description: "Future-proof your home with professional EV charger installation. Compatible with all major electric vehicle brands.",
-    color: "from-sky-400 to-blue-500",
+    color: "from-sky-400 to-sky-500",
+    image: "/images/service-ev.jpg",
   },
   {
     icon: Wrench,
     title: "Electrical Repairs",
     description: "Fast, reliable troubleshooting and repairs for any electrical issue. 24/7 emergency service available for urgent problems.",
-    color: "from-rose-400 to-red-500",
+    color: "from-sky-400 to-sky-500",
+    image: "/images/service-repairs.jpg",
   },
   {
     icon: Zap,
     title: "Panel Upgrades",
     description: "Modernize your electrical system with panel upgrades and rewiring. Ensure your home can handle today's power demands.",
-    color: "from-violet-400 to-purple-500",
+    color: "from-sky-400 to-sky-500",
+    image: "/images/service-panel.jpg",
   },
   {
     icon: Building2,
     title: "Commercial Services",
     description: "Specialized electrical services for condos, apartments, and commercial properties. Bulk pricing and maintenance plans available.",
-    color: "from-cyan-400 to-teal-500",
+    color: "from-sky-400 to-sky-500",
+    image: "/images/service-commercial.jpg",
   },
 ];
 
@@ -187,19 +193,21 @@ export default function Home() {
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight"
               style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}
             >
-              Southwest Florida's Trusted Electrical Contractor
+              Southwest Florida's Trusted
+              <br />
+              <span className="text-3xl sm:text-4xl lg:text-5xl">Electrical Contractor</span>
             </h1>
             
             <p 
-              className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-10 max-w-3xl mx-auto"
+              className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-10 max-w-4xl mx-auto flex flex-wrap justify-center gap-2"
               style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}
             >
-              Family-owned electrical contractor operating in{" "}
-              <span className="inline-block relative w-32 text-left">
+              <span>Family-owned electrical contractor operating in</span>
+              <span className="inline-block min-w-32">
                 {serviceAreas.map((area, index) => (
                   <span
                     key={area.slug}
-                    className={`absolute left-0 right-0 transition-all duration-500 ${
+                    className={`absolute transition-all duration-500 ${
                       index === currentAreaIndex 
                         ? 'opacity-100 translate-y-0' 
                         : 'opacity-0 -translate-y-4'
@@ -276,19 +284,29 @@ export default function Home() {
           <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <StaggerItem key={service.title}>
-                <div className="bento-card service-card bg-white rounded-2xl p-8 border border-gray-100 h-full">
-                  <div className={`card-icon w-14 h-14 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 transition-transform duration-300`}>
-                    <service.icon className="w-7 h-7 text-white" />
+                <div 
+                  className="bento-card service-card relative rounded-2xl overflow-hidden h-full min-h-64 group"
+                  style={{
+                    backgroundImage: `url(${service.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                  }}
+                >
+                  <div className="absolute inset-0 bg-slate-900/70 group-hover:bg-slate-900/60 transition-colors duration-300" />
+                  <div className="relative z-10 p-8 h-full flex flex-col">
+                    <div className={`card-icon w-14 h-14 rounded-xl bg-gradient-to-br from-sky-400 to-sky-500 flex items-center justify-center mb-6 transition-transform duration-300`}>
+                      <service.icon className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                    <p className="text-white/80 leading-relaxed flex-grow">{service.description}</p>
+                    <button
+                      onClick={() => setIsContactOpen(true)}
+                      className="mt-6 inline-flex items-center text-sky-400 hover:text-sky-300 font-semibold transition-colors"
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </button>
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{service.description}</p>
-                  <button
-                    onClick={() => setIsContactOpen(true)}
-                    className="mt-6 inline-flex items-center text-sky-500 hover:text-sky-600 font-semibold transition-colors"
-                  >
-                    <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
                 </div>
               </StaggerItem>
             ))}
