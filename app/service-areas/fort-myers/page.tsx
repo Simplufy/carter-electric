@@ -165,7 +165,7 @@ export default function FortMyersPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-sky-500 to-emerald-500">
+      <section className="py-20 bg-sky-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Your Fort Myers Electrician</h2>

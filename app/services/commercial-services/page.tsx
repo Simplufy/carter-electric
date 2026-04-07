@@ -236,7 +236,7 @@ export default function CommercialServicesPage() {
                 </div>
 
                 {/* Trust Badge */}
-                <div className="mt-6 bg-gradient-to-br from-sky-500 to-emerald-500 rounded-2xl p-6 text-white">
+                <div className="mt-6 bg-sky-500 rounded-2xl p-6 text-white">
                   <div className="flex items-center gap-2 mb-2">
                     <Shield className="w-5 h-5" />
                     <span className="font-bold">Licensed & Insured</span>

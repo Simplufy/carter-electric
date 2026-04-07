@@ -199,15 +199,15 @@ export default function Home() {
             </h1>
             
             <p 
-              className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-10 max-w-4xl mx-auto"
+              className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-10 max-w-4xl mx-auto text-center"
               style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}
             >
               <span>Family-owned electrical contractor operating in </span>
-              <span className="inline relative h-8">
+              <span className="inline relative h-8 w-40">
                 {serviceAreas.map((area, index) => (
                   <span
                     key={area.slug}
-                    className={`absolute left-0 top-0 transition-all duration-500 whitespace-nowrap ${
+                    className={`absolute left-0 right-0 text-center transition-all duration-500 whitespace-nowrap ${
                       index === currentAreaIndex 
                         ? 'opacity-100 translate-y-0' 
                         : 'opacity-0 -translate-y-2'
@@ -452,7 +452,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-sky-500 to-emerald-500">
+      <section className="py-20 bg-sky-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
