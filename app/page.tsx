@@ -134,8 +134,9 @@ export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const openChat = () => {
-    if (window.leadConnector && window.leadConnector.chatWidget) {
-      window.leadConnector.chatWidget.openWidget();
+    const w = window as any;
+    if (w.leadConnector && w.leadConnector.chatWidget) {
+      w.leadConnector.chatWidget.openWidget();
     }
   };
 
