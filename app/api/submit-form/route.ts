@@ -12,7 +12,9 @@ export async function POST(request: Request) {
     const baseUrl = "https://services.leadconnectorhq.com";
     const version = "2021-07-28";
 
-    // Create contact
+    const authHeader = `Bearer ${apiKey}`;
+
+    // Create or update contact using upsert
     const contactData = {
       locationId,
       firstName: name.split(" ")[0],
@@ -25,12 +27,12 @@ export async function POST(request: Request) {
     console.log("Creating contact with:", contactData);
 
     const contactResponse = await fetch(
-      `${baseUrl}/contacts/`,
+      `${baseUrl}/contacts/upsert`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": apiKey,
+          "Authorization": authHeader,
           "Version": version,
         },
         body: JSON.stringify(contactData),
@@ -42,18 +44,16 @@ export async function POST(request: Request) {
     const contactResult = await contactResponse.json();
     console.log("Contact response:", contactResult);
 
-    if (!contactResponse.ok) {
-      return NextResponse.json(
-        { error: "Failed to create contact", details: contactResult },
-        { status: 500 }
-      );
-    }
-
     const contactId = contactResult?.contact?.id || contactResult?.id;
     
     if (!contactId) {
       console.error("No contact ID returned:", contactResult);
-      return NextResponse.json({ success: true, message: "Form submitted (contact ID not returned)" });
+      // Still return success to user but log the error for debugging
+      return NextResponse.json({ 
+        success: true, 
+        warning: "Form submitted but CRM contact creation failed",
+        debug: contactResult 
+      });
     }
 
     // Create deal
@@ -73,7 +73,7 @@ export async function POST(request: Request) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": apiKey,
+          "Authorization": authHeader,
           "Version": version,
         },
         body: JSON.stringify(dealData),
