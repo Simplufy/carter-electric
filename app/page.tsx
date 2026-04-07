@@ -187,9 +187,7 @@ export default function Home() {
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight"
               style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}
             >
-              Carter Electric
-              <br />
-              <span className="text-3xl sm:text-4xl lg:text-5xl">local electric</span>
+              Southwest Florida's Trusted Electrical Contractor
             </h1>
             
             <p 
@@ -197,18 +195,15 @@ export default function Home() {
               style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}
             >
               Family-owned electrical contractor operating in{" "}
-              <span className="inline-block">
+              <span className="inline-block relative w-32 text-left">
                 {serviceAreas.map((area, index) => (
                   <span
                     key={area.slug}
-                    className={`absolute transition-all duration-500 ${
+                    className={`absolute left-0 right-0 transition-all duration-500 ${
                       index === currentAreaIndex 
                         ? 'opacity-100 translate-y-0' 
-                        : 'opacity-0 translate-y-4'
+                        : 'opacity-0 -translate-y-4'
                     }`}
-                    style={{ 
-                      display: index === currentAreaIndex ? 'inline' : 'none'
-                    }}
                   >
                     {area.name}
                   </span>
