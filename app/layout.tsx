@@ -111,57 +111,23 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               window.openGHLChat = function() {
-                // Method 1: LCW global
-                if (window.LCW && window.LCW.open) {
-                  window.LCW.open();
-                  return;
-                }
-                if (window.lcw && window.lcw.open) {
+                if (window.leadConnector && window.leadConnector.chatWidget) {
+                  window.leadConnector.chatWidget.openWidget();
+                } else if (window.lcw && window.lcw.open) {
                   window.lcw.open();
-                  return;
                 }
-                
-                // Method 2: Find element at bottom-right corner (where widget usually lives)
-                var bottomRight = document.elementFromPoint(window.innerWidth - 60, window.innerHeight - 60);
-                if (bottomRight && bottomRight.click) {
-                  bottomRight.click();
-                  return;
-                }
-                
-                // Method 3: Find any element in bottom 100px right 100px of viewport
-                var allElements = document.querySelectorAll('*');
-                for (var i = 0; i < allElements.length; i++) {
-                  var rect = allElements[i].getBoundingClientRect();
-                  if (rect.top > window.innerHeight - 100 && rect.left > window.innerWidth - 100) {
-                    if (allElements[i].click) {
-                      allElements[i].click();
-                      return;
-                    }
-                  }
-                }
-                
-                // Method 4: Just dispatch click on document and hope it reaches widget
-                document.addEventListener('click', function handler(e) {
-                  var target = e.target;
-                  if (target && target.click) {
-                    document.removeEventListener('click', handler);
-                  }
-                });
               };
               
-              // Store LCW when it becomes available
               window.addEventListener('message', function(e) {
                 try {
                   if (e.data && typeof e.data === 'object') {
                     if (e.data.type === 'init' || e.data.type === 'ready') {
                       window.lcw = e.data.instance || e.data;
                     }
-                    if (e.data.open) window.lcw = e.data;
                   }
                 } catch(err) {}
               });
               
-              // Poll for LCW
               (function() {
                 var interval = setInterval(function() {
                   for (var key in window) {
@@ -170,6 +136,10 @@ export default function RootLayout({
                       clearInterval(interval);
                       break;
                     }
+                  }
+                  // Also check for leadConnector
+                  if (window.leadConnector && window.leadConnector.chatWidget) {
+                    clearInterval(interval);
                   }
                 }, 500);
               })();
