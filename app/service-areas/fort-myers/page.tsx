@@ -62,7 +62,7 @@ const otherCities = [
 ];
 
 export default function FortMyersPage() {
-  const openChat = () => { (window as any).openGHLChat?.(); };
+  const openChat = () => { (window as any).leadConnector?.chatWidget?.openWidget(); };
 
   return (
     <main className="min-h-screen">
@@ -113,7 +113,7 @@ export default function FortMyersPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">Electrical Services in {city.name}, Florida</h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>Fort Myers, known as the City of Palms, is the commercial and cultural hub of Lee County. Home to the historic winter estates of Thomas Edison and Henry Ford, this vibrant city blends rich history with modern development along the beautiful Caloosahatchee River.</p>
-                <p>Carter Electric has been serving Fort Myers for over 15 years, and we understand the diverse electrical needs of this dynamic city. From historic homes in the River District that require careful preservation to modern commercial developments, our licensed electricians bring expertise to every project.</p>
+                <p>Carter Electric has been serving Fort Myers since 2026, and we understand the diverse electrical needs of this dynamic city. From historic homes in the River District that require careful preservation to modern commercial developments, our licensed electricians bring expertise to every project.</p>
                 <p>We also specialize in multi-family electrical services, working with property managers throughout Fort Myers to keep condos and apartment complexes running smoothly. Our maintenance plans and 24/7 emergency service ensure your tenants are never left in the dark.</p>
               </div>
             </AnimatedSection>

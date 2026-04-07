@@ -65,13 +65,13 @@ const milestones = [
   { year: "2012", event: "Expanded service area throughout Northern Illinois" },
   { year: "2015", event: "Achieved Master Electrician certification" },
   { year: "2018", event: "Added EV charger installation services" },
-  { year: "2021", event: "Started Carter Electric of Southwest Florida" },
+  { year: "2026", event: "Started Carter Electric of Southwest Florida" },
   { year: "2024", event: "Now serving all of Southwest Florida from Sarasota to Naples" },
 ];
 
 export default function AboutPage() {
   const openChat = () => {
-    (window as any).openGHLChat?.();
+    (window as any).leadConnector?.chatWidget?.openWidget();
   };
 
   return (
@@ -117,7 +117,7 @@ export default function AboutPage() {
                   <strong>A&J Electric was founded in 2009 in Sycamore, Illinois</strong> by Jeff Carter, a master electrician with a vision of providing honest, reliable electrical services to his community. For 18 successful years, A&J Electric built a reputation for quality workmanship and exceptional customer service throughout Northern Illinois.
                 </p>
                 <p>
-                  But Jeff had a dream beyond the Midwest winters. An avid scuba diving enthusiast, he longed to combine his professional expertise with his passion for underwater exploration. In 2021, Jeff made the life-changing decision to move to Southwest Florida, bringing his decades of electrical experience to the sunshine state.
+                  But Jeff had a dream beyond the Midwest winters. An avid scuba diving enthusiast, he longed to combine his professional expertise with his passion for underwater exploration. In 2026, Jeff made the life-changing decision to move to Southwest Florida, bringing his decades of electrical experience to the sunshine state.
                 </p>
                 <p>
                   <strong>Carter Electric of Southwest Florida</strong> was born from this dream - a company that delivers the same top-quality electrical work Jeff perfected in Illinois, while allowing him to spend his free time exploring the beautiful waters of the Gulf Coast.

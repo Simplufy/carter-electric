@@ -103,7 +103,7 @@ const whyChooseUs = [
   {
     icon: Users,
     title: "Family Owned",
-    description: "Local family business treating every customer like family. 15+ years of trusted service.",
+    description: "Local family business treating every customer like family. Bringing 15+ years of electrical experience from Illinois to Southwest Florida.",
   },
 ];
 
@@ -135,7 +135,9 @@ export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const openChat = () => {
-    (window as any).openGHLChat?.();
+    if (window.leadConnector && window.leadConnector.chatWidget) {
+      window.leadConnector.chatWidget.openWidget();
+    }
   };
 
   useEffect(() => {
@@ -336,7 +338,7 @@ export default function Home() {
               The Carter Electric Difference
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-              For over 15 years, families and businesses across Southwest Florida have trusted us with their electrical needs.
+              Since 2026, families and businesses across Southwest Florida have trusted us with their electrical needs.
             </p>
           </AnimatedSection>
 

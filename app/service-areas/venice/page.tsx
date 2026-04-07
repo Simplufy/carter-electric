@@ -62,7 +62,7 @@ const otherCities = [
 ];
 
 export default function VenicePage() {
-  const openChat = () => { (window as any).openGHLChat?.(); };
+  const openChat = () => { (window as any).leadConnector?.chatWidget?.openWidget(); };
 
   return (
     <main className="min-h-screen">
@@ -122,7 +122,7 @@ export default function VenicePage() {
                   {city.name} is a charming coastal city known as "The City on the Gulf." Famous for its Italian Renaissance-style architecture, world-class shark tooth hunting at Venice Beach, and pristine Gulf of Mexico waters, Venice offers residents a unique blend of history and natural beauty.
                 </p>
                 <p>
-                  Carter Electric has been serving Venice homeowners and businesses for over 15 years. We understand the specific needs of Venice properties, from the historic homes in the downtown district to modern developments throughout the area. Our experience with Venice's coastal environment means we know how to protect your electrical systems from salt air and humidity.
+                  Carter Electric has been serving Venice homeowners and businesses since 2026. We understand the specific needs of Venice properties, from the historic homes in the downtown district to modern developments throughout the area. Our experience with Venice's coastal environment means we know how to protect your electrical systems from salt air and humidity.
                 </p>
                 <p>
                   Whether you're renovating a Mediterranean Revival home, upgrading the electrical in your beachfront condo, or installing landscape lighting to showcase your tropical garden, our licensed electricians bring expertise and attention to detail to every project.

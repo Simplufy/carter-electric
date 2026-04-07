@@ -86,7 +86,7 @@ const otherCities = [
 ];
 
 export default function SarasotaPage() {
-  const openChat = () => { (window as any).openGHLChat?.(); };
+  const openChat = () => { (window as any).leadConnector?.chatWidget?.openWidget(); };
 
   return (
     <main className="min-h-screen">
@@ -117,7 +117,7 @@ export default function SarasotaPage() {
               Electrician in {city.name}, FL
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mb-8">
-              {city.description}. Carter Electric has been Sarasota's trusted electrical contractor for over 15 years, serving homes and businesses from Siesta Key to the Rosemary District.
+              {city.description}. Carter Electric has been Sarasota's trusted electrical contractor since 2026, serving homes and businesses from Siesta Key to the Rosemary District.
             </p>
             <div className="flex flex-wrap gap-4">
               <button onClick={openChat} className="inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl">
@@ -239,7 +239,7 @@ export default function SarasotaPage() {
             {[
               { icon: Shield, title: "Licensed & Insured", desc: "Full Florida state licensing and comprehensive insurance" },
               { icon: Clock, title: "24/7 Emergency", desc: "Round-the-clock emergency electrical service" },
-              { icon: Star, title: "Local Expertise", desc: "15+ years serving {city.name} homes and businesses" },
+              { icon: Star, title: "Local Expertise", desc: "Decades of experience serving Sarasota homes and businesses" },
               { icon: CheckCircle2, title: "Upfront Pricing", desc: "No hidden fees - transparent quotes guaranteed" },
             ].map((item, index) => (
               <AnimatedSection key={item.title} delay={index * 0.1} className="text-center">

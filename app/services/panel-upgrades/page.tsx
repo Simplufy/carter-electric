@@ -43,7 +43,7 @@ const benefits = [
 ];
 
 export default function PanelUpgradesPage() {
-  const openChat = () => { (window as any).openGHLChat?.(); };
+  const openChat = () => { (window as any).leadConnector?.chatWidget?.openWidget(); };
 
   return (
     <main className="min-h-screen">

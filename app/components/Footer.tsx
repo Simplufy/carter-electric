@@ -76,7 +76,7 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
               {services.map((service) => (
                 <li key={service}>
                   <button
-                    onClick={() => (window as any).openGHLChat?.()}
+                    onClick={() => (window as any).leadConnector?.chatWidget?.openWidget()}
                     className="text-slate-400 hover:text-sky-400 transition-colors text-sm"
                   >
                     {service}

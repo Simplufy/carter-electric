@@ -130,7 +130,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
               <span className="font-medium">+1 941-336-6811</span>
             </a>
             <button
-              onClick={() => (window as any).openGHLChat?.()}
+              onClick={() => (window as any).leadConnector?.chatWidget?.openWidget()}
               className="bg-sky-500 hover:bg-sky-600 text-white px-6 py-2.5 rounded-full font-medium transition-all hover:shadow-lg hover:shadow-sky-500/25"
             >
               Contact Now
@@ -226,7 +226,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
 
               <button
                 onClick={() => {
-                  (window as any).openGHLChat?.();
+                  (window as any).leadConnector?.chatWidget?.openWidget();
                   setMobileMenuOpen(false);
                 }}
                 className="bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-full font-medium transition-all w-full"

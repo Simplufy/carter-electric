@@ -62,7 +62,7 @@ const otherCities = [
 ];
 
 export default function EnglewoodPage() {
-  const openChat = () => { (window as any).openGHLChat?.(); };
+  const openChat = () => { (window as any).leadConnector?.chatWidget?.openWidget(); };
 
   return (
     <main className="min-h-screen">
@@ -113,7 +113,7 @@ export default function EnglewoodPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">Electrical Services in {city.name}, Florida</h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>Englewood is a hidden gem on Florida's Gulf Coast, straddling both Sarasota and Charlotte counties. Known for its pristine beaches, excellent fishing, and laid-back lifestyle, Englewood offers residents a slice of old Florida charm that's increasingly rare.</p>
-                <p>Carter Electric has been serving the Englewood community for over 15 years. We understand the unique challenges of coastal electrical work, from salt-air corrosion on beachfront properties to the specific needs of historic homes in the area.</p>
+                <p>Carter Electric has been serving the Englewood community since 2026. We understand the unique challenges of coastal electrical work, from salt-air corrosion on beachfront properties to the specific needs of historic homes in the area.</p>
                 <p>Whether you need emergency repairs, a panel upgrade for your beach house, or modern lighting for your home along Dearborn Street, our licensed electricians are here to help. We take pride in providing honest, reliable service that Englewood residents can count on.</p>
               </div>
             </AnimatedSection>

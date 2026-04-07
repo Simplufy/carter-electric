@@ -62,7 +62,7 @@ const otherCities = [
 ];
 
 export default function PuntaGordaPage() {
-  const openChat = () => { (window as any).openGHLChat?.(); };
+  const openChat = () => { (window as any).leadConnector?.chatWidget?.openWidget(); };
 
   return (
     <main className="min-h-screen">
@@ -113,7 +113,7 @@ export default function PuntaGordaPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">Electrical Services in {city.name}, Florida</h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>Punta Gorda, meaning "Fat Point" in Spanish, is a charming waterfront city that perfectly blends historic character with modern living. The beautifully restored historic downtown district, with its brick-lined streets and unique shops, draws visitors from across Southwest Florida.</p>
-                <p>Carter Electric has been serving Punta Gorda for over 15 years, and we understand the unique challenges of working on historic homes. Our electricians are experienced in updating century-old electrical systems while preserving the architectural integrity that makes these homes special.</p>
+                <p>Carter Electric has been serving Punta Gorda since 2026, and we understand the unique challenges of working on historic homes. Our electricians are experienced in updating century-old electrical systems while preserving the architectural integrity that makes these homes special.</p>
                 <p>We also serve the newer developments throughout Punta Gorda, from Burnt Store Isles to the Avenues. Whether you need a panel upgrade for your historic home or landscape lighting for your waterfront property, our team brings expertise and respect for Punta Gorda's unique character.</p>
               </div>
             </AnimatedSection>
