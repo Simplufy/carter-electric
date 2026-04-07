@@ -133,11 +133,20 @@ export default function RootLayout({
       <body className="min-h-screen font-sans antialiased">
         {children}
         <script
-          src="https://widgets.leadconnectorhq.com/loader.js"
-          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="69d5434a37d15a5006851e4f"
-          async
-          defer
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var script = document.createElement('script');
+                script.src = 'https://widgets.leadconnectorhq.com/loader.js';
+                script.setAttribute('data-resources-url', 'https://widgets.leadconnectorhq.com/chat-widget/loader.js');
+                script.setAttribute('data-widget-id', '69d5434a37d15a5006851e4f');
+                script.setAttribute('data-location-id', 'nqFllJqrvntKsbfnRDoW');
+                script.async = true;
+                script.defer = true;
+                document.body.appendChild(script);
+              })();
+            `,
+          }}
         />
       </body>
     </html>
