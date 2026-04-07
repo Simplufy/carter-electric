@@ -6,50 +6,88 @@ export async function POST(request: Request) {
     
     const { name, phone, email, address, serviceType, message } = body;
 
-    // Return success immediately for now - CRM integration can be debugged separately
-    // This allows the form to work while we troubleshoot the GHL connection
-    console.log("Form submitted with data:", body);
+    const locationId = "nqFllJqrvntKsbfnRDoW";
+    const apiKey = "pit-9006dca6-d606-45b7-bd8b-a0fb02e1d5b0";
     
-    // Try GHL integration but don't block form success if it fails
-    try {
-      const locationId = "nqFllJqrvntKsbfnRDoW";
-      const apiKey = "pit-9006dca6-d606-45b7-bd8b-a0fb02e1d5b0";
-      
-      const baseUrl = "https://services.leadconnectorhq.com";
-      
-      const contactData = {
-        locationId,
-        firstName: name.split(" ")[0],
-        lastName: name.split(" ").slice(1).join(" ") || "",
-        phone,
-        email,
-        source: "Website",
-      };
+    const baseUrl = "https://services.leadconnectorhq.com";
+    const version = "2021-07-28";
 
-      const contactResponse = await fetch(
-        `${baseUrl}/contacts/upsert`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": apiKey,
-            "Version": "2021-07-28",
-          },
-          body: JSON.stringify(contactData),
-        }
-      );
+    // Create contact
+    const contactData = {
+      locationId,
+      firstName: name.split(" ")[0],
+      lastName: name.split(" ").slice(1).join(" ") || "",
+      phone,
+      email,
+      source: "Website",
+    };
 
-      console.log("GHL Contact Response status:", contactResponse.status);
-      
-      if (contactResponse.ok) {
-        const result = await contactResponse.json();
-        console.log("GHL Contact created:", result);
+    console.log("Creating contact with:", contactData);
+
+    const contactResponse = await fetch(
+      `${baseUrl}/contacts/`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": apiKey,
+          "Version": version,
+        },
+        body: JSON.stringify(contactData),
       }
-    } catch (ghlError) {
-      console.error("GHL Error (non-blocking):", ghlError);
+    );
+
+    console.log("Contact response status:", contactResponse.status);
+    
+    const contactResult = await contactResponse.json();
+    console.log("Contact response:", contactResult);
+
+    if (!contactResponse.ok) {
+      return NextResponse.json(
+        { error: "Failed to create contact", details: contactResult },
+        { status: 500 }
+      );
     }
 
-    return NextResponse.json({ success: true, message: "Form submitted successfully" });
+    const contactId = contactResult?.contact?.id || contactResult?.id;
+    
+    if (!contactId) {
+      console.error("No contact ID returned:", contactResult);
+      return NextResponse.json({ success: true, message: "Form submitted (contact ID not returned)" });
+    }
+
+    // Create deal
+    const dealData = {
+      locationId,
+      name: `${name} - ${serviceType || "Electrical Lead"}`,
+      pipelineId: "default",
+      stageId: "lead",
+      source: "Website",
+      contactId: contactId,
+      value: 0,
+    };
+
+    const dealResponse = await fetch(
+      `${baseUrl}/deals/`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": apiKey,
+          "Version": version,
+        },
+        body: JSON.stringify(dealData),
+      }
+    );
+
+    const dealResult = await dealResponse.json();
+    console.log("Deal response:", dealResult);
+
+    return NextResponse.json({ 
+      success: true, 
+      contactId,
+      dealId: dealResult?.deal?.id 
+    });
   } catch (error) {
     console.error("Form submission error:", error);
     return NextResponse.json(

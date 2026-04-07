@@ -39,7 +39,7 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
     setIsSubmitting(true);
     
     try {
-      const response = await fetch("/api/submit-form", {
+      await fetch("/api/submit-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -47,7 +47,7 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
         body: JSON.stringify(formData),
       });
 
-      // Show success regardless of API response
+      // Show success
       setIsSubmitted(true);
       
       setTimeout(() => {
@@ -65,7 +65,7 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
       }, 3000);
     } catch (error) {
       console.error("Form submission error:", error);
-      // Even on error, show success to user
+      // Still show success on error
       setIsSubmitted(true);
       setTimeout(() => {
         setIsSubmitted(false);
