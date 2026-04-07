@@ -9,6 +9,10 @@ export async function POST(request: Request) {
     const locationId = "nqFllJqrvntKsbfnRDoW";
     const apiKey = "pit-9006dca6-d606-45b7-bd8b-a0fb02e1d5b0";
 
+    // GoHighLevel v2.0 API - using Private Integration format
+    const baseUrl = "https://services.leadconnectorhq.com";
+    const version = "2021-07-28";
+
     // First, create or update the contact
     const contactData = {
       locationId,
@@ -27,66 +31,73 @@ export async function POST(request: Request) {
       notes: message ? `Service Type: ${serviceType || 'Not specified'}\n\nMessage: ${message}` : `Service Type: ${serviceType || 'Not specified'}`,
     };
 
+    console.log("Submitting contact to GHL with data:", JSON.stringify(contactData, null, 2));
+
     const contactResponse = await fetch(
-      `https://api.gohighlevel.com/v1/contacts/upsert`,
+      `${baseUrl}/contacts/upsert`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${apiKey}`,
+          "Authorization": apiKey,
+          "Version": version,
         },
         body: JSON.stringify(contactData),
       }
     );
 
+    const contactResult = await contactResponse.json();
+    console.log("Contact API response:", contactResult);
+
     if (!contactResponse.ok) {
-      const errorData = await contactResponse.json();
-      console.error("GoHighLevel Contact API error:", errorData);
+      console.error("GoHighLevel Contact API error:", contactResult);
       return NextResponse.json(
-        { error: "Failed to create contact in CRM", details: errorData },
+        { error: "Failed to create contact in CRM", details: contactResult },
         { status: 500 }
       );
     }
 
-    const contactResult = await contactResponse.json();
     const contactId = contactResult.contact?.id;
     
     if (!contactId) {
       console.error("No contact ID returned:", contactResult);
       return NextResponse.json(
-        { error: "Contact created but no ID returned" },
+        { error: "Contact created but no ID returned", details: contactResult },
         { status: 500 }
       );
     }
 
-    // Now create a deal/opportunity
+    // Create a deal/opportunity
     const dealData = {
       locationId,
       name: `New ${serviceType || "Electrical"} Lead - ${name}`,
-      pipelineId: "default", // This may need to be adjusted to your specific pipeline ID
-      pipelineStage: "lead", // Initial stage
+      pipelineId: "default",
+      pipelineStage: "lead",
       source: "Website",
-      assignedTo: "",
       contactId: contactId,
-      monetaryValue: 0,
-      tags: serviceType ? [serviceType] : ["Website Lead"],
+      value: 0,
     };
 
+    console.log("Creating deal with data:", JSON.stringify(dealData, null, 2));
+
     const dealResponse = await fetch(
-      `https://api.gohighlevel.com/v1/deals`,
+      `${baseUrl}/deals`,
       {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${apiKey}`,
+          "Authorization": apiKey,
+          "Version": version,
         },
         body: JSON.stringify(dealData),
       }
     );
 
+    const dealResult = await dealResponse.json();
+    console.log("Deal API response:", dealResult);
+
     if (!dealResponse.ok) {
-      const dealErrorData = await dealResponse.json();
-      console.error("GoHighLevel Deal API error:", dealErrorData);
+      console.error("GoHighLevel Deal API error:", dealResult);
       // Contact was created, so we return success but note the deal failed
       return NextResponse.json({ 
         success: true, 
@@ -94,8 +105,6 @@ export async function POST(request: Request) {
         contactId 
       });
     }
-
-    const dealResult = await dealResponse.json();
     
     return NextResponse.json({ 
       success: true, 
