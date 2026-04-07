@@ -51,8 +51,8 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="relative w-12 h-12">
+          <Link href="/" className="flex items-center">
+            <div className="relative w-32 h-16 sm:w-40 sm:h-20">
               <Image
                 src="/images/logo.png"
                 alt="Carter Electric Logo"
@@ -60,16 +60,6 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
                 className="object-contain"
                 priority
               />
-            </div>
-            <div className="hidden sm:block">
-              <h1 className={`text-lg font-bold leading-tight transition-colors ${
-                scrolled ? 'text-slate-900' : 'text-white'
-              }`}>
-                Carter Electric
-              </h1>
-              <p className={`text-xs transition-colors ${
-                scrolled ? 'text-slate-500' : 'text-white/80'
-              }`}>of Southwest Florida</p>
             </div>
           </Link>
 

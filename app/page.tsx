@@ -164,15 +164,15 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h1 
-              className="text-5xl sm:text-6xl lg:text-8xl font-black text-white mb-8 tracking-tight"
-              style={{ textShadow: '0 6px 20px rgba(0,0,0,0.9), 0 4px 8px rgba(0,0,0,0.8), 0 2px 4px rgba(0,0,0,0.6)' }}
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight"
+              style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}
             >
               Southwest Florida's Trusted Local Electric Company
             </h1>
             
             <p 
-              className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-12 max-w-4xl mx-auto"
-              style={{ textShadow: '0 4px 12px rgba(0,0,0,0.9), 0 2px 4px rgba(0,0,0,0.8)' }}
+              className="text-lg sm:text-xl lg:text-2xl text-white font-semibold mb-10 max-w-3xl mx-auto"
+              style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}
             >
               Family-owned electrical contractor serving Sarasota to Naples with expertise and care
             </p>
@@ -196,26 +196,26 @@ export default function Home() {
             </div>
 
             {/* Trust Badges */}
-            <div className="flex flex-wrap gap-8 justify-center mt-12">
+            <div className="flex flex-wrap gap-8 justify-center mt-10">
               <div 
-                className="flex items-center space-x-2 text-white font-semibold text-lg"
-                style={{ textShadow: '0 2px 6px rgba(0,0,0,0.9)' }}
+                className="flex items-center space-x-2 text-white font-medium text-base"
+                style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}
               >
-                <Shield className="w-6 h-6" />
+                <Shield className="w-5 h-5" />
                 <span>Licensed & Insured</span>
               </div>
               <div 
-                className="flex items-center space-x-2 text-white font-semibold text-lg"
-                style={{ textShadow: '0 2px 6px rgba(0,0,0,0.9)' }}
+                className="flex items-center space-x-2 text-white font-medium text-base"
+                style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}
               >
-                <Clock className="w-6 h-6" />
+                <Clock className="w-5 h-5" />
                 <span>24/7 Emergency</span>
               </div>
               <div 
-                className="flex items-center space-x-2 text-white font-semibold text-lg"
-                style={{ textShadow: '0 2px 6px rgba(0,0,0,0.9)' }}
+                className="flex items-center space-x-2 text-white font-medium text-base"
+                style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}
               >
-                <MapPin className="w-6 h-6" />
+                <MapPin className="w-5 h-5" />
                 <span>Sarasota to Naples</span>
               </div>
             </div>
@@ -318,6 +318,46 @@ export default function Home() {
                     {area.description}
                   </p>
                 </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* Photo Gallery */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-16">
+            <span className="text-sky-500 font-semibold tracking-wider uppercase text-sm">Our Work</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
+              Quality Electrical Work
+            </h2>
+            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+              See examples of our professional electrical installations and repairs throughout Southwest Florida.
+            </p>
+          </AnimatedSection>
+
+          <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {[
+              '/images/IMG_9500.jpg',
+              '/images/IMG_9501.jpg',
+              '/images/IMG_9503.jpg',
+              '/images/IMG_9504.jpg',
+              '/images/IMG_9505.jpg',
+              '/images/IMG_9507.jpg',
+              '/images/IMG_9509.jpg',
+              '/images/IMG_9510.jpg',
+            ].map((img, index) => (
+              <StaggerItem key={index}>
+                <div className="relative aspect-square rounded-xl overflow-hidden group">
+                  <Image
+                    src={img}
+                    alt={`Electrical work example ${index + 1}`}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+                </div>
               </StaggerItem>
             ))}
           </StaggerContainer>
