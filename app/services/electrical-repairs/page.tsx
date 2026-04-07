@@ -96,7 +96,7 @@ export default function ElectricalRepairsPage() {
                     Electrical problems can be frustrating and potentially dangerous. Our licensed electricians provide fast, reliable repairs for any electrical issue in your home or business. From flickering lights to complete power outages, we have the expertise to diagnose and fix the problem safely.
                   </p>
 
-                  <div className="bg-rose-50 border-l-4 border-rose-500 p-6 mb-8 rounded-r-xl">
+                  <div className="bg-sky-50 border-l-4 border-sky-500 p-6 mb-8 rounded-r-xl">
                     <h3 className="text-xl font-bold text-sky-900 mb-2">24/7 Emergency Service</h3>
                     <p className="text-sky-800">
                       Electrical emergencies don't wait for business hours. We offer round-the-clock emergency service for urgent issues like power outages, sparking outlets, and burning smells.
@@ -154,7 +154,7 @@ export default function ElectricalRepairsPage() {
 
                 <button
                   onClick={() => setIsContactOpen(true)}
-                  className="mt-8 inline-flex items-center justify-center space-x-2 bg-rose-500 hover:bg-rose-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
+                  className="mt-8 inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
                 >
                   <span>Schedule Electrical Repair</span>
                   <ArrowRight className="w-5 h-5" />
@@ -191,7 +191,7 @@ export default function ElectricalRepairsPage() {
 
                   <button
                     onClick={() => setIsContactOpen(true)}
-                    className="w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-full font-semibold transition-all"
+                    className="w-full bg-sky-500 hover:bg-sky-600 text-white py-3 rounded-full font-semibold transition-all"
                   >
                     Request Service
                   </button>
@@ -205,7 +205,7 @@ export default function ElectricalRepairsPage() {
                       <Link
                         key={service.slug}
                         href={`/services/${service.slug}`}
-                        className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-rose-50 transition-colors group"
+                        className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-sky-50 transition-colors group"
                       >
                         <service.icon className="w-5 h-5 text-sky-500" />
                         <span className="text-slate-700 group-hover:text-sky-600">{service.name}</span>

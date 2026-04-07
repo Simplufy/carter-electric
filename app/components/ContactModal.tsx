@@ -83,8 +83,8 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
         <div className="p-8">
           {isSubmitted ? (
             <div className="text-center py-12 animate-fade-in">
-              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Send className="w-8 h-8 text-emerald-600" />
+              <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Send className="w-8 h-8 text-sky-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Thank You!</h3>
               <p className="text-slate-600">We have received your message and will get back to you shortly.</p>

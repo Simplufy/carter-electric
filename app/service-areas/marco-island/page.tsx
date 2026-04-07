@@ -86,13 +86,13 @@ export default function MarcoIslandPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="flex items-center gap-2 mb-4">
-              <MapPin className="w-5 h-5 text-cyan-400" />
-              <span className="text-cyan-400 font-medium">{city.county}</span>
+              <MapPin className="w-5 h-5 text-sky-400" />
+              <span className="text-sky-400 font-medium">{city.county}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Electrician in {city.name}, FL</h1>
             <p className="text-xl text-slate-300 max-w-3xl mb-8">{city.description}. Professional electrical services for island homes and properties.</p>
             <div className="flex flex-wrap gap-4">
-              <button onClick={() => setIsContactOpen(true)} className="inline-flex items-center justify-center space-x-2 bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl">
+              <button onClick={() => setIsContactOpen(true)} className="inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl">
                 <span>Get Free Quote</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -109,7 +109,7 @@ export default function MarcoIslandPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
             <AnimatedSection className="lg:col-span-2">
-              <span className="text-cyan-500 font-semibold tracking-wider uppercase text-sm">About {city.name}</span>
+              <span className="text-sky-500 font-semibold tracking-wider uppercase text-sm">About {city.name}</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">Electrical Services in {city.name}, Florida</h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>Marco Island is Southwest Florida's largest barrier island, offering residents and visitors a tropical paradise of white sand beaches, turquoise waters, and world-class amenities. Accessible by the Judge S.S. Jolley Bridge, this island gem combines natural beauty with sophisticated living.</p>
@@ -145,7 +145,7 @@ export default function MarcoIslandPage() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-cyan-500 font-semibold tracking-wider uppercase text-sm">Our Services</span>
+            <span className="text-sky-500 font-semibold tracking-wider uppercase text-sm">Our Services</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Electrical Services in {city.name}</h2>
           </AnimatedSection>
 
@@ -153,8 +153,8 @@ export default function MarcoIslandPage() {
             {services.map((service) => (
               <StaggerItem key={service.title}>
                 <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow h-full">
-                  <div className="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center mb-6">
-                    <service.icon className="w-7 h-7 text-cyan-500" />
+                  <div className="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-6">
+                    <service.icon className="w-7 h-7 text-sky-500" />
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
                   <p className="text-slate-600 leading-relaxed">{service.description}</p>

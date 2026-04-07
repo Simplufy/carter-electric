@@ -143,7 +143,7 @@ export default function OutdoorLightingPage() {
 
                 <button
                   onClick={() => setIsContactOpen(true)}
-                  className="mt-8 inline-flex items-center justify-center space-x-2 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
+                  className="mt-8 inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
                 >
                   <span>Get Your Free Outdoor Lighting Quote</span>
                   <ArrowRight className="w-5 h-5" />
@@ -180,7 +180,7 @@ export default function OutdoorLightingPage() {
 
                   <button
                     onClick={() => setIsContactOpen(true)}
-                    className="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-3 rounded-full font-semibold transition-all"
+                    className="w-full bg-sky-500 hover:bg-sky-600 text-white py-3 rounded-full font-semibold transition-all"
                   >
                     Request a Quote
                   </button>

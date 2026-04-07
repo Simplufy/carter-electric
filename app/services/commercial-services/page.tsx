@@ -137,7 +137,7 @@ export default function CommercialServicesPage() {
                     Keep your properties in top condition with our commercial maintenance plans. Regular inspections and preventive maintenance help avoid costly emergency repairs and ensure code compliance.
                   </p>
 
-                  <div className="bg-cyan-50 border-l-4 border-cyan-500 p-6 mb-8 rounded-r-xl">
+                  <div className="bg-sky-50 border-l-4 border-sky-500 p-6 mb-8 rounded-r-xl">
                     <h4 className="text-xl font-bold text-sky-900 mb-2">Bulk Pricing Available</h4>
                     <p className="text-sky-800">
                       Property managers and HOAs receive special pricing for multi-unit projects and ongoing maintenance contracts.
@@ -175,7 +175,7 @@ export default function CommercialServicesPage() {
 
                 <button
                   onClick={() => setIsContactOpen(true)}
-                  className="mt-8 inline-flex items-center justify-center space-x-2 bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
+                  className="mt-8 inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
                 >
                   <span>Discuss Your Commercial Project</span>
                   <ArrowRight className="w-5 h-5" />
@@ -212,7 +212,7 @@ export default function CommercialServicesPage() {
 
                   <button
                     onClick={() => setIsContactOpen(true)}
-                    className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 rounded-full font-semibold transition-all"
+                    className="w-full bg-sky-500 hover:bg-sky-600 text-white py-3 rounded-full font-semibold transition-all"
                   >
                     Request Commercial Quote
                   </button>
@@ -226,7 +226,7 @@ export default function CommercialServicesPage() {
                       <Link
                         key={service.slug}
                         href={`/services/${service.slug}`}
-                        className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-cyan-50 transition-colors group"
+                        className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-sky-50 transition-colors group"
                       >
                         <service.icon className="w-5 h-5 text-sky-500" />
                         <span className="text-slate-700 group-hover:text-sky-600">{service.name}</span>

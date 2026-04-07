@@ -160,7 +160,7 @@ export default function PanelUpgradesPage() {
 
                 <button
                   onClick={() => setIsContactOpen(true)}
-                  className="mt-8 inline-flex items-center justify-center space-x-2 bg-violet-500 hover:bg-violet-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
+                  className="mt-8 inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
                 >
                   <span>Get Your Panel Upgrade Quote</span>
                   <ArrowRight className="w-5 h-5" />
@@ -197,7 +197,7 @@ export default function PanelUpgradesPage() {
 
                   <button
                     onClick={() => setIsContactOpen(true)}
-                    className="w-full bg-violet-500 hover:bg-violet-600 text-white py-3 rounded-full font-semibold transition-all"
+                    className="w-full bg-sky-500 hover:bg-sky-600 text-white py-3 rounded-full font-semibold transition-all"
                   >
                     Request a Quote
                   </button>
@@ -211,7 +211,7 @@ export default function PanelUpgradesPage() {
                       <Link
                         key={service.slug}
                         href={`/services/${service.slug}`}
-                        className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-violet-50 transition-colors group"
+                        className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-sky-50 transition-colors group"
                       >
                         <service.icon className="w-5 h-5 text-sky-500" />
                         <span className="text-slate-700 group-hover:text-sky-600">{service.name}</span>
