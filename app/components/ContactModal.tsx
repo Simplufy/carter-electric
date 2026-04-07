@@ -24,6 +24,7 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
     name: "",
     phone: "",
     email: "",
+    address: "",
     serviceType: "",
     contactMethod: "call",
     message: "",
@@ -50,6 +51,7 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
         name: "",
         phone: "",
         email: "",
+        address: "",
         serviceType: "",
         contactMethod: "call",
         message: "",
@@ -108,7 +110,7 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
                 </a>
                 <span className="flex items-center space-x-2 text-slate-600">
                   <MapPin className="w-4 h-4" />
-                  <span className="text-sm font-medium">Southwest Florida</span>
+                  <span className="text-sm font-medium">Serving Sarasota to Naples, FL</span>
                 </span>
               </div>
 
@@ -158,6 +160,21 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 outline-none transition-all"
                     placeholder="john@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="address" className="block text-sm font-medium text-slate-700 mb-1">
+                    Service Address
+                  </label>
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    value={formData.address}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/20 outline-none transition-all"
+                    placeholder="123 Main St, City, FL 12345"
                   />
                 </div>
 
