@@ -67,8 +67,8 @@ export default function ElectricalRepairsPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="flex items-center gap-2 mb-4">
-              <Wrench className="w-6 h-6 text-rose-400" />
-              <span className="text-rose-400 font-medium">Our Services</span>
+              <Wrench className="w-6 h-6 text-sky-400" />
+              <span className="text-sky-400 font-medium">Our Services</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               Electrical Repairs & Troubleshooting
@@ -97,8 +97,8 @@ export default function ElectricalRepairsPage() {
                   </p>
 
                   <div className="bg-rose-50 border-l-4 border-rose-500 p-6 mb-8 rounded-r-xl">
-                    <h3 className="text-xl font-bold text-rose-900 mb-2">24/7 Emergency Service</h3>
-                    <p className="text-rose-800">
+                    <h3 className="text-xl font-bold text-sky-900 mb-2">24/7 Emergency Service</h3>
+                    <p className="text-sky-800">
                       Electrical emergencies don't wait for business hours. We offer round-the-clock emergency service for urgent issues like power outages, sparking outlets, and burning smells.
                     </p>
                   </div>
@@ -110,7 +110,7 @@ export default function ElectricalRepairsPage() {
                   <ul className="space-y-3 mb-8">
                     {services.map((service, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-rose-500 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
                         <span>{service}</span>
                       </li>
                     ))}
@@ -172,19 +172,19 @@ export default function ElectricalRepairsPage() {
                   
                   <div className="space-y-4 mb-6">
                     <a href="tel:9415550100" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
-                      <Phone className="w-5 h-5 text-rose-400" />
+                      <Phone className="w-5 h-5 text-sky-400" />
                       <span>(941) 555-0100</span>
                     </a>
                     <a href="mailto:info@cartelectric.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
-                      <Mail className="w-5 h-5 text-rose-400" />
+                      <Mail className="w-5 h-5 text-sky-400" />
                       <span>info@cartelectric.com</span>
                     </a>
                     <div className="flex items-center gap-3 text-slate-300">
-                      <Clock className="w-5 h-5 text-rose-400" />
+                      <Clock className="w-5 h-5 text-sky-400" />
                       <span>24/7 Emergency Available</span>
                     </div>
                     <div className="flex items-center gap-3 text-slate-300">
-                      <MapPin className="w-5 h-5 text-rose-400" />
+                      <MapPin className="w-5 h-5 text-sky-400" />
                       <span>Sarasota to Naples</span>
                     </div>
                   </div>
@@ -207,15 +207,15 @@ export default function ElectricalRepairsPage() {
                         href={`/services/${service.slug}`}
                         className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-rose-50 transition-colors group"
                       >
-                        <service.icon className="w-5 h-5 text-rose-500" />
-                        <span className="text-slate-700 group-hover:text-rose-600">{service.name}</span>
+                        <service.icon className="w-5 h-5 text-sky-500" />
+                        <span className="text-slate-700 group-hover:text-sky-600">{service.name}</span>
                       </Link>
                     ))}
                   </div>
                 </div>
 
                 {/* Trust Badge */}
-                <div className="mt-6 bg-gradient-to-br from-rose-500 to-orange-500 rounded-2xl p-6 text-white">
+                <div className="mt-6 bg-gradient-to-br from-sky-500 to-emerald-500 rounded-2xl p-6 text-white">
                   <div className="flex items-center gap-2 mb-2">
                     <Shield className="w-5 h-5" />
                     <span className="font-bold">Licensed & Insured</span>
