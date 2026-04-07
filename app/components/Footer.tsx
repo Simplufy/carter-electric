@@ -76,7 +76,10 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
               {services.map((service) => (
                 <li key={service}>
                   <button
-                    onClick={onOpenContact}
+                    onClick={() => {
+                      const lcw = (window as any).lcw;
+                      if (lcw?.open) lcw.open();
+                    }}
                     className="text-slate-400 hover:text-sky-400 transition-colors text-sm"
                   >
                     {service}
@@ -152,7 +155,13 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
             <Link href="/about" className="text-slate-500 hover:text-sky-400 transition-colors">
               About Us
             </Link>
-            <button onClick={onOpenContact} className="text-slate-500 hover:text-sky-400 transition-colors">
+            <button 
+              onClick={() => {
+                const lcw = (window as any).lcw;
+                if (lcw?.open) lcw.open();
+              }} 
+              className="text-slate-500 hover:text-sky-400 transition-colors"
+            >
               Contact
             </button>
             <Link href="/privacy-policy" className="text-slate-500 hover:text-sky-400 transition-colors">

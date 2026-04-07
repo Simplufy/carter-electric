@@ -1,10 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect } from "react";
 import Image from "next/image";
 import { Award, Heart, Users, Lightbulb, Shield, Clock, Star, MapPin } from "lucide-react";
 import Navbar from "../components/Navbar";
-import ContactModal from "../components/ContactModal";
 import Footer from "../components/Footer";
 import AnimatedSection, { AnimatedCard } from "../components/AnimatedSection";
 
@@ -71,12 +70,14 @@ const milestones = [
 ];
 
 export default function AboutPage() {
-  const [isContactOpen, setIsContactOpen] = useState(false);
+  const openChat = () => {
+    const lcw = (window as any).lcw;
+    if (lcw?.open) lcw.open();
+  };
 
   return (
     <main className="min-h-screen">
-      <Navbar onOpenContact={() => setIsContactOpen(true)} />
-      <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+      <Navbar onOpenContact={openChat} />
 
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
@@ -259,7 +260,7 @@ export default function AboutPage() {
               Join thousands of satisfied customers across Southwest Florida. We'd love to add you to our family of happy clients.
             </p>
             <button
-              onClick={() => setIsContactOpen(true)}
+              onClick={openChat}
               className="inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
             >
               <span>Get Your Free Quote</span>
@@ -268,7 +269,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <Footer onOpenContact={() => setIsContactOpen(true)} />
+      <Footer onOpenContact={openChat} />
     </main>
   );
 }

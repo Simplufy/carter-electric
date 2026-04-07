@@ -19,7 +19,7 @@ import {
   Shield
 } from "lucide-react";
 import Navbar from "../../components/Navbar";
-import ContactModal from "../../components/ContactModal";
+
 import Footer from "../../components/Footer";
 import AnimatedSection from "../../components/AnimatedSection";
 
@@ -43,12 +43,12 @@ const benefits = [
 ];
 
 export default function PanelUpgradesPage() {
-  const [isContactOpen, setIsContactOpen] = useState(false);
+  const openChat = () => { const lcw = (window as any).lcw; if (lcw?.open) lcw.open(); };
 
   return (
     <main className="min-h-screen">
-      <Navbar onOpenContact={() => setIsContactOpen(true)} />
-      <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+      <Navbar onOpenContact={openChat} />
+      
 
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
@@ -159,7 +159,7 @@ export default function PanelUpgradesPage() {
                 </div>
 
                 <button
-                  onClick={() => setIsContactOpen(true)}
+                  onClick={openChat}
                   className="mt-8 inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
                 >
                   <span>Get Your Panel Upgrade Quote</span>
@@ -196,7 +196,7 @@ export default function PanelUpgradesPage() {
                   </div>
 
                   <button
-                    onClick={() => setIsContactOpen(true)}
+                    onClick={openChat}
                     className="w-full bg-sky-500 hover:bg-sky-600 text-white py-3 rounded-full font-semibold transition-all"
                   >
                     Request a Quote
@@ -234,7 +234,8 @@ export default function PanelUpgradesPage() {
         </div>
       </section>
 
-      <Footer onOpenContact={() => setIsContactOpen(true)} />
+      <Footer onOpenContact={openChat} />
     </main>
   );
 }
+

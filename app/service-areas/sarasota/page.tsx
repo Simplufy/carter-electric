@@ -18,7 +18,7 @@ import {
   CheckCircle2
 } from "lucide-react";
 import Navbar from "../../components/Navbar";
-import ContactModal from "../../components/ContactModal";
+
 import Footer from "../../components/Footer";
 import AnimatedSection, { StaggerContainer, StaggerItem } from "../../components/AnimatedSection";
 
@@ -86,12 +86,12 @@ const otherCities = [
 ];
 
 export default function SarasotaPage() {
-  const [isContactOpen, setIsContactOpen] = useState(false);
+  const openChat = () => { const lcw = (window as any).lcw; if (lcw?.open) lcw.open(); };
 
   return (
     <main className="min-h-screen">
-      <Navbar onOpenContact={() => setIsContactOpen(true)} />
-      <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+      <Navbar onOpenContact={openChat} />
+      
 
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
@@ -120,7 +120,7 @@ export default function SarasotaPage() {
               {city.description}. Carter Electric has been Sarasota's trusted electrical contractor for over 15 years, serving homes and businesses from Siesta Key to the Rosemary District.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button onClick={() => setIsContactOpen(true)} className="inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl">
+              <button onClick={openChat} className="inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl">
                 <span>Get Free Quote</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -266,7 +266,7 @@ export default function SarasotaPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => setIsContactOpen(true)}
+                onClick={openChat}
                 className="inline-flex items-center justify-center space-x-2 bg-white text-sky-600 hover:bg-slate-100 px-8 py-4 rounded-full font-semibold text-lg transition-all"
               >
                 <span>Schedule Service</span>
@@ -302,7 +302,7 @@ export default function SarasotaPage() {
         </div>
       </section>
 
-      <Footer onOpenContact={() => setIsContactOpen(true)} />
+      <Footer onOpenContact={openChat} />
     </main>
   );
 }
