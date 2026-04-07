@@ -199,15 +199,15 @@ export default function Home() {
             </h1>
             
             <p 
-              className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-10 max-w-4xl mx-auto text-center"
+              className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-10 max-w-4xl mx-auto text-center flex flex-wrap justify-center items-center gap-x-1"
               style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}
             >
               <span>Family-owned electrical contractor operating in </span>
-              <span className="inline relative h-8 w-40">
+              <span className="relative inline-block h-8 w-44 text-center">
                 {serviceAreas.map((area, index) => (
                   <span
                     key={area.slug}
-                    className={`absolute left-0 right-0 text-center transition-all duration-500 whitespace-nowrap ${
+                    className={`absolute left-0 right-0 mx-auto transition-all duration-500 whitespace-nowrap ${
                       index === currentAreaIndex 
                         ? 'opacity-100 translate-y-0' 
                         : 'opacity-0 -translate-y-2'
