@@ -108,17 +108,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <script
-          src="https://widgets.leadconnectorhq.com/loader.js"
-          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-          data-widget-id="69d5434a37d15a5006851e4f"
-          async
-          defer
-        />
-        <script
           dangerouslySetInnerHTML={{
             __html: `
               window.openGHLChat = function() {
-                var lc = document.querySelector('.live-contact-widget, [class*="LeadConnector"], iframe[src*="leadconnector"]');
+                var lc = document.querySelector('.live-contact_widget, iframe[src*="leadconnector"]');
                 if (lc && lc.contentWindow) {
                   lc.contentWindow.postMessage({ type: 'open' }, '*');
                 }
@@ -139,6 +132,13 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen font-sans antialiased">
         {children}
+        <script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="69d5434a37d15a5006851e4f"
+          async
+          defer
+        />
       </body>
     </html>
   );
