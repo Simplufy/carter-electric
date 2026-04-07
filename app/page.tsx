@@ -130,6 +130,8 @@ const testimonials = [
 
 export default function Home() {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
   const [currentAreaIndex, setCurrentAreaIndex] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -140,11 +142,32 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentAreaIndex((prev) => (prev + 1) % serviceAreas.length);
-    }, 2800);
-    return () => clearInterval(interval);
-  }, []);
+    const currentCity = serviceAreas[currentAreaIndex].name;
+    let timeout: NodeJS.Timeout;
+
+    if (!isDeleting) {
+      if (displayedText.length < currentCity.length) {
+        timeout = setTimeout(() => {
+          setDisplayedText(currentCity.slice(0, displayedText.length + 1));
+        }, 80);
+      } else {
+        timeout = setTimeout(() => {
+          setIsDeleting(true);
+        }, 2000);
+      }
+    } else {
+      if (displayedText.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayedText(displayedText.slice(0, -1));
+        }, 50);
+      } else {
+        setIsDeleting(false);
+        setCurrentAreaIndex((prev) => (prev + 1) % serviceAreas.length);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayedText, isDeleting, currentAreaIndex]);
 
   return (
     <main className="min-h-screen">
@@ -203,20 +226,8 @@ export default function Home() {
               style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}
             >
               <span>Family-owned electrical contractor operating in </span>
-              <span className="relative inline-block h-8 w-44 text-center">
-                {serviceAreas.map((area, index) => (
-                  <span
-                    key={area.slug}
-                    className={`absolute left-0 right-0 mx-auto transition-all duration-500 whitespace-nowrap ${
-                      index === currentAreaIndex 
-                        ? 'opacity-100 translate-y-0' 
-                        : 'opacity-0 -translate-y-2'
-                    }`}
-                  >
-                    {area.name}
-                  </span>
-                ))}
-              </span>
+              <span className="text-sky-300 min-w-28">{displayedText}</span>
+              <span className="animate-pulse">|</span>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
