@@ -234,7 +234,7 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => openChat}
+                onClick={openChat}
                 className="inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-10 py-5 rounded-full font-bold text-xl transition-all hover:shadow-2xl hover:shadow-sky-500/40 drop-shadow-lg"
                 style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}
               >
@@ -313,7 +313,7 @@ export default function Home() {
                     <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                     <p className="text-white/80 leading-relaxed flex-grow">{service.description}</p>
                     <button
-                      onClick={() => openChat}
+                      onClick={openChat}
                       className="mt-6 inline-flex items-center text-sky-400 hover:text-sky-300 font-semibold transition-colors"
                     >
                       <span>Learn More</span>
@@ -476,7 +476,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => openChat}
+                onClick={openChat}
                 className="inline-flex items-center justify-center space-x-2 bg-white text-sky-600 hover:bg-slate-100 px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
               >
                 <span>Get Free Quote</span>
