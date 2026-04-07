@@ -6,25 +6,26 @@ export async function POST(request: Request) {
     
     const { name, phone, email, address, serviceType, message } = body;
 
+    console.log("Form submission received:", { name, phone, email, serviceType });
+
     const locationId = "nqFllJqrvntKsbfnRDoW";
-    const apiKey = "pit-9006dca6-d606-45b7-bd8b-a0fb02e1d5b0";
+    const apiKey = process.env.GHL_API_KEY || "pit-9006dca6-d606-45b7-bd8b-a0fb02e1d5b0";
     
     const baseUrl = "https://services.leadconnectorhq.com";
     const version = "2021-07-28";
 
     const authHeader = `Bearer ${apiKey}`;
 
-    // Create or update contact using upsert
     const contactData = {
       locationId,
       firstName: name.split(" ")[0],
       lastName: name.split(" ").slice(1).join(" ") || "",
-      phone,
-      email,
+      phone: phone.replace(/\D/g, ""),
+      email: email || "",
       source: "Website",
     };
 
-    console.log("Creating contact with:", contactData);
+    console.log("Sending to GHL:", JSON.stringify(contactData));
 
     const contactResponse = await fetch(
       `${baseUrl}/contacts/upsert`,
@@ -39,20 +40,17 @@ export async function POST(request: Request) {
       }
     );
 
-    console.log("Contact response status:", contactResponse.status);
-    
+    console.log("GHL Response status:", contactResponse.status);
     const contactResult = await contactResponse.json();
-    console.log("Contact response:", contactResult);
+    console.log("GHL Response:", JSON.stringify(contactResult));
 
     const contactId = contactResult?.contact?.id || contactResult?.id;
     
     if (!contactId) {
       console.error("No contact ID returned:", contactResult);
-      // Still return success to user but log the error for debugging
       return NextResponse.json({ 
         success: true, 
-        warning: "Form submitted but CRM contact creation failed",
-        debug: contactResult 
+        debug: { contactResult, contactData }
       });
     }
 
