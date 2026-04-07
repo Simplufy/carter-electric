@@ -74,7 +74,7 @@ export default function RootLayout({
     "description": "Family-owned electrical contractor serving Sarasota, Naples & all of Southwest Florida.",
     "url": "https://carterelectricfl.com",
     "telephone": "+1-941-336-6811",
-    "email": "contact@carterelectric.com",
+    "email": "contact@carterelectricflorida.com",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "FL",

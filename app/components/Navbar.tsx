@@ -30,6 +30,7 @@ const services = [
 export default function Navbar({ onOpenContact }: { onOpenContact: () => void }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  const [mobileServicesDropdownOpen, setMobileServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -158,7 +159,31 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
               >
                 Home
               </Link>
-              
+
+              <div>
+                <button
+                  onClick={() => setMobileServicesDropdownOpen(!mobileServicesDropdownOpen)}
+                  className="flex items-center justify-between w-full text-slate-700 hover:text-sky-600 font-medium py-2"
+                >
+                  <span>Services</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileServicesDropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {mobileServicesDropdownOpen && (
+                  <div className="pl-4 mt-2 space-y-2 animate-fade-in">
+                    {services.map((service) => (
+                      <Link
+                        key={service.slug}
+                        href={`/services/${service.slug}`}
+                        className="block text-sm text-slate-600 hover:text-sky-600 py-1"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <div>
                 <button
                   onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
