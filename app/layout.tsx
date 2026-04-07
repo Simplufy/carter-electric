@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: "Family-owned electrical contractor serving Sarasota, Naples & all of Southwest Florida. Indoor/outdoor lighting, EV chargers, panel upgrades & 24/7 emergency service.",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/carter-electric-social.png",
         width: 1200,
         height: 630,
         alt: "Carter Electric - Electrical Services in Southwest Florida",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Carter Electric of Southwest Florida",
     description: "Family-owned electrical contractor serving Sarasota to Naples. Licensed & insured.",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/carter-electric-social.png"],
     creator: "@carterelectric",
   },
   alternates: {
@@ -92,7 +92,7 @@ export default function RootLayout({
     },
     "priceRange": "$$",
     "openingHours": "Mo-Fr 07:00-18:00, Sa 08:00-16:00, 24/7 Emergency",
-    "image": "https://carterelectricfl.com/images/og-image.jpg",
+    "image": "https://carterelectricfl.com/images/carter-electric-social.png",
     "sameAs": [],
     "keywords": "electrician, electrical services, Southwest Florida, Sarasota, Naples"
   };
