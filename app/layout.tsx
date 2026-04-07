@@ -111,21 +111,35 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               window.openGHLChat = function() {
-                var lc = document.querySelector('.live-contact_widget, iframe[src*="leadconnector"]');
-                if (lc && lc.contentWindow) {
-                  lc.contentWindow.postMessage({ type: 'open' }, '*');
-                }
-                if (window.lcw && window.lcw.open) {
+                // Method 1: Try LCW global (most reliable)
+                if (window.lcw && typeof window.lcw.open === 'function') {
                   window.lcw.open();
+                  return;
                 }
-                var event = new CustomEvent('lcw:ready', {});
-                window.dispatchEvent(event);
+                // Method 2: Try to find and click the widget launcher button
+                var launcher = document.querySelector('[class*="launcher"], .lcw-launcher, [data-testid="chat-launcher"]');
+                if (launcher && launcher.click) {
+                  launcher.click();
+                  return;
+                }
+                // Method 3: Try postMessage to the widget iframe
+                var widgetFrame = document.querySelector('iframe[src*="leadconnector"], iframe[src*="chat-widget"]');
+                if (widgetFrame && widgetFrame.contentWindow) {
+                  widgetFrame.contentWindow.postMessage({ type: 'open' }, '*');
+                }
               };
               window.addEventListener('message', function(e) {
                 if (e.data && e.data.type === 'init') {
                   window.lcw = e.data.instance;
                 }
               });
+              // Also try to capture LCW from global
+              var checkLCW = setInterval(function() {
+                if (window.LCW) {
+                  clearInterval(checkLCW);
+                  window.lcw = window.LCW;
+                }
+              }, 1000);
             `,
           }}
         />
