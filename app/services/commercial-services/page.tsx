@@ -150,21 +150,21 @@ export default function CommercialServicesPage() {
 
                   <div className="space-y-4 mb-8">
                     <div className="flex gap-4">
-                      <div className="w-8 h-8 bg-cyan-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
+                      <div className="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
                       <div>
                         <h4 className="font-bold text-slate-900">Minimal Disruption</h4>
                         <p className="text-sm">We work around your schedule to minimize impact on tenants and customers.</p>
                       </div>
                     </div>
                     <div className="flex gap-4">
-                      <div className="w-8 h-8 bg-cyan-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
+                      <div className="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
                       <div>
                         <h4 className="font-bold text-slate-900">Fast Response</h4>
                         <p className="text-sm">24/7 emergency service for urgent commercial electrical issues.</p>
                       </div>
                     </div>
                     <div className="flex gap-4">
-                      <div className="w-8 h-8 bg-cyan-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
+                      <div className="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
                       <div>
                         <h4 className="font-bold text-slate-900">Code Compliance</h4>
                         <p className="text-sm">All work meets current commercial electrical codes and safety standards.</p>

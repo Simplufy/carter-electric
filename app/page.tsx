@@ -201,7 +201,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             {/* Logo Icon */}
-            <div className="relative w-32 h-32 mx-auto mb-4">
+            <div className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 pt-8 sm:pt-0">
               <Image
                 src="/images/logo-icon.png"
                 alt="Carter Electric"
