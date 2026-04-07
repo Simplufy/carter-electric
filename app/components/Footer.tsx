@@ -111,7 +111,7 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
                 <Phone className="w-5 h-5 text-sky-400 mt-0.5" />
                 <div>
                   <p className="font-medium">Phone</p>
-                  <a href="tel:9415550100" className="text-slate-400 hover:text-sky-400 transition-colors text-sm">
+                  <a href="tel:+19413366811" className="text-slate-400 hover:text-sky-400 transition-colors text-sm">
                     (941) 555-0100
                   </a>
                 </div>
@@ -120,8 +120,8 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
                 <Mail className="w-5 h-5 text-sky-400 mt-0.5" />
                 <div>
                   <p className="font-medium">Email</p>
-                  <a href="mailto:info@cartelectric.com" className="text-slate-400 hover:text-sky-400 transition-colors text-sm">
-                    info@cartelectric.com
+                  <a href="mailto:contact@carterelectric.com" className="text-slate-400 hover:text-sky-400 transition-colors text-sm">
+                    contact@carterelectric.com
                   </a>
                 </div>
               </li>

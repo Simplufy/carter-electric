@@ -122,11 +122,11 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:9415550100" className={`flex items-center space-x-2 transition-colors ${
+            <a href="tel:+19413366811" className={`flex items-center space-x-2 transition-colors ${
               scrolled ? 'text-slate-600 hover:text-sky-600' : 'text-white hover:text-sky-300'
             }`}>
               <Phone className="w-4 h-4" />
-              <span className="font-medium">(941) 555-0100</span>
+              <span className="font-medium">+1 941-336-6811</span>
             </a>
             <button
               onClick={onOpenContact}
@@ -192,11 +192,11 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
               </Link>
 
               <a
-                href="tel:9415550100"
+                href="tel:+19413366811"
                 className="flex items-center space-x-2 text-slate-600 hover:text-sky-600 py-2"
               >
                 <Phone className="w-4 h-4" />
-                <span className="font-medium">(941) 555-0100</span>
+                <span className="font-medium">+1 941-336-6811</span>
               </a>
 
               <button

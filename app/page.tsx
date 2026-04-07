@@ -124,12 +124,20 @@ const testimonials = [
 
 export default function Home() {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [currentAreaIndex, setCurrentAreaIndex] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.5;
     }
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentAreaIndex((prev) => (prev + 1) % serviceAreas.length);
+    }, 2800);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -163,18 +171,49 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Logo Icon */}
+            <div className="relative w-32 h-32 mx-auto mb-4">
+              <Image
+                src="/images/logo-icon.png"
+                alt="Carter Electric"
+                fill
+                className="object-contain"
+                priority
+                unoptimized
+              />
+            </div>
+            
             <h1 
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight"
               style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}
             >
-              Southwest Florida's Trusted Local Electric Company
+              Carter Electric
+              <br />
+              <span className="text-3xl sm:text-4xl lg:text-5xl">local electric</span>
             </h1>
             
             <p 
-              className="text-lg sm:text-xl lg:text-2xl text-white font-semibold mb-10 max-w-3xl mx-auto"
+              className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-10 max-w-3xl mx-auto"
               style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}
             >
-              Family-owned electrical contractor serving Sarasota to Naples with expertise and care
+              Family-owned electrical contractor operating in{" "}
+              <span className="inline-block">
+                {serviceAreas.map((area, index) => (
+                  <span
+                    key={area.slug}
+                    className={`absolute transition-all duration-500 ${
+                      index === currentAreaIndex 
+                        ? 'opacity-100 translate-y-0' 
+                        : 'opacity-0 translate-y-4'
+                    }`}
+                    style={{ 
+                      display: index === currentAreaIndex ? 'inline' : 'none'
+                    }}
+                  >
+                    {area.name}
+                  </span>
+                ))}
+              </span>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -187,11 +226,11 @@ export default function Home() {
                 <ArrowRight className="w-6 h-6" />
               </button>
               <a
-                href="tel:9415550100"
+                href="tel:+19413366811"
                 className="inline-flex items-center justify-center space-x-2 bg-white hover:bg-gray-100 text-slate-900 px-10 py-5 rounded-full font-bold text-xl transition-all drop-shadow-lg"
               >
                 <Phone className="w-6 h-6" />
-                <span>(941) 555-0100</span>
+                <span>+1 941-336-6811</span>
               </a>
             </div>
 
@@ -418,11 +457,11 @@ export default function Home() {
                 <ArrowRight className="w-5 h-5" />
               </button>
               <a
-                href="tel:9415550100"
+                href="tel:+19413366811"
                 className="inline-flex items-center justify-center space-x-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg transition-all"
               >
                 <Phone className="w-5 h-5" />
-                <span>(941) 555-0100</span>
+                <span>+1 941-336-6811</span>
               </a>
             </div>
             

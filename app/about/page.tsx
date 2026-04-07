@@ -79,15 +79,20 @@ export default function AboutPage() {
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
 
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }} />
+      <section className="relative py-32 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/about-header.png"
+            alt="Carter Electric"
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/50" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
-            <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">About Us</span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-4 mb-6">
               From Illinois to Southwest Florida
             </h1>
@@ -178,38 +183,6 @@ export default function AboutPage() {
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{value.title}</h3>
                   <p className="text-slate-600 leading-relaxed">{value.description}</p>
-                </div>
-              </AnimatedCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16">
-            <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">Our Team</span>
-            <h2 className="text-3xl sm:text-4xl font-bold mt-2 mb-4">
-              Meet the Carter Electric Family
-            </h2>
-            <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-              Behind every successful project is a dedicated team of professionals who truly care about their craft.
-            </p>
-          </AnimatedSection>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {team.map((member, index) => (
-              <AnimatedCard key={member.name} delay={index * 0.1}>
-                <div className="bg-slate-800 rounded-2xl p-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-sky-500 to-emerald-500 rounded-full flex items-center justify-center mb-6">
-                    <span className="text-2xl font-bold text-white">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
-                  <p className="text-sky-400 font-medium mb-4">{member.role}</p>
-                  <p className="text-slate-300 leading-relaxed">{member.description}</p>
                 </div>
               </AnimatedCard>
             ))}

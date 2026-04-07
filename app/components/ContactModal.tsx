@@ -98,13 +98,13 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
 
               {/* Quick contact info */}
               <div className="flex flex-wrap gap-4 mb-6 p-4 bg-slate-50 rounded-xl">
-                <a href="tel:9415550100" className="flex items-center space-x-2 text-slate-600 hover:text-sky-600 transition-colors">
+                <a href="tel:+19413366811" className="flex items-center space-x-2 text-slate-600 hover:text-sky-600 transition-colors">
                   <Phone className="w-4 h-4" />
-                  <span className="text-sm font-medium">(941) 555-0100</span>
+                  <span className="text-sm font-medium">+1 941-336-6811</span>
                 </a>
-                <a href="mailto:info@cartelectric.com" className="flex items-center space-x-2 text-slate-600 hover:text-sky-600 transition-colors">
+                <a href="mailto:contact@carterelectric.com" className="flex items-center space-x-2 text-slate-600 hover:text-sky-600 transition-colors">
                   <Mail className="w-4 h-4" />
-                  <span className="text-sm font-medium">info@cartelectric.com</span>
+                  <span className="text-sm font-medium">contact@carterelectric.com</span>
                 </a>
                 <span className="flex items-center space-x-2 text-slate-600">
                   <MapPin className="w-4 h-4" />

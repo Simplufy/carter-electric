@@ -187,13 +187,13 @@ export default function IndoorLightingPage() {
                   <p className="text-slate-300 mb-6">Contact us today for a free consultation and quote.</p>
                   
                   <div className="space-y-4 mb-6">
-                    <a href="tel:9415550100" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
+                    <a href="tel:+19413366811" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
                       <Phone className="w-5 h-5 text-sky-400" />
                       <span>(941) 555-0100</span>
                     </a>
-                    <a href="mailto:info@cartelectric.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
+                    <a href="mailto:contact@carterelectric.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
                       <Mail className="w-5 h-5 text-sky-400" />
-                      <span>info@cartelectric.com</span>
+                      <span>contact@carterelectric.com</span>
                     </a>
                     <div className="flex items-center gap-3 text-slate-300">
                       <Clock className="w-5 h-5 text-sky-400" />
