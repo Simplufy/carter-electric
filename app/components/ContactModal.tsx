@@ -47,8 +47,13 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
         body: JSON.stringify(formData),
       });
 
+      const result = await response.json();
+
       if (!response.ok) {
-        throw new Error("Failed to submit");
+        console.error("Form submission failed:", result);
+        alert("There was an issue submitting your request. Please try again or call us directly.");
+        setIsSubmitting(false);
+        return;
       }
 
       setIsSubmitted(true);
