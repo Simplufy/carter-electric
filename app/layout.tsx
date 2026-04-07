@@ -111,53 +111,59 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               window.openGHLChat = function() {
-                // Try LCW from window
+                // Method 1: LCW global
                 if (window.LCW && window.LCW.open) {
                   window.LCW.open();
                   return;
                 }
-                // Try from window.lcw
                 if (window.lcw && window.lcw.open) {
                   window.lcw.open();
                   return;
                 }
-                // Try to find and click any button in the widget container
-                var widgetContainer = document.querySelector('[class*="widget"], [class*="chat-widget"]');
-                if (widgetContainer) {
-                  var buttons = widgetContainer.querySelectorAll('button');
-                  for (var i = 0; i < buttons.length; i++) {
-                    if (buttons[i].offsetVisible !== false) {
-                      buttons[i].click();
+                
+                // Method 2: Find element at bottom-right corner (where widget usually lives)
+                var bottomRight = document.elementFromPoint(window.innerWidth - 60, window.innerHeight - 60);
+                if (bottomRight && bottomRight.click) {
+                  bottomRight.click();
+                  return;
+                }
+                
+                // Method 3: Find any element in bottom 100px right 100px of viewport
+                var allElements = document.querySelectorAll('*');
+                for (var i = 0; i < allElements.length; i++) {
+                  var rect = allElements[i].getBoundingClientRect();
+                  if (rect.top > window.innerHeight - 100 && rect.left > window.innerWidth - 100) {
+                    if (allElements[i].click) {
+                      allElements[i].click();
                       return;
                     }
                   }
                 }
-                // Try to click by dispatching click on any likely element
-                var possibleLaunchers = document.querySelectorAll('[class*="launcher"], [class*="button"], [class*="trigger"]');
-                for (var j = 0; j < possibleLaunchers.length; j++) {
-                  var rect = possibleLaunchers[j].getBoundingClientRect();
-                  if (rect.width > 0 && rect.height > 0) {
-                    possibleLaunchers[j].click();
-                    return;
+                
+                // Method 4: Just dispatch click on document and hope it reaches widget
+                document.addEventListener('click', function handler(e) {
+                  var target = e.target;
+                  if (target && target.click) {
+                    document.removeEventListener('click', handler);
                   }
-                }
+                });
               };
-              // Listen for various LCW initialization events
+              
+              // Store LCW when it becomes available
               window.addEventListener('message', function(e) {
-                if (e.data) {
-                  if (e.data.type === 'init' || e.data.type === 'ready') {
-                    window.lcw = e.data.instance || e.data;
+                try {
+                  if (e.data && typeof e.data === 'object') {
+                    if (e.data.type === 'init' || e.data.type === 'ready') {
+                      window.lcw = e.data.instance || e.data;
+                    }
+                    if (e.data.open) window.lcw = e.data;
                   }
-                }
+                } catch(err) {}
               });
-              // Poll for LCW global
+              
+              // Poll for LCW
               (function() {
                 var interval = setInterval(function() {
-                  if (window.LCW) {
-                    clearInterval(interval);
-                    window.lcw = window.LCW;
-                  }
-                  // Also check for any global starting with lc or LCW
                   for (var key in window) {
                     if (key.toLowerCase().includes('lcw') && window[key] && window[key].open) {
                       window.lcw = window[key];
