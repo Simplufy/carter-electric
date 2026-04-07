@@ -111,35 +111,62 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               window.openGHLChat = function() {
-                // Method 1: Try LCW global (most reliable)
-                if (window.lcw && typeof window.lcw.open === 'function') {
+                // Try LCW from window
+                if (window.LCW && window.LCW.open) {
+                  window.LCW.open();
+                  return;
+                }
+                // Try from window.lcw
+                if (window.lcw && window.lcw.open) {
                   window.lcw.open();
                   return;
                 }
-                // Method 2: Try to find and click the widget launcher button
-                var launcher = document.querySelector('[class*="launcher"], .lcw-launcher, [data-testid="chat-launcher"]');
-                if (launcher && launcher.click) {
-                  launcher.click();
-                  return;
+                // Try to find and click any button in the widget container
+                var widgetContainer = document.querySelector('[class*="widget"], [class*="chat-widget"]');
+                if (widgetContainer) {
+                  var buttons = widgetContainer.querySelectorAll('button');
+                  for (var i = 0; i < buttons.length; i++) {
+                    if (buttons[i].offsetVisible !== false) {
+                      buttons[i].click();
+                      return;
+                    }
+                  }
                 }
-                // Method 3: Try postMessage to the widget iframe
-                var widgetFrame = document.querySelector('iframe[src*="leadconnector"], iframe[src*="chat-widget"]');
-                if (widgetFrame && widgetFrame.contentWindow) {
-                  widgetFrame.contentWindow.postMessage({ type: 'open' }, '*');
+                // Try to click by dispatching click on any likely element
+                var possibleLaunchers = document.querySelectorAll('[class*="launcher"], [class*="button"], [class*="trigger"]');
+                for (var j = 0; j < possibleLaunchers.length; j++) {
+                  var rect = possibleLaunchers[j].getBoundingClientRect();
+                  if (rect.width > 0 && rect.height > 0) {
+                    possibleLaunchers[j].click();
+                    return;
+                  }
                 }
               };
+              // Listen for various LCW initialization events
               window.addEventListener('message', function(e) {
-                if (e.data && e.data.type === 'init') {
-                  window.lcw = e.data.instance;
+                if (e.data) {
+                  if (e.data.type === 'init' || e.data.type === 'ready') {
+                    window.lcw = e.data.instance || e.data;
+                  }
                 }
               });
-              // Also try to capture LCW from global
-              var checkLCW = setInterval(function() {
-                if (window.LCW) {
-                  clearInterval(checkLCW);
-                  window.lcw = window.LCW;
-                }
-              }, 1000);
+              // Poll for LCW global
+              (function() {
+                var interval = setInterval(function() {
+                  if (window.LCW) {
+                    clearInterval(interval);
+                    window.lcw = window.LCW;
+                  }
+                  // Also check for any global starting with lc or LCW
+                  for (var key in window) {
+                    if (key.toLowerCase().includes('lcw') && window[key] && window[key].open) {
+                      window.lcw = window[key];
+                      clearInterval(interval);
+                      break;
+                    }
+                  }
+                }, 500);
+              })();
             `,
           }}
         />
