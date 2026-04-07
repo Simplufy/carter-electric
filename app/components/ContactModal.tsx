@@ -39,7 +39,7 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
     setIsSubmitting(true);
     
     try {
-      await fetch("/api/submit-form", {
+      await fetch("/api/submit-form/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
