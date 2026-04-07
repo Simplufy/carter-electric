@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { 
   Zap, 
@@ -50,7 +51,19 @@ export default function PanelUpgradesPage() {
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
 
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-violet-900">
+      <section className="relative py-32 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/IMG_9505.JPG"
+            alt="Panel upgrades and electrical work"
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/50" />
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="flex items-center gap-2 mb-4">

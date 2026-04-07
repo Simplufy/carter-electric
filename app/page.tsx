@@ -339,14 +339,14 @@ export default function Home() {
 
           <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              '/images/IMG_9500.jpg',
-              '/images/IMG_9501.jpg',
-              '/images/IMG_9503.jpg',
-              '/images/IMG_9504.jpg',
-              '/images/IMG_9505.jpg',
-              '/images/IMG_9507.jpg',
-              '/images/IMG_9509.jpg',
-              '/images/IMG_9510.jpg',
+              '/images/IMG_9500.jpeg',
+              '/images/IMG_9501.jpeg',
+              '/images/IMG_9503.jpeg',
+              '/images/IMG_9504.JPG',
+              '/images/IMG_9505.JPG',
+              '/images/IMG_9507.jpeg',
+              '/images/IMG_9509.JPG',
+              '/images/IMG_9510.JPG',
             ].map((img, index) => (
               <StaggerItem key={index}>
                 <div className="relative aspect-square rounded-xl overflow-hidden group">
@@ -355,6 +355,7 @@ export default function Home() {
                     alt={`Electrical work example ${index + 1}`}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    unoptimized
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
                 </div>
