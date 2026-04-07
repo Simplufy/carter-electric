@@ -102,7 +102,7 @@ const whyChooseUs = [
   {
     icon: Users,
     title: "Family Owned",
-    description: "Local family business treating every customer like family. Bringing 15+ years of electrical experience from Illinois to Southwest Florida.",
+    description: "Local family business treating every customer like family. Bringing 30+ years of electrical experience from Illinois to Southwest Florida.",
   },
 ];
 

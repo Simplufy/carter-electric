@@ -18,7 +18,7 @@ export default function SimpleFooter() {
               />
             </div>
             <p className="text-slate-400 text-sm">
-              We've been operating in Florida since 2026, but have ran electrical companies for 15+ years, starting in the Chicagoland area. Licensed, insured, and committed to your safety.
+              We've been operating in Florida since 2026, but have ran electrical companies for 30+ years, starting in the Chicagoland area. Licensed, insured, and committed to your safety.
             </p>
           </div>
           

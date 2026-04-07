@@ -57,7 +57,7 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
               />
             </div>
             <p className="text-slate-400 text-sm mb-4">
-              We've been operating in Florida since 2026, but have ran electrical companies for 15+ years, starting in the Chicagoland area. Licensed, insured, and committed to your safety.
+              We've been operating in Florida since 2026, but have ran electrical companies for 30+ years, starting in the Chicagoland area. Licensed, insured, and committed to your safety.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-sky-500 transition-colors">

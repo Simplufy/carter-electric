@@ -41,7 +41,7 @@ const team = [
   {
     name: "Jeff Carter",
     role: "Founder & Master Electrician",
-    description: "Licensed master electrician who started A&J Electric in Sycamore, Illinois in 2009. After 18 successful years, Jeff brought his expertise to Southwest Florida to combine his passion for quality electrical work with his love of scuba diving.",
+    description: "Licensed master electrician with 37 years of experience who started A&J Electric in Sycamore, Illinois in 2009. After 18 successful years, Jeff brought his expertise to Southwest Florida to combine his passion for quality electrical work with his love of scuba diving.",
   },
   {
     name: "Sarah Carter",
@@ -51,7 +51,7 @@ const team = [
   {
     name: "Mike Rodriguez",
     role: "Lead Electrician",
-    description: "Mike brings 15 years of commercial and residential experience. He specializes in complex installations and loves solving challenging electrical puzzles.",
+    description: "Mike brings 30+ years of commercial and residential experience. He specializes in complex installations and loves solving challenging electrical puzzles.",
   },
   {
     name: "Emily Chen",
