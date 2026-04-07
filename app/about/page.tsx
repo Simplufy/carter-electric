@@ -66,7 +66,6 @@ const milestones = [
   { year: "2015", event: "Achieved Master Electrician certification" },
   { year: "2018", event: "Added EV charger installation services" },
   { year: "2026", event: "Started Carter Electric of Southwest Florida" },
-  { year: "2024", event: "Now serving all of Southwest Florida from Sarasota to Naples" },
 ];
 
 export default function AboutPage() {
