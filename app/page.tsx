@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { 
@@ -124,6 +124,13 @@ const testimonials = [
 
 export default function Home() {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5;
+    }
+  }, []);
 
   return (
     <main className="min-h-screen">
@@ -134,37 +141,38 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Video Background */}
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: 'brightness(0.7)' }}
           poster="/images/hero-poster.jpg"
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
         </video>
         
         {/* Dark Overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/30" />
         
         {/* Centered Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h1 
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]"
-              style={{ textShadow: '0 4px 12px rgba(0,0,0,0.9), 0 2px 4px rgba(0,0,0,0.8)' }}
+              className="text-5xl sm:text-6xl lg:text-8xl font-black text-white mb-8 tracking-tight"
+              style={{ textShadow: '0 6px 20px rgba(0,0,0,0.9), 0 4px 8px rgba(0,0,0,0.8), 0 2px 4px rgba(0,0,0,0.6)' }}
             >
-              Professional Electrical Services for{" "}
-              <span className="text-sky-400">Southwest Florida</span>
+              Southwest Florida's Trusted Local Electric Company
             </h1>
             
             <p 
-              className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-10 max-w-3xl mx-auto"
-              style={{ textShadow: '0 3px 10px rgba(0,0,0,0.9), 0 2px 4px rgba(0,0,0,0.8)' }}
+              className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-12 max-w-4xl mx-auto"
+              style={{ textShadow: '0 4px 12px rgba(0,0,0,0.9), 0 2px 4px rgba(0,0,0,0.8)' }}
             >
               Family-owned electrical contractor serving Sarasota to Naples with expertise and care
             </p>
