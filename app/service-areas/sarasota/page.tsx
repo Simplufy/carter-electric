@@ -86,7 +86,12 @@ const otherCities = [
 ];
 
 export default function SarasotaPage() {
-  const openChat = () => { (window as any).leadConnector?.chatWidget?.openWidget(); };
+  const openChat = () => {
+    const w = window as any;
+    if (w.leadConnector?.chatWidget?.openWidget) {
+      w.leadConnector.chatWidget.openWidget();
+    }
+  };
 
   return (
     <main className="min-h-screen">

@@ -22,7 +22,6 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
-import ContactModal from "./components/ContactModal";
 import Footer from "./components/Footer";
 import AnimatedSection, { AnimatedCard, StaggerContainer, StaggerItem } from "./components/AnimatedSection";
 
