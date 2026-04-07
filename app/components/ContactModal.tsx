@@ -38,26 +38,38 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        address: "",
-        serviceType: "",
-        contactMethod: "call",
-        message: "",
+    try {
+      const response = await fetch("/api/submit-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-      onClose();
-    }, 3000);
+
+      if (!response.ok) {
+        throw new Error("Failed to submit");
+      }
+
+      setIsSubmitted(true);
+      
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          address: "",
+          serviceType: "",
+          contactMethod: "call",
+          message: "",
+        });
+        onClose();
+      }, 3000);
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
