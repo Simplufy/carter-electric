@@ -512,7 +512,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer onOpenContact={() => openChat} />
+      <Footer onOpenContact={openChat} />
     </main>
   );
 }

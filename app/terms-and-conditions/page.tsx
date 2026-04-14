@@ -28,7 +28,7 @@ export default function TermsAndConditions() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8 text-slate-600">
             <p>
-              By accessing our services or submitting a contact form, you agree to the following terms and conditions.
+              By accessing our services or submitting your details through our chat widget, you agree to the following terms and conditions.
             </p>
 
             <div>
