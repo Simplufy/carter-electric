@@ -33,10 +33,10 @@ export default function PrivacyPolicy() {
 
             <div>
               <h2 className="text-2xl font-bold text-slate-900 mb-4">1. Information We Collect</h2>
-              <p className="mb-4">We collect information you provide directly to us, including:</p>
+              <p className="mb-4">We collect information submitted through our GoHighLevel chat widget, including:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Contact Information:</strong> Name, email address, and phone number.</li>
-                <li><strong>Project Details:</strong> Address and specific electrical needs provided via quote or consultation requests.</li>
+                <li><strong>Project Details:</strong> Address and specific electrical needs shared during chat or consultation requests.</li>
               </ul>
             </div>
 

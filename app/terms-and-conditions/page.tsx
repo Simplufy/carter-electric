@@ -41,7 +41,7 @@ export default function TermsAndConditions() {
             <div>
               <h2 className="text-2xl font-bold text-slate-900 mb-4">2. Consent to Communication</h2>
               <p>
-                By providing your phone number and email, you grant Carter Electric Florida express written consent to contact you regarding:
+                By sharing your details through our GoHighLevel chat widget, you grant Carter Electric Florida express written consent to contact you regarding:
               </p>
               <ul className="list-disc pl-6 mt-4 space-y-2">
                 <li>Requested quotes and estimates.</li>
