@@ -53,9 +53,9 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="relative w-40 h-20 sm:w-48 sm:h-24">
+            <div className="relative w-48 h-20 sm:w-60 sm:h-24 bg-white rounded-xl shadow-sm p-1">
               <Image
-                src="/images/carter-electric-logo.png"
+                src="/images/carter-electric-logo-florida.jpg"
                 alt="Carter Electric Logo"
                 fill
                 className="object-contain"
@@ -67,7 +67,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link href="/" className={`nav-link font-medium transition-colors ${
-              scrolled ? 'text-slate-700 hover:text-sky-600' : 'text-white hover:text-sky-300'
+              scrolled ? 'text-slate-700 hover:text-orange-700' : 'text-white hover:text-amber-300'
             }`}>
               Home
             </Link>
@@ -75,7 +75,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
             {/* Services Dropdown */}
             <div className="dropdown relative">
               <button className={`nav-link flex items-center space-x-1 font-medium transition-colors ${
-                scrolled ? 'text-slate-700 hover:text-sky-600' : 'text-white hover:text-sky-300'
+                scrolled ? 'text-slate-700 hover:text-orange-700' : 'text-white hover:text-amber-300'
               }`}>
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4" />
@@ -85,7 +85,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
                   <Link
                     key={service.slug}
                     href={`/services/${service.slug}`}
-                    className="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-sky-600 transition-colors"
+                    className="block px-4 py-2 text-sm text-slate-600 hover:bg-orange-50 hover:text-orange-700 transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -96,7 +96,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
             {/* Locations Dropdown */}
             <div className="dropdown relative">
               <button className={`nav-link flex items-center space-x-1 font-medium transition-colors ${
-                scrolled ? 'text-slate-700 hover:text-sky-600' : 'text-white hover:text-sky-300'
+                scrolled ? 'text-slate-700 hover:text-orange-700' : 'text-white hover:text-amber-300'
               }`}>
                 <span>Where We Service</span>
                 <ChevronDown className="w-4 h-4" />
@@ -106,7 +106,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
                   <Link
                     key={area.slug}
                     href={`/service-areas/${area.slug}`}
-                    className="block px-4 py-2 text-sm text-slate-600 hover:bg-sky-50 hover:text-sky-600 transition-colors"
+                    className="block px-4 py-2 text-sm text-slate-600 hover:bg-orange-50 hover:text-orange-700 transition-colors"
                   >
                     {area.name}
                   </Link>
@@ -115,7 +115,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
             </div>
 
             <Link href="/about" className={`nav-link font-medium transition-colors ${
-              scrolled ? 'text-slate-700 hover:text-sky-600' : 'text-white hover:text-sky-300'
+              scrolled ? 'text-slate-700 hover:text-orange-700' : 'text-white hover:text-amber-300'
             }`}>
               About Us
             </Link>
@@ -124,14 +124,14 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <a href="tel:+19413366811" className={`flex items-center space-x-2 transition-colors ${
-              scrolled ? 'text-slate-600 hover:text-sky-600' : 'text-white hover:text-sky-300'
+              scrolled ? 'text-slate-600 hover:text-orange-700' : 'text-white hover:text-amber-300'
             }`}>
               <Phone className="w-4 h-4" />
               <span className="font-medium">+1 941-336-6811</span>
             </a>
             <button
               onClick={() => (window as any).leadConnector?.chatWidget?.openWidget()}
-              className="bg-sky-500 hover:bg-sky-600 text-white px-6 py-2.5 rounded-full font-medium transition-all hover:shadow-lg hover:shadow-sky-500/25"
+              className="bg-orange-500 hover:bg-orange-700 text-white px-6 py-2.5 rounded-full font-medium transition-all hover:shadow-lg hover:shadow-orange-500/25"
             >
               Contact Now
             </button>
@@ -141,7 +141,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className={`lg:hidden p-2 transition-colors ${
-              scrolled ? 'text-slate-600 hover:text-sky-600' : 'text-white hover:text-sky-300'
+              scrolled ? 'text-slate-600 hover:text-orange-700' : 'text-white hover:text-amber-300'
             }`}
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -154,7 +154,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
             <div className="flex flex-col space-y-4 px-4">
               <Link
                 href="/"
-                className="text-slate-700 hover:text-sky-600 font-medium py-2"
+                className="text-slate-700 hover:text-orange-700 font-medium py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
@@ -163,7 +163,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
               <div>
                 <button
                   onClick={() => setMobileServicesDropdownOpen(!mobileServicesDropdownOpen)}
-                  className="flex items-center justify-between w-full text-slate-700 hover:text-sky-600 font-medium py-2"
+                  className="flex items-center justify-between w-full text-slate-700 hover:text-orange-700 font-medium py-2"
                 >
                   <span>Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${mobileServicesDropdownOpen ? 'rotate-180' : ''}`} />
@@ -174,7 +174,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
                       <Link
                         key={service.slug}
                         href={`/services/${service.slug}`}
-                        className="block text-sm text-slate-600 hover:text-sky-600 py-1"
+                        className="block text-sm text-slate-600 hover:text-orange-700 py-1"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {service.name}
@@ -187,7 +187,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
               <div>
                 <button
                   onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
-                  className="flex items-center justify-between w-full text-slate-700 hover:text-sky-600 font-medium py-2"
+                  className="flex items-center justify-between w-full text-slate-700 hover:text-orange-700 font-medium py-2"
                 >
                   <span>Where We Service</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${mobileDropdownOpen ? 'rotate-180' : ''}`} />
@@ -198,7 +198,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
                       <Link
                         key={area.slug}
                         href={`/service-areas/${area.slug}`}
-                        className="block text-sm text-slate-600 hover:text-sky-600 py-1"
+                        className="block text-sm text-slate-600 hover:text-orange-700 py-1"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {area.name}
@@ -210,7 +210,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
 
               <Link
                 href="/about"
-                className="text-slate-700 hover:text-sky-600 font-medium py-2"
+                className="text-slate-700 hover:text-orange-700 font-medium py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About Us
@@ -218,7 +218,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
 
               <a
                 href="tel:+19413366811"
-                className="flex items-center space-x-2 text-slate-600 hover:text-sky-600 py-2"
+                className="flex items-center space-x-2 text-slate-600 hover:text-orange-700 py-2"
               >
                 <Phone className="w-4 h-4" />
                 <span className="font-medium">+1 941-336-6811</span>
@@ -229,7 +229,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
                   (window as any).leadConnector?.chatWidget?.openWidget();
                   setMobileMenuOpen(false);
                 }}
-                className="bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-full font-medium transition-all w-full"
+                className="bg-orange-500 hover:bg-orange-700 text-white px-6 py-3 rounded-full font-medium transition-all w-full"
               >
                 Contact Now
               </button>
@@ -240,3 +240,4 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
     </nav>
   );
 }
+

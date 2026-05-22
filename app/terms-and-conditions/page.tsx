@@ -18,7 +18,7 @@ export default function TermsAndConditions() {
       
       <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <FileText className="w-16 h-16 text-sky-400 mx-auto mb-6" />
+          <FileText className="w-16 h-16 text-amber-400 mx-auto mb-6" />
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Terms and Conditions</h1>
           <p className="text-slate-300 text-lg">Last Updated: April 7, 2026</p>
         </div>
@@ -54,22 +54,22 @@ export default function TermsAndConditions() {
               <h2 className="text-2xl font-bold text-slate-900 mb-4">3. SMS Messaging Program</h2>
               
               <div className="space-y-4">
-                <div className="bg-sky-50 p-4 rounded-xl">
+                <div className="bg-orange-50 p-4 rounded-xl">
                   <p className="font-medium text-slate-900 mb-1">Program Description</p>
                   <p className="text-slate-600">Our SMS program is used to provide project updates and scheduling information.</p>
                 </div>
                 
-                <div className="bg-sky-50 p-4 rounded-xl">
+                <div className="bg-orange-50 p-4 rounded-xl">
                   <p className="font-medium text-slate-900 mb-1">Frequency</p>
                   <p className="text-slate-600">Message frequency varies based on your project status.</p>
                 </div>
                 
-                <div className="bg-sky-50 p-4 rounded-xl">
+                <div className="bg-orange-50 p-4 rounded-xl">
                   <p className="font-medium text-slate-900 mb-1">Opt-Out</p>
                   <p className="text-slate-600">You can cancel the SMS service at any time. Just text STOP to our number. After you send the SMS message STOP to us, we will send you an SMS message to confirm that you have been unsubscribed.</p>
                 </div>
                 
-                <div className="bg-sky-50 p-4 rounded-xl">
+                <div className="bg-orange-50 p-4 rounded-xl">
                   <p className="font-medium text-slate-900 mb-1">Help</p>
                   <p className="text-slate-600">If you are experiencing issues with the messaging program, you can reply with the keyword HELP for more assistance, or reach out directly to contact@carterelectricflorida.com.</p>
                 </div>
@@ -93,11 +93,11 @@ export default function TermsAndConditions() {
               <h2 className="text-2xl font-bold text-slate-900 mb-4">5. Contact Us</h2>
               <p>If you have questions about these Terms, please contact us at:</p>
               <div className="mt-4 flex flex-col gap-2">
-                <a href="mailto:contact@carterelectricflorida.com" className="flex items-center gap-2 text-sky-500 hover:text-sky-600">
+                <a href="mailto:contact@carterelectricflorida.com" className="flex items-center gap-2 text-orange-500 hover:text-orange-700">
                   <Mail className="w-4 h-4" />
                   <span>contact@carterelectricflorida.com</span>
                 </a>
-                <a href="tel:+19413366811" className="flex items-center gap-2 text-sky-500 hover:text-sky-600">
+                <a href="tel:+19413366811" className="flex items-center gap-2 text-orange-500 hover:text-orange-700">
                   <Phone className="w-4 h-4" />
                   <span>+1 941-336-6811</span>
                 </a>
@@ -111,3 +111,4 @@ export default function TermsAndConditions() {
     </main>
   );
 }
+

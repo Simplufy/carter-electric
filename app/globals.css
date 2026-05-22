@@ -3,8 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #1e293b;
-  --primary-blue: #0ea5e9;
-  --primary-green: #10b981;
+  --primary-orange: #f97316;
+  --accent-yellow: #facc15;
   --light-gray: #f8fafc;
   --text-muted: #64748b;
 }
@@ -12,8 +12,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary-blue: var(--primary-blue);
-  --color-primary-green: var(--primary-green);
+  --color-primary-orange: var(--primary-orange);
+  --color-accent-yellow: var(--accent-yellow);
   --color-light-gray: var(--light-gray);
   --color-text-muted: var(--text-muted);
 }
@@ -94,7 +94,7 @@ body {
 .delay-500 { animation-delay: 500ms; }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+  background: linear-gradient(135deg, var(--primary-orange), var(--accent-yellow));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -124,7 +124,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--primary-blue);
+  background: var(--primary-orange);
   transition: width 0.3s ease;
 }
 
@@ -146,7 +146,7 @@ body {
 }
 
 .hero-bg {
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0ea5e9 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #111827 50%, #f97316 100%);
 }
 
 @media (max-width: 768px) {

@@ -48,9 +48,9 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="relative w-48 h-24 mb-4">
+            <div className="relative w-56 h-32 mb-4 bg-white rounded-xl p-2">
               <Image
-                src="/images/carter-electric-logo.png"
+                src="/images/carter-electric-logo-florida.jpg"
                 alt="Carter Electric Logo"
                 fill
                 className="object-contain"
@@ -60,10 +60,10 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
               We've been operating in Florida since 2026, but have ran electrical companies for 30+ years, starting in the Chicagoland area. Licensed, insured, and committed to your safety.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-sky-500 transition-colors">
+              <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
                 <FacebookIcon />
               </a>
-              <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-sky-500 transition-colors">
+              <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
                 <InstagramIcon />
               </a>
             </div>
@@ -77,7 +77,7 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
                 <li key={service}>
                   <button
                     onClick={() => (window as any).leadConnector?.chatWidget?.openWidget()}
-                    className="text-slate-400 hover:text-sky-400 transition-colors text-sm"
+                    className="text-slate-400 hover:text-amber-400 transition-colors text-sm"
                   >
                     {service}
                   </button>
@@ -94,7 +94,7 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
                 <li key={area.slug}>
                   <Link
                     href={`/service-areas/${area.slug}`}
-                    className="text-slate-400 hover:text-sky-400 transition-colors text-sm"
+                    className="text-slate-400 hover:text-amber-400 transition-colors text-sm"
                   >
                     {area.name}
                   </Link>
@@ -108,32 +108,32 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
             <h4 className="font-semibold text-lg mb-4">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-sky-400 mt-0.5" />
+                <Phone className="w-5 h-5 text-amber-400 mt-0.5" />
                 <div>
                   <p className="font-medium">Phone</p>
-                  <a href="tel:+19413366811" className="text-slate-400 hover:text-sky-400 transition-colors text-sm">
+                  <a href="tel:+19413366811" className="text-slate-400 hover:text-amber-400 transition-colors text-sm">
                     (941) 555-0100
                   </a>
                 </div>
               </li>
               <li className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-sky-400 mt-0.5" />
+                <Mail className="w-5 h-5 text-amber-400 mt-0.5" />
                 <div>
                   <p className="font-medium">Email</p>
-                  <a href="mailto:contact@carterelectricflorida.com" className="text-slate-400 hover:text-sky-400 transition-colors text-sm">
+                  <a href="mailto:contact@carterelectricflorida.com" className="text-slate-400 hover:text-amber-400 transition-colors text-sm">
                     contact@carterelectricflorida.com
                   </a>
                 </div>
               </li>
               <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-sky-400 mt-0.5" />
+                <MapPin className="w-5 h-5 text-amber-400 mt-0.5" />
                 <div>
                   <p className="font-medium">Service Area</p>
                   <p className="text-slate-400 text-sm">Southwest Florida<br />Sarasota to Naples</p>
                 </div>
               </li>
               <li className="flex items-start space-x-3">
-                <Clock className="w-5 h-5 text-sky-400 mt-0.5" />
+                <Clock className="w-5 h-5 text-amber-400 mt-0.5" />
                 <div>
                   <p className="font-medium">Hours</p>
                   <p className="text-slate-400 text-sm">Mon-Fri: 7AM-6PM<br />Sat: 8AM-4PM<br />24/7 Emergency</p>
@@ -149,7 +149,7 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
             © {new Date().getFullYear()} Carter Electric of Southwest Florida. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
-            <Link href="/about" className="text-slate-500 hover:text-sky-400 transition-colors">
+            <Link href="/about" className="text-slate-500 hover:text-amber-400 transition-colors">
               About Us
             </Link>
             <button 
@@ -157,14 +157,14 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
                 const lcw = (window as any).lcw;
                 if (lcw?.open) lcw.open();
               }} 
-              className="text-slate-500 hover:text-sky-400 transition-colors"
+              className="text-slate-500 hover:text-amber-400 transition-colors"
             >
               Contact
             </button>
-            <Link href="/privacy-policy" className="text-slate-500 hover:text-sky-400 transition-colors">
+            <Link href="/privacy-policy" className="text-slate-500 hover:text-amber-400 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms-and-conditions" className="text-slate-500 hover:text-sky-400 transition-colors">
+            <Link href="/terms-and-conditions" className="text-slate-500 hover:text-amber-400 transition-colors">
               Terms & Conditions
             </Link>
           </div>
@@ -173,3 +173,4 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
     </footer>
   );
 }
+

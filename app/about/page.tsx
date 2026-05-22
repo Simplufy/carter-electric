@@ -107,7 +107,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
-              <span className="text-sky-500 font-semibold tracking-wider uppercase text-sm">Our Story</span>
+              <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">Our Story</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">
                 18 Years of Excellence, Now in Paradise
               </h2>
@@ -132,9 +132,9 @@ export default function AboutPage() {
                 <div className="space-y-6">
                   {milestones.map((milestone, index) => (
                     <div key={milestone.year} className="flex gap-4">
-                      <div className="flex-shrink-0 w-16 text-sky-500 font-bold">{milestone.year}</div>
+                      <div className="flex-shrink-0 w-16 text-orange-500 font-bold">{milestone.year}</div>
                       <div className="flex-grow pb-6 border-l-2 border-slate-200 pl-4 relative">
-                        <div className="absolute -left-1.5 top-1.5 w-3 h-3 bg-sky-500 rounded-full" />
+                        <div className="absolute -left-1.5 top-1.5 w-3 h-3 bg-orange-500 rounded-full" />
                         <p className="text-slate-700">{milestone.event}</p>
                       </div>
                     </div>
@@ -152,7 +152,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <AnimatedCard key={stat.label} delay={index * 0.1} className="text-center">
-                <div className="text-4xl sm:text-5xl font-bold text-sky-500 mb-2">{stat.value}</div>
+                <div className="text-4xl sm:text-5xl font-bold text-orange-500 mb-2">{stat.value}</div>
                 <div className="text-slate-600 font-medium">{stat.label}</div>
               </AnimatedCard>
             ))}
@@ -164,7 +164,7 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-sky-500 font-semibold tracking-wider uppercase text-sm">Our Values</span>
+            <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">Our Values</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
               What We Stand For
             </h2>
@@ -177,8 +177,8 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <AnimatedCard key={value.title} delay={index * 0.1}>
                 <div className="bg-slate-50 rounded-2xl p-8 h-full">
-                  <div className="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-6">
-                    <value.icon className="w-7 h-7 text-sky-500" />
+                  <div className="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+                    <value.icon className="w-7 h-7 text-orange-500" />
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{value.title}</h3>
                   <p className="text-slate-600 leading-relaxed">{value.description}</p>
@@ -190,11 +190,11 @@ export default function AboutPage() {
       </section>
 
       {/* Why Local Matters */}
-      <section className="py-20 bg-sky-50">
+      <section className="py-20 bg-orange-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
-              <span className="text-sky-500 font-semibold tracking-wider uppercase text-sm">Local Expertise</span>
+              <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">Local Expertise</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">
                 We Know Southwest Florida
               </h2>
@@ -213,7 +213,7 @@ export default function AboutPage() {
               <div className="mt-8 flex flex-wrap gap-3">
                 {['Sarasota', 'Venice', 'Englewood', 'Port Charlotte', 'Punta Gorda', 'Cape Coral', 'Fort Myers', 'Bonita Springs', 'Naples', 'Marco Island'].map((city) => (
                   <span key={city} className="inline-flex items-center gap-1 bg-white px-3 py-1 rounded-full text-sm text-slate-700 shadow-sm">
-                    <MapPin className="w-3 h-3 text-sky-500" />
+                    <MapPin className="w-3 h-3 text-orange-500" />
                     {city}
                   </span>
                 ))}
@@ -233,8 +233,8 @@ export default function AboutPage() {
                   "Working with Carter Electric was a breath of fresh air. They treated our home like it was their own, explained everything clearly, and the work was perfect. It's rare to find this level of professionalism these days."
                 </blockquote>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-sky-100 rounded-full flex items-center justify-center">
-                    <span className="font-bold text-sky-600">JD</span>
+                  <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                    <span className="font-bold text-orange-700">JD</span>
                   </div>
                   <div>
                     <div className="font-semibold text-slate-900">James D.</div>
@@ -259,7 +259,7 @@ export default function AboutPage() {
             </p>
             <button
               onClick={openChat}
-              className="inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
+              className="inline-flex items-center justify-center space-x-2 bg-orange-500 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
             >
               <span>Get Your Free Quote</span>
             </button>
@@ -271,3 +271,4 @@ export default function AboutPage() {
     </main>
   );
 }
+

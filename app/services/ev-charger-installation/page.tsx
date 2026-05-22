@@ -67,8 +67,8 @@ export default function EVChargerPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="flex items-center gap-2 mb-4">
-              <Car className="w-6 h-6 text-sky-400" />
-              <span className="text-sky-400 font-medium">Our Services</span>
+              <Car className="w-6 h-6 text-amber-400" />
+              <span className="text-amber-400 font-medium">Our Services</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               EV Charger Installation
@@ -125,28 +125,28 @@ export default function EVChargerPage() {
 
                   <div className="space-y-6 mb-8">
                     <div className="flex gap-4">
-                      <div className="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
+                      <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
                       <div>
                         <h4 className="font-bold text-slate-900">Home Assessment</h4>
                         <p className="text-sm">We evaluate your electrical panel and determine the best installation location.</p>
                       </div>
                     </div>
                     <div className="flex gap-4">
-                      <div className="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
+                      <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
                       <div>
                         <h4 className="font-bold text-slate-900">Load Calculation</h4>
                         <p className="text-sm">We ensure your electrical system can handle the EV charger load safely.</p>
                       </div>
                     </div>
                     <div className="flex gap-4">
-                      <div className="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
+                      <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
                       <div>
                         <h4 className="font-bold text-slate-900">Permit & Installation</h4>
                         <p className="text-sm">We handle all permits and install your charger to code.</p>
                       </div>
                     </div>
                     <div className="flex gap-4">
-                      <div className="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>
+                      <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>
                       <div>
                         <h4 className="font-bold text-slate-900">Testing & Setup</h4>
                         <p className="text-sm">We test everything and show you how to use your new charger.</p>
@@ -161,7 +161,7 @@ export default function EVChargerPage() {
                   <ul className="space-y-3 mb-8">
                     {benefits.map((benefit, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -170,7 +170,7 @@ export default function EVChargerPage() {
 
                 <button
                   onClick={openChat}
-                  className="mt-8 inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
+                  className="mt-8 inline-flex items-center justify-center space-x-2 bg-orange-500 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
                 >
                   <span>Get Your Free EV Charger Quote</span>
                   <ArrowRight className="w-5 h-5" />
@@ -188,26 +188,26 @@ export default function EVChargerPage() {
                   
                   <div className="space-y-4 mb-6">
                     <a href="tel:+19413366811" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
-                      <Phone className="w-5 h-5 text-sky-400" />
+                      <Phone className="w-5 h-5 text-amber-400" />
                       <span>(941) 555-0100</span>
                     </a>
                     <a href="mailto:contact@carterelectric.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
-                      <Mail className="w-5 h-5 text-sky-400" />
+                      <Mail className="w-5 h-5 text-amber-400" />
                       <span>contact@carterelectric.com</span>
                     </a>
                     <div className="flex items-center gap-3 text-slate-300">
-                      <Clock className="w-5 h-5 text-sky-400" />
+                      <Clock className="w-5 h-5 text-amber-400" />
                       <span>Mon-Fri: 7AM-6PM</span>
                     </div>
                     <div className="flex items-center gap-3 text-slate-300">
-                      <MapPin className="w-5 h-5 text-sky-400" />
+                      <MapPin className="w-5 h-5 text-amber-400" />
                       <span>Sarasota to Naples</span>
                     </div>
                   </div>
 
                   <button
                     onClick={openChat}
-                    className="w-full bg-sky-500 hover:bg-sky-600 text-white py-3 rounded-full font-semibold transition-all"
+                    className="w-full bg-orange-500 hover:bg-orange-700 text-white py-3 rounded-full font-semibold transition-all"
                   >
                     Request a Quote
                   </button>
@@ -221,17 +221,17 @@ export default function EVChargerPage() {
                       <Link
                         key={service.slug}
                         href={`/services/${service.slug}`}
-                        className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-sky-50 transition-colors group"
+                        className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors group"
                       >
-                        <service.icon className="w-5 h-5 text-sky-500" />
-                        <span className="text-slate-700 group-hover:text-sky-600">{service.name}</span>
+                        <service.icon className="w-5 h-5 text-orange-500" />
+                        <span className="text-slate-700 group-hover:text-orange-700">{service.name}</span>
                       </Link>
                     ))}
                   </div>
                 </div>
 
                 {/* Trust Badge */}
-                <div className="mt-6 bg-sky-500 rounded-2xl p-6 text-white">
+                <div className="mt-6 bg-orange-500 rounded-2xl p-6 text-white">
                   <div className="flex items-center gap-2 mb-2">
                     <Shield className="w-5 h-5" />
                     <span className="font-bold">Licensed & Insured</span>
@@ -248,4 +248,5 @@ export default function EVChargerPage() {
     </main>
   );
 }
+
 

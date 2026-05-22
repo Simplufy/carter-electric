@@ -9,9 +9,9 @@ export default function SimpleFooter() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <div className="relative w-40 h-24 mb-4">
+            <div className="relative w-56 h-32 mb-4 bg-white rounded-xl p-2">
               <Image
-                src="/images/carter-electric-logo.png"
+                src="/images/carter-electric-logo-florida.jpg"
                 alt="Carter Electric Logo"
                 fill
                 className="object-contain"
@@ -31,9 +31,9 @@ export default function SimpleFooter() {
           <div>
             <h4 className="font-bold text-lg mb-4">Quick Links</h4>
             <div className="flex flex-col space-y-2 text-sm">
-              <Link href="/about" className="text-slate-400 hover:text-sky-400">About Us</Link>
-              <Link href="/privacy-policy" className="text-slate-400 hover:text-sky-400">Privacy Policy</Link>
-              <Link href="/terms-and-conditions" className="text-slate-400 hover:text-sky-400">Terms & Conditions</Link>
+              <Link href="/about" className="text-slate-400 hover:text-amber-400">About Us</Link>
+              <Link href="/privacy-policy" className="text-slate-400 hover:text-amber-400">Privacy Policy</Link>
+              <Link href="/terms-and-conditions" className="text-slate-400 hover:text-amber-400">Terms & Conditions</Link>
             </div>
           </div>
         </div>
@@ -47,3 +47,4 @@ export default function SimpleFooter() {
     </footer>
   );
 }
+

@@ -115,8 +115,8 @@ export default function SarasotaPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="flex items-center gap-2 mb-4">
-              <MapPin className="w-5 h-5 text-sky-400" />
-              <span className="text-sky-400 font-medium">{city.county}</span>
+              <MapPin className="w-5 h-5 text-amber-400" />
+              <span className="text-amber-400 font-medium">{city.county}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               Electrician in {city.name}, FL
@@ -125,7 +125,7 @@ export default function SarasotaPage() {
               {city.description}. Carter Electric has been Sarasota's trusted electrical contractor since 2026, serving homes and businesses from Siesta Key to the Rosemary District.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button onClick={openChat} className="inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl">
+              <button onClick={openChat} className="inline-flex items-center justify-center space-x-2 bg-orange-500 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl">
                 <span>Get Free Quote</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -143,7 +143,7 @@ export default function SarasotaPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
             <AnimatedSection className="lg:col-span-2">
-              <span className="text-sky-500 font-semibold tracking-wider uppercase text-sm">About {city.name}</span>
+              <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">About {city.name}</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">
                 Electrical Services in {city.name}, Florida
               </h2>
@@ -205,7 +205,7 @@ export default function SarasotaPage() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-sky-500 font-semibold tracking-wider uppercase text-sm">Our Services</span>
+            <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">Our Services</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
               Electrical Services We Offer in {city.name}
             </h2>
@@ -218,8 +218,8 @@ export default function SarasotaPage() {
             {services.map((service, index) => (
               <StaggerItem key={service.title}>
                 <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow h-full">
-                  <div className="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-6">
-                    <service.icon className="w-7 h-7 text-sky-500" />
+                  <div className="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+                    <service.icon className="w-7 h-7 text-orange-500" />
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
                   <p className="text-slate-600 leading-relaxed">{service.description}</p>
@@ -234,7 +234,7 @@ export default function SarasotaPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-sky-500 font-semibold tracking-wider uppercase text-sm">Why {city.name} Chooses Us</span>
+            <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">Why {city.name} Chooses Us</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
               Your Local {city.name} Electrician
             </h2>
@@ -248,8 +248,8 @@ export default function SarasotaPage() {
               { icon: CheckCircle2, title: "Upfront Pricing", desc: "No hidden fees - transparent quotes guaranteed" },
             ].map((item, index) => (
               <AnimatedSection key={item.title} delay={index * 0.1} className="text-center">
-                <div className="w-16 h-16 bg-sky-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-8 h-8 text-sky-500" />
+                <div className="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <item.icon className="w-8 h-8 text-orange-500" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
                 <p className="text-slate-600 text-sm">{item.desc}</p>
@@ -260,7 +260,7 @@ export default function SarasotaPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-sky-500">
+      <section className="py-20 bg-orange-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -272,7 +272,7 @@ export default function SarasotaPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={openChat}
-                className="inline-flex items-center justify-center space-x-2 bg-white text-sky-600 hover:bg-slate-100 px-8 py-4 rounded-full font-semibold text-lg transition-all"
+                className="inline-flex items-center justify-center space-x-2 bg-white text-orange-700 hover:bg-slate-100 px-8 py-4 rounded-full font-semibold text-lg transition-all"
               >
                 <span>Schedule Service</span>
                 <ArrowRight className="w-5 h-5" />
@@ -298,7 +298,7 @@ export default function SarasotaPage() {
               <Link
                 key={city.slug}
                 href={`/service-areas/${city.slug}`}
-                className="bg-white hover:bg-sky-50 px-6 py-3 rounded-full text-slate-700 hover:text-sky-600 transition-colors shadow-sm"
+                className="bg-white hover:bg-orange-50 px-6 py-3 rounded-full text-slate-700 hover:text-orange-700 transition-colors shadow-sm"
               >
                 {city.name}
               </Link>
@@ -311,3 +311,4 @@ export default function SarasotaPage() {
     </main>
   );
 }
+

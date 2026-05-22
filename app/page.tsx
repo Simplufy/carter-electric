@@ -30,42 +30,42 @@ const services = [
     icon: Lightbulb,
     title: "Indoor Lighting",
     description: "Transform your home with custom indoor lighting solutions. From recessed lighting to statement fixtures, we bring your vision to life.",
-    color: "from-sky-400 to-sky-500",
+    color: "from-amber-400 to-orange-600",
     image: "/images/service-indoor.jpg",
   },
   {
     icon: HomeIcon,
     title: "Outdoor Lighting",
     description: "Enhance curb appeal and security with professional landscape lighting, pathway lights, and architectural illumination.",
-    color: "from-sky-400 to-sky-500",
+    color: "from-amber-400 to-orange-600",
     image: "/images/service-outdoor.jpg",
   },
   {
     icon: Car,
     title: "EV Charger Installation",
     description: "Future-proof your home with professional EV charger installation. Compatible with all major electric vehicle brands.",
-    color: "from-sky-400 to-sky-500",
+    color: "from-amber-400 to-orange-600",
     image: "/images/service-ev.jpg",
   },
   {
     icon: Wrench,
     title: "Electrical Repairs",
     description: "Fast, reliable troubleshooting and repairs for any electrical issue. 24/7 emergency service available for urgent problems.",
-    color: "from-sky-400 to-sky-500",
+    color: "from-amber-400 to-orange-600",
     image: "/images/service-repairs.jpg",
   },
   {
     icon: Zap,
     title: "Panel Upgrades",
     description: "Modernize your electrical system with panel upgrades and rewiring. Ensure your home can handle today's power demands.",
-    color: "from-sky-400 to-sky-500",
+    color: "from-amber-400 to-orange-600",
     image: "/images/service-panel.jpg",
   },
   {
     icon: Building2,
     title: "Commercial Services",
     description: "Specialized electrical services for condos, apartments, and commercial properties. Bulk pricing and maintenance plans available.",
-    color: "from-sky-400 to-sky-500",
+    color: "from-amber-400 to-orange-600",
     image: "/images/service-commercial.jpg",
   },
 ];
@@ -204,10 +204,10 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {/* Logo Icon */}
-            <div className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 pt-8 sm:pt-0">
+            {/* Logo */}
+            <div className="relative w-72 h-44 sm:w-[30rem] sm:h-64 mx-auto mb-4 bg-white/95 rounded-2xl p-3 shadow-2xl">
               <Image
-                src="/images/logo-icon.png"
+                src="/images/carter-electric-logo-florida.jpg"
                 alt="Carter Electric"
                 fill
                 className="object-contain"
@@ -230,14 +230,14 @@ export default function Home() {
               style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}
             >
               <span>Family-owned electrical contractor operating in </span>
-              <span className="text-sky-300 min-w-28">{displayedText}</span>
+              <span className="text-amber-300 min-w-28">{displayedText}</span>
               <span className="animate-pulse">|</span>
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={openChat}
-                className="inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-10 py-5 rounded-full font-bold text-xl transition-all hover:shadow-2xl hover:shadow-sky-500/40 drop-shadow-lg"
+                className="inline-flex items-center justify-center space-x-2 bg-orange-500 hover:bg-orange-700 text-white px-10 py-5 rounded-full font-bold text-xl transition-all hover:shadow-2xl hover:shadow-orange-500/40 drop-shadow-lg"
                 style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}
               >
                 <span>Get Free Quote</span>
@@ -287,7 +287,7 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-sky-500 font-semibold tracking-wider uppercase text-sm">Our Services</span>
+            <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">Our Services</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
               Complete Electrical Solutions
             </h2>
@@ -309,14 +309,14 @@ export default function Home() {
                 >
                   <div className="absolute inset-0 bg-slate-900/70 group-hover:bg-slate-900/60 transition-colors duration-300" />
                   <div className="relative z-10 p-8 h-full flex flex-col">
-                    <div className={`card-icon w-14 h-14 rounded-xl bg-gradient-to-br from-sky-400 to-sky-500 flex items-center justify-center mb-6 transition-transform duration-300`}>
+                    <div className={`card-icon w-14 h-14 rounded-xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center mb-6 transition-transform duration-300`}>
                       <service.icon className="w-7 h-7 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                     <p className="text-white/80 leading-relaxed flex-grow">{service.description}</p>
                     <button
                       onClick={openChat}
-                      className="mt-6 inline-flex items-center text-sky-400 hover:text-sky-300 font-semibold transition-colors"
+                      className="mt-6 inline-flex items-center text-amber-400 hover:text-amber-300 font-semibold transition-colors"
                     >
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4 ml-2" />
@@ -333,7 +333,7 @@ export default function Home() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-sky-500 font-semibold tracking-wider uppercase text-sm">Why Choose Us</span>
+            <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">Why Choose Us</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
               The Carter Electric Difference
             </h2>
@@ -346,8 +346,8 @@ export default function Home() {
             {whyChooseUs.map((item, index) => (
               <AnimatedCard key={item.title} delay={index * 0.1}>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-sky-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="w-8 h-8 text-sky-500" />
+                  <div className="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="w-8 h-8 text-orange-500" />
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
                   <p className="text-slate-600 text-sm">{item.description}</p>
@@ -362,7 +362,7 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-sky-500 font-semibold tracking-wider uppercase text-sm">Service Areas</span>
+            <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">Service Areas</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
               Serving All of Southwest Florida
             </h2>
@@ -376,9 +376,9 @@ export default function Home() {
               <StaggerItem key={area.slug}>
                 <Link
                   href={`/service-areas/${area.slug}`}
-                  className="group block bg-slate-50 hover:bg-sky-50 rounded-xl p-6 transition-all hover:shadow-lg"
+                  className="group block bg-slate-50 hover:bg-orange-50 rounded-xl p-6 transition-all hover:shadow-lg"
                 >
-                  <h3 className="font-bold text-slate-900 group-hover:text-sky-600 transition-colors mb-1">
+                  <h3 className="font-bold text-slate-900 group-hover:text-orange-700 transition-colors mb-1">
                     {area.name}
                   </h3>
                   <p className="text-sm text-slate-500 group-hover:text-slate-600">
@@ -395,7 +395,7 @@ export default function Home() {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-sky-500 font-semibold tracking-wider uppercase text-sm">Our Work</span>
+            <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">Our Work</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
               Quality Electrical Work
             </h2>
@@ -436,7 +436,7 @@ export default function Home() {
       <section className="py-20 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
-            <span className="text-sky-400 font-semibold tracking-wider uppercase text-sm">Testimonials</span>
+            <span className="text-amber-400 font-semibold tracking-wider uppercase text-sm">Testimonials</span>
             <h2 className="text-3xl sm:text-4xl font-bold mt-2 mb-4">
               What Our Customers Say
             </h2>
@@ -457,7 +457,7 @@ export default function Home() {
                   <p className="text-slate-300 mb-6 leading-relaxed">"{testimonial.text}"</p>
                   <div>
                     <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-sky-400 text-sm">{testimonial.location}</p>
+                    <p className="text-amber-400 text-sm">{testimonial.location}</p>
                   </div>
                 </div>
               </AnimatedCard>
@@ -467,7 +467,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-sky-500">
+      <section className="py-20 bg-orange-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -479,7 +479,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={openChat}
-                className="inline-flex items-center justify-center space-x-2 bg-white text-sky-600 hover:bg-slate-100 px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
+                className="inline-flex items-center justify-center space-x-2 bg-white text-orange-700 hover:bg-slate-100 px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
               >
                 <span>Get Free Quote</span>
                 <ArrowRight className="w-5 h-5" />
@@ -516,3 +516,4 @@ export default function Home() {
     </main>
   );
 }
+

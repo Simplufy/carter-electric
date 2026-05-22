@@ -74,8 +74,8 @@ export default function CommercialServicesPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <div className="flex items-center gap-2 mb-4">
-              <Building2 className="w-6 h-6 text-sky-400" />
-              <span className="text-sky-400 font-medium">Our Services</span>
+              <Building2 className="w-6 h-6 text-amber-400" />
+              <span className="text-amber-400 font-medium">Our Services</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               Commercial Electrical Services
@@ -123,7 +123,7 @@ export default function CommercialServicesPage() {
                   <ul className="space-y-3 mb-8">
                     {services.map((service, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-sky-500 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
                         <span>{service}</span>
                       </li>
                     ))}
@@ -137,9 +137,9 @@ export default function CommercialServicesPage() {
                     Keep your properties in top condition with our commercial maintenance plans. Regular inspections and preventive maintenance help avoid costly emergency repairs and ensure code compliance.
                   </p>
 
-                  <div className="bg-sky-50 border-l-4 border-sky-500 p-6 mb-8 rounded-r-xl">
-                    <h4 className="text-xl font-bold text-sky-900 mb-2">Bulk Pricing Available</h4>
-                    <p className="text-sky-800">
+                  <div className="bg-orange-50 border-l-4 border-orange-500 p-6 mb-8 rounded-r-xl">
+                    <h4 className="text-xl font-bold text-orange-900 mb-2">Bulk Pricing Available</h4>
+                    <p className="text-orange-800">
                       Property managers and HOAs receive special pricing for multi-unit projects and ongoing maintenance contracts.
                     </p>
                   </div>
@@ -150,21 +150,21 @@ export default function CommercialServicesPage() {
 
                   <div className="space-y-4 mb-8">
                     <div className="flex gap-4">
-                      <div className="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
+                      <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
                       <div>
                         <h4 className="font-bold text-slate-900">Minimal Disruption</h4>
                         <p className="text-sm">We work around your schedule to minimize impact on tenants and customers.</p>
                       </div>
                     </div>
                     <div className="flex gap-4">
-                      <div className="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
+                      <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
                       <div>
                         <h4 className="font-bold text-slate-900">Fast Response</h4>
                         <p className="text-sm">24/7 emergency service for urgent commercial electrical issues.</p>
                       </div>
                     </div>
                     <div className="flex gap-4">
-                      <div className="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
+                      <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
                       <div>
                         <h4 className="font-bold text-slate-900">Code Compliance</h4>
                         <p className="text-sm">All work meets current commercial electrical codes and safety standards.</p>
@@ -175,7 +175,7 @@ export default function CommercialServicesPage() {
 
                 <button
                   onClick={openChat}
-                  className="mt-8 inline-flex items-center justify-center space-x-2 bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
+                  className="mt-8 inline-flex items-center justify-center space-x-2 bg-orange-500 hover:bg-orange-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all hover:shadow-xl"
                 >
                   <span>Discuss Your Commercial Project</span>
                   <ArrowRight className="w-5 h-5" />
@@ -193,26 +193,26 @@ export default function CommercialServicesPage() {
                   
                   <div className="space-y-4 mb-6">
                     <a href="tel:+19413366811" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
-                      <Phone className="w-5 h-5 text-sky-400" />
+                      <Phone className="w-5 h-5 text-amber-400" />
                       <span>(941) 555-0100</span>
                     </a>
                     <a href="mailto:contact@carterelectric.com" className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
-                      <Mail className="w-5 h-5 text-sky-400" />
+                      <Mail className="w-5 h-5 text-amber-400" />
                       <span>contact@carterelectric.com</span>
                     </a>
                     <div className="flex items-center gap-3 text-slate-300">
-                      <Clock className="w-5 h-5 text-sky-400" />
+                      <Clock className="w-5 h-5 text-amber-400" />
                       <span>24/7 Emergency Available</span>
                     </div>
                     <div className="flex items-center gap-3 text-slate-300">
-                      <MapPin className="w-5 h-5 text-sky-400" />
+                      <MapPin className="w-5 h-5 text-amber-400" />
                       <span>Sarasota to Naples</span>
                     </div>
                   </div>
 
                   <button
                     onClick={openChat}
-                    className="w-full bg-sky-500 hover:bg-sky-600 text-white py-3 rounded-full font-semibold transition-all"
+                    className="w-full bg-orange-500 hover:bg-orange-700 text-white py-3 rounded-full font-semibold transition-all"
                   >
                     Request Commercial Quote
                   </button>
@@ -226,17 +226,17 @@ export default function CommercialServicesPage() {
                       <Link
                         key={service.slug}
                         href={`/services/${service.slug}`}
-                        className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-sky-50 transition-colors group"
+                        className="flex items-center gap-3 p-3 bg-white rounded-lg hover:bg-orange-50 transition-colors group"
                       >
-                        <service.icon className="w-5 h-5 text-sky-500" />
-                        <span className="text-slate-700 group-hover:text-sky-600">{service.name}</span>
+                        <service.icon className="w-5 h-5 text-orange-500" />
+                        <span className="text-slate-700 group-hover:text-orange-700">{service.name}</span>
                       </Link>
                     ))}
                   </div>
                 </div>
 
                 {/* Trust Badge */}
-                <div className="mt-6 bg-sky-500 rounded-2xl p-6 text-white">
+                <div className="mt-6 bg-orange-500 rounded-2xl p-6 text-white">
                   <div className="flex items-center gap-2 mb-2">
                     <Shield className="w-5 h-5" />
                     <span className="font-bold">Licensed & Insured</span>
@@ -253,4 +253,6 @@ export default function CommercialServicesPage() {
     </main>
   );
 }
+
+
 
