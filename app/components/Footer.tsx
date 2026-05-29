@@ -48,9 +48,9 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="relative w-56 h-32 mb-4 bg-white rounded-xl p-2">
+            <div className="relative w-56 h-32 mb-4">
               <Image
-                src="/images/carter-electric-logo-florida.jpg"
+                src="/images/carter-electric-logo-florida-transparent.png"
                 alt="Carter Electric Logo"
                 fill
                 className="object-contain"

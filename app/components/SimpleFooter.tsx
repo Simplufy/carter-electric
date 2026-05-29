@@ -9,9 +9,9 @@ export default function SimpleFooter() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <div className="relative w-56 h-32 mb-4 bg-white rounded-xl p-2">
+            <div className="relative w-56 h-32 mb-4">
               <Image
-                src="/images/carter-electric-logo-florida.jpg"
+                src="/images/carter-electric-logo-florida-transparent.png"
                 alt="Carter Electric Logo"
                 fill
                 className="object-contain"

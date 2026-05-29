@@ -205,9 +205,9 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             {/* Logo */}
-            <div className="relative w-72 h-44 sm:w-[30rem] sm:h-64 mx-auto mb-4 bg-white/95 rounded-2xl p-3 shadow-2xl">
+            <div className="relative w-72 h-44 sm:w-[30rem] sm:h-64 mx-auto mb-4 drop-shadow-2xl">
               <Image
-                src="/images/carter-electric-logo-florida.jpg"
+                src="/images/carter-electric-logo-florida-transparent.png"
                 alt="Carter Electric"
                 fill
                 className="object-contain"
