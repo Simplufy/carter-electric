@@ -187,6 +187,7 @@ export default function Home() {
           loop
           muted
           playsInline
+          preload="metadata"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: 'brightness(0.7)' }}
           poster="/images/hero-poster.jpg"
@@ -212,7 +213,7 @@ export default function Home() {
                 fill
                 className="object-contain"
                 priority
-                unoptimized
+                quality={85}
               />
             </div>
             

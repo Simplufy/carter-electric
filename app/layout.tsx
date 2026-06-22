@@ -100,8 +100,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/logo-icon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/images/logo-icon.png" />
         <link rel="preconnect" href="https://carterelectricfl.com" />
         <script
           type="application/ld+json"

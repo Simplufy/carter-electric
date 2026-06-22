@@ -11,11 +11,12 @@ const FacebookIcon = () => (
   </svg>
 );
 
-const InstagramIcon = () => (
+const GoogleIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+    <circle cx="12" cy="12" r="10"/>
+    <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+    <line x1="9" y1="9" x2="9.01" y2="9"/>
+    <line x1="15" y1="9" x2="15.01" y2="9"/>
   </svg>
 );
 
@@ -60,11 +61,11 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
               We've been operating in Florida since 2026, but have ran electrical companies for 30+ years, starting in the Chicagoland area. Licensed, insured, and committed to your safety.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61590354060946" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
                 <FacebookIcon />
               </a>
-              <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
-                <InstagramIcon />
+              <a href="https://share.google/PxVSJCHjW78JqUJvl" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors">
+                <GoogleIcon />
               </a>
             </div>
           </div>
