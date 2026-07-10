@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://carterelectricfl.com";
+const baseUrl = "https://www.carterelectricflorida.com";
 
 const routes = [
   "",
@@ -33,3 +33,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === "" ? 1 : route.startsWith("/services") ? 0.9 : 0.8,
   }));
 }
+

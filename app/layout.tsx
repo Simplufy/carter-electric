@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://carterelectricfl.com"),
+  metadataBase: new URL("https://www.carterelectricflorida.com"),
   title: {
     default: "Carter Electric of Southwest Florida | Licensed Electrician Services",
     template: "%s | Carter Electric",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://carterelectricfl.com",
+    url: "https://www.carterelectricflorida.com",
     siteName: "Carter Electric of Southwest Florida",
     title: "Carter Electric of Southwest Florida | Licensed Electrician Services",
     description: "Family-owned electrical contractor serving Sarasota, Naples & all of Southwest Florida. Indoor/outdoor lighting, EV chargers, panel upgrades & 24/7 emergency service.",
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
     creator: "@carterelectric",
   },
   alternates: {
-    canonical: "https://carterelectricfl.com",
+    canonical: "https://www.carterelectricflorida.com",
     languages: {
-      en: "https://carterelectricfl.com",
+      en: "https://www.carterelectricflorida.com",
     },
   },
   category: "business",
@@ -72,7 +72,7 @@ export default function RootLayout({
     "@type": "Electrician",
     "name": "Carter Electric of Southwest Florida",
     "description": "Family-owned electrical contractor serving Sarasota, Naples & all of Southwest Florida.",
-    "url": "https://carterelectricfl.com",
+    "url": "https://www.carterelectricflorida.com",
     "telephone": "+1-941-336-6811",
     "email": "contact@carterelectricflorida.com",
     "address": {
@@ -92,7 +92,7 @@ export default function RootLayout({
     },
     "priceRange": "$$",
     "openingHours": "Mo-Fr 07:00-18:00, Sa 08:00-16:00, 24/7 Emergency",
-    "image": "https://carterelectricfl.com/images/carter-electric-social.png",
+    "image": "https://www.carterelectricflorida.com/images/carter-electric-social.png",
     "sameAs": [],
     "keywords": "electrician, electrical services, Southwest Florida, Sarasota, Naples"
   };
@@ -102,7 +102,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/images/logo-icon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/images/logo-icon.png" />
-        <link rel="preconnect" href="https://carterelectricfl.com" />
+        <link rel="preconnect" href="https://www.carterelectricflorida.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -169,3 +169,4 @@ export default function RootLayout({
     </html>
   );
 }
+

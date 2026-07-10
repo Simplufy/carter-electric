@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Terms and Conditions | Carter Electric Florida",
   description: "Terms and conditions for Carter Electric Florida electrical services.",
   alternates: {
-    canonical: "https://carterelectricfl.com/terms-and-conditions",
+    canonical: "https://www.carterelectricflorida.com/terms-and-conditions",
   },
 };
 
@@ -111,4 +111,5 @@ export default function TermsAndConditions() {
     </main>
   );
 }
+
 

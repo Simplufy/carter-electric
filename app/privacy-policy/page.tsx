@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Carter Electric Florida",
   description: "Privacy policy for Carter Electric Florida. We do not share your information with third parties.",
   alternates: {
-    canonical: "https://carterelectricfl.com/privacy-policy",
+    canonical: "https://www.carterelectricflorida.com/privacy-policy",
   },
 };
 
@@ -101,4 +101,5 @@ export default function PrivacyPolicy() {
     </main>
   );
 }
+
 
