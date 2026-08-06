@@ -1,15 +1,6 @@
-import type { Metadata } from "next";
 import { Shield, Lock, Mail, Phone } from "lucide-react";
 import SimpleNavbar from "../components/SimpleNavbar";
 import SimpleFooter from "../components/SimpleFooter";
-
-export const metadata: Metadata = {
-  title: "Privacy Policy | Carter Electric Florida",
-  description: "Privacy policy for Carter Electric Florida. We do not share your information with third parties.",
-  alternates: {
-    canonical: "https://www.carterelectricflorida.com/privacy-policy",
-  },
-};
 
 export default function PrivacyPolicy() {
   return (

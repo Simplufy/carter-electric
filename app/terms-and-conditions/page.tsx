@@ -1,15 +1,6 @@
-import type { Metadata } from "next";
 import { FileText, AlertTriangle, CheckCircle, Mail, Phone } from "lucide-react";
 import SimpleNavbar from "../components/SimpleNavbar";
 import SimpleFooter from "../components/SimpleFooter";
-
-export const metadata: Metadata = {
-  title: "Terms and Conditions | Carter Electric Florida",
-  description: "Terms and conditions for Carter Electric Florida electrical services.",
-  alternates: {
-    canonical: "https://www.carterelectricflorida.com/terms-and-conditions",
-  },
-};
 
 export default function TermsAndConditions() {
   return (
