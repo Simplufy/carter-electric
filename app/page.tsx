@@ -24,6 +24,8 @@ import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AnimatedSection, { AnimatedCard, StaggerContainer, StaggerItem } from "./components/AnimatedSection";
+import Faq from "./components/Faq";
+import { homeFaq } from "./seo-data";
 
 const services = [
   {
@@ -177,6 +179,24 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Navbar onOpenContact={openChat} />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: homeFaq.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
+              },
+            })),
+          }),
+        }}
+      />
 
       {/* Hero Section with Video Background */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -513,6 +533,7 @@ export default function Home() {
         </div>
       </section>
 
+      <Faq items={homeFaq} />
       <Footer onOpenContact={openChat} />
     </main>
   );

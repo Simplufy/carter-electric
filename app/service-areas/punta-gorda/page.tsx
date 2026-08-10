@@ -8,6 +8,8 @@ import Navbar from "../../components/Navbar";
 
 import Footer from "../../components/Footer";
 import AnimatedSection, { StaggerContainer, StaggerItem } from "../../components/AnimatedSection";
+import Faq from "../../components/Faq";
+import { areaFaq } from "../../seo-data";
 
 const city = {
   name: "Punta Gorda",
@@ -193,6 +195,7 @@ export default function PuntaGordaPage() {
         </div>
       </section>
 
+      <Faq items={areaFaq["punta-gorda"]} />
       <Footer onOpenContact={openChat} />
     </main>
   );

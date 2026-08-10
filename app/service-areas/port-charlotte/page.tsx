@@ -8,6 +8,8 @@ import Navbar from "../../components/Navbar";
 
 import Footer from "../../components/Footer";
 import AnimatedSection, { StaggerContainer, StaggerItem } from "../../components/AnimatedSection";
+import Faq from "../../components/Faq";
+import { areaFaq } from "../../seo-data";
 
 const city = {
   name: "Port Charlotte",
@@ -193,6 +195,7 @@ export default function PortCharlottePage() {
         </div>
       </section>
 
+      <Faq items={areaFaq["port-charlotte"]} />
       <Footer onOpenContact={openChat} />
     </main>
   );

@@ -113,7 +113,7 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
                 <div>
                   <p className="font-medium">Phone</p>
                   <a href="tel:+19413366811" className="text-slate-400 hover:text-amber-400 transition-colors text-sm">
-                    (941) 555-0100
+                    (941) 336-6811
                   </a>
                 </div>
               </li>

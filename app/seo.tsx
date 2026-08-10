@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { areaFaq, serviceFaq, type FaqItem } from "./seo-data";
 
 const siteUrl = "https://www.carterelectricflorida.com";
 const siteName = "Carter Electric of Southwest Florida";
@@ -14,11 +15,13 @@ type SeoConfig = {
 
 type ServiceConfig = SeoConfig & {
   serviceType: string;
+  faq: FaqItem[];
 };
 
 type AreaConfig = SeoConfig & {
   city: string;
   county: string;
+  faq: FaqItem[];
 };
 
 export const serviceSeo: Record<string, ServiceConfig> = {
@@ -28,6 +31,7 @@ export const serviceSeo: Record<string, ServiceConfig> = {
     path: "/services/indoor-lighting/",
     keywords: ["indoor lighting installation", "recessed lighting", "lighting electrician", "Southwest Florida electrician"],
     serviceType: "Indoor lighting installation",
+    faq: serviceFaq["indoor-lighting"],
   },
   "outdoor-lighting": {
     title: "Outdoor & Landscape Lighting Electrician",
@@ -35,6 +39,7 @@ export const serviceSeo: Record<string, ServiceConfig> = {
     path: "/services/outdoor-lighting/",
     keywords: ["outdoor lighting", "landscape lighting", "security lighting", "Southwest Florida electrician"],
     serviceType: "Outdoor and landscape lighting",
+    faq: serviceFaq["outdoor-lighting"],
   },
   "ev-charger-installation": {
     title: "EV Charger Installation in Southwest Florida",
@@ -42,6 +47,7 @@ export const serviceSeo: Record<string, ServiceConfig> = {
     path: "/services/ev-charger-installation/",
     keywords: ["EV charger installation", "Level 2 charger", "Tesla charger installation", "Southwest Florida electrician"],
     serviceType: "EV charger installation",
+    faq: serviceFaq["ev-charger-installation"],
   },
   "electrical-repairs": {
     title: "Electrical Repairs & Troubleshooting Services",
@@ -49,6 +55,7 @@ export const serviceSeo: Record<string, ServiceConfig> = {
     path: "/services/electrical-repairs/",
     keywords: ["electrical repairs", "emergency electrician", "electrical troubleshooting", "Southwest Florida electrician"],
     serviceType: "Electrical repairs and troubleshooting",
+    faq: serviceFaq["electrical-repairs"],
   },
   "panel-upgrades": {
     title: "Electrical Panel Upgrades in Southwest Florida",
@@ -56,6 +63,7 @@ export const serviceSeo: Record<string, ServiceConfig> = {
     path: "/services/panel-upgrades/",
     keywords: ["electrical panel upgrade", "breaker panel replacement", "subpanel installation", "Southwest Florida electrician"],
     serviceType: "Electrical panel upgrades",
+    faq: serviceFaq["panel-upgrades"],
   },
   "commercial-services": {
     title: "Commercial Electrical Services in Southwest Florida",
@@ -63,6 +71,7 @@ export const serviceSeo: Record<string, ServiceConfig> = {
     path: "/services/commercial-services/",
     keywords: ["commercial electrician", "business electrical services", "property management electrician", "Southwest Florida electrician"],
     serviceType: "Commercial electrical services",
+    faq: serviceFaq["commercial-services"],
   },
 };
 
@@ -74,6 +83,7 @@ export const areaSeo: Record<string, AreaConfig> = {
     keywords: ["electrician Sarasota FL", "Sarasota electrical services", "Sarasota lighting installation"],
     city: "Sarasota",
     county: "Sarasota County",
+    faq: areaFaq.sarasota,
   },
   venice: {
     title: "Electrician in Venice, FL",
@@ -82,6 +92,7 @@ export const areaSeo: Record<string, AreaConfig> = {
     keywords: ["electrician Venice FL", "Venice electrical services", "Venice FL electrician"],
     city: "Venice",
     county: "Sarasota County",
+    faq: areaFaq.venice,
   },
   englewood: {
     title: "Electrician in Englewood, FL",
@@ -90,6 +101,7 @@ export const areaSeo: Record<string, AreaConfig> = {
     keywords: ["electrician Englewood FL", "Englewood electrical services", "coastal electrical contractor"],
     city: "Englewood",
     county: "Sarasota and Charlotte Counties",
+    faq: areaFaq.englewood,
   },
   "port-charlotte": {
     title: "Electrician in Port Charlotte, FL",
@@ -98,6 +110,7 @@ export const areaSeo: Record<string, AreaConfig> = {
     keywords: ["electrician Port Charlotte FL", "Port Charlotte electrical services", "Port Charlotte electrician"],
     city: "Port Charlotte",
     county: "Charlotte County",
+    faq: areaFaq["port-charlotte"],
   },
   "punta-gorda": {
     title: "Electrician in Punta Gorda, FL",
@@ -106,6 +119,7 @@ export const areaSeo: Record<string, AreaConfig> = {
     keywords: ["electrician Punta Gorda FL", "Punta Gorda electrical services", "historic home electrician"],
     city: "Punta Gorda",
     county: "Charlotte County",
+    faq: areaFaq["punta-gorda"],
   },
   "cape-coral": {
     title: "Electrician in Cape Coral, FL",
@@ -114,6 +128,7 @@ export const areaSeo: Record<string, AreaConfig> = {
     keywords: ["electrician Cape Coral FL", "Cape Coral electrical services", "Cape Coral electrician"],
     city: "Cape Coral",
     county: "Lee County",
+    faq: areaFaq["cape-coral"],
   },
   "fort-myers": {
     title: "Electrician in Fort Myers, FL",
@@ -122,6 +137,7 @@ export const areaSeo: Record<string, AreaConfig> = {
     keywords: ["electrician Fort Myers FL", "Fort Myers electrical services", "Fort Myers electrician"],
     city: "Fort Myers",
     county: "Lee County",
+    faq: areaFaq["fort-myers"],
   },
   "bonita-springs": {
     title: "Electrician in Bonita Springs, FL",
@@ -130,6 +146,7 @@ export const areaSeo: Record<string, AreaConfig> = {
     keywords: ["electrician Bonita Springs FL", "Bonita Springs electrical services", "Bonita Springs electrician"],
     city: "Bonita Springs",
     county: "Lee County",
+    faq: areaFaq["bonita-springs"],
   },
   naples: {
     title: "Electrician in Naples, FL",
@@ -138,6 +155,7 @@ export const areaSeo: Record<string, AreaConfig> = {
     keywords: ["electrician Naples FL", "Naples electrical services", "Naples electrician"],
     city: "Naples",
     county: "Collier County",
+    faq: areaFaq.naples,
   },
   "marco-island": {
     title: "Electrician in Marco Island, FL",
@@ -146,6 +164,7 @@ export const areaSeo: Record<string, AreaConfig> = {
     keywords: ["electrician Marco Island FL", "Marco Island electrical services", "coastal electrician Marco Island"],
     city: "Marco Island",
     county: "Collier County",
+    faq: areaFaq["marco-island"],
   },
 };
 
@@ -205,6 +224,21 @@ function breadcrumbSchema(items: { name: string; url: string }[]) {
   };
 }
 
+function faqSchema(faq: FaqItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+}
+
 export function ServiceSeoLayout({ config, children }: { config: ServiceConfig; children: ReactNode }) {
   const url = `${siteUrl}${config.path}`;
   const schema = {
@@ -232,6 +266,7 @@ export function ServiceSeoLayout({ config, children }: { config: ServiceConfig; 
         { name: "Services", url: `${siteUrl}/#services` },
         { name: config.serviceType, url },
       ])} />
+      <JsonLd data={faqSchema(config.faq)} />
       {children}
     </>
   );
@@ -264,6 +299,7 @@ export function AreaSeoLayout({ config, children }: { config: AreaConfig; childr
         { name: "Service Areas", url: `${siteUrl}/#service-areas` },
         { name: config.city, url },
       ])} />
+      <JsonLd data={faqSchema(config.faq)} />
       {children}
     </>
   );

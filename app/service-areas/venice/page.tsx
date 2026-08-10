@@ -8,6 +8,8 @@ import Navbar from "../../components/Navbar";
 
 import Footer from "../../components/Footer";
 import AnimatedSection, { StaggerContainer, StaggerItem } from "../../components/AnimatedSection";
+import Faq from "../../components/Faq";
+import { areaFaq } from "../../seo-data";
 
 const city = {
   name: "Venice",
@@ -102,7 +104,7 @@ export default function VenicePage() {
               </button>
               <a href="tel:+19413366811" className="inline-flex items-center justify-center space-x-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg transition-all">
                 <Phone className="w-5 h-5" />
-                <span>(941) 555-0100</span>
+                <span>(941) 336-6811</span>
               </a>
             </div>
           </AnimatedSection>
@@ -195,7 +197,7 @@ export default function VenicePage() {
               </button>
               <a href="tel:+19413366811" className="inline-flex items-center justify-center space-x-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg transition-all">
                 <Phone className="w-5 h-5" />
-                <span>(941) 555-0100</span>
+                <span>(941) 336-6811</span>
               </a>
             </div>
           </AnimatedSection>
@@ -213,6 +215,7 @@ export default function VenicePage() {
         </div>
       </section>
 
+      <Faq items={areaFaq["venice"]} />
       <Footer onOpenContact={openChat} />
     </main>
   );
