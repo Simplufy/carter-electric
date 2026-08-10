@@ -228,7 +228,7 @@ export default function Home() {
             {/* Logo */}
             <div className="relative w-72 h-44 sm:w-[30rem] sm:h-64 mx-auto mb-4 drop-shadow-2xl">
               <Image
-                src="/images/carter-electric-logo-florida-transparent.png"
+                src="/images/carter-electric-logo.png"
                 alt="Carter Electric"
                 fill
                 className="object-contain"

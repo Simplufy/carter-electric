@@ -26,7 +26,7 @@ export default function SimpleNavbar() {
           <Link href="/" className="flex items-center">
             <div className="relative w-48 h-20 sm:w-60 sm:h-24">
               <img
-                src="/images/carter-electric-logo-florida-transparent.png"
+                src="/images/carter-electric-logo.png"
                 alt="Carter Electric Logo"
                 className="object-contain w-full h-full"
               />

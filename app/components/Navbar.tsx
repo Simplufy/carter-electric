@@ -55,7 +55,7 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
           <Link href="/" className="flex items-center">
             <div className="relative w-48 h-20 sm:w-60 sm:h-24">
               <Image
-                src="/images/carter-electric-logo-florida-transparent.png"
+                src="/images/carter-electric-logo.png"
                 alt="Carter Electric Logo"
                 fill
                 className="object-contain"

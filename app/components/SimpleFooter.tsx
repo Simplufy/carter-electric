@@ -11,7 +11,7 @@ export default function SimpleFooter() {
           <div>
             <div className="relative w-56 h-32 mb-4">
               <Image
-                src="/images/carter-electric-logo-florida-transparent.png"
+                src="/images/carter-electric-logo.png"
                 alt="Carter Electric Logo"
                 fill
                 className="object-contain"
