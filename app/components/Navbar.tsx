@@ -123,18 +123,13 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+19413366811" className={`flex items-center space-x-2 transition-colors ${
-              scrolled ? 'text-slate-600 hover:text-orange-700' : 'text-white hover:text-amber-300'
-            }`}>
-              <Phone className="w-4 h-4" />
-              <span className="font-medium">+1 941-336-6811</span>
-            </a>
-            <button
-              onClick={() => (window as any).leadConnector?.chatWidget?.openWidget()}
-              className="bg-orange-500 hover:bg-orange-700 text-white px-6 py-2.5 rounded-full font-medium transition-all hover:shadow-lg hover:shadow-orange-500/25"
+            <a
+              href="tel:+19413366811"
+              className="inline-flex items-center space-x-2 bg-orange-500 hover:bg-orange-700 text-white px-6 py-2.5 rounded-full font-bold transition-all hover:shadow-lg hover:shadow-orange-500/25"
             >
-              Contact Now
-            </button>
+              <Phone className="w-4 h-4" />
+              <span>+1 941-336-6811</span>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -218,21 +213,11 @@ export default function Navbar({ onOpenContact }: { onOpenContact: () => void })
 
               <a
                 href="tel:+19413366811"
-                className="flex items-center space-x-2 text-slate-600 hover:text-orange-700 py-2"
+                className="flex items-center justify-center space-x-2 bg-orange-500 hover:bg-orange-700 text-white px-6 py-3 rounded-full font-bold transition-all w-full"
               >
                 <Phone className="w-4 h-4" />
-                <span className="font-medium">+1 941-336-6811</span>
+                <span>+1 941-336-6811</span>
               </a>
-
-              <button
-                onClick={() => {
-                  (window as any).leadConnector?.chatWidget?.openWidget();
-                  setMobileMenuOpen(false);
-                }}
-                className="bg-orange-500 hover:bg-orange-700 text-white px-6 py-3 rounded-full font-medium transition-all w-full"
-              >
-                Contact Now
-              </button>
             </div>
           </div>
         )}
