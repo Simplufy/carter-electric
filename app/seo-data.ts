@@ -21,6 +21,14 @@ export const serviceFaq: Record<string, FaqItem[]> = {
       question: "Are your lighting installations permitted and up to code?",
       answer: "All of our indoor lighting work is performed by licensed electricians and meets Florida building and electrical code. We pull the necessary permits and schedule inspections when required.",
     },
+    {
+      question: "Which Southwest Florida cities do you serve for indoor lighting?",
+      answer: "We install indoor lighting in Sarasota, Venice, Englewood, Port Charlotte, Punta Gorda, Cape Coral, Fort Myers, Bonita Springs, Naples, and Marco Island.",
+    },
+    {
+      question: "How long does a typical indoor lighting project take?",
+      answer: "A single-room fixture swap can often be completed in a few hours. Whole-home recessed layouts or kitchen lighting redesigns usually take one to several days depending on scope and access.",
+    },
   ],
   "outdoor-lighting": [
     {
@@ -38,6 +46,14 @@ export const serviceFaq: Record<string, FaqItem[]> = {
     {
       question: "Do you offer outdoor lighting repair and upgrades?",
       answer: "Yes. We repair or replace damaged fixtures, re-run low-voltage wiring, and upgrade older systems to energy-efficient LED lighting.",
+    },
+    {
+      question: "Will outdoor lighting survive Southwest Florida storms?",
+      answer: "Properly installed weather-rated systems hold up much better than big-box kits. We focus on sealed connections, correct burial depth or routing, GFCI protection, and fixtures suited to Gulf Coast conditions.",
+    },
+    {
+      question: "Do you light lanais, docks approaches, and canal lots?",
+      answer: "Yes. Outdoor living spaces are a big part of Southwest Florida homes. We design safe, attractive lighting for lanais, walkways, entries, and waterfront properties in cities like Cape Coral and Marco Island.",
     },
   ],
   "ev-charger-installation": [
@@ -57,6 +73,14 @@ export const serviceFaq: Record<string, FaqItem[]> = {
       question: "How long does EV charger installation take?",
       answer: "Most residential Level 2 charger installations are completed in a single visit. If a panel upgrade or new circuit run is required, the total project is typically finished within a few days.",
     },
+    {
+      question: "Can you install EV chargers in condos?",
+      answer: "Often yes, when the association allows it and electrical capacity is available. We review building rules, panel location, and routing before quoting condo charger projects.",
+    },
+    {
+      question: "What amperage charger should I get?",
+      answer: "It depends on your vehicle, panel capacity, and how fast you want to charge. Many homes do well with a 40–60 amp Level 2 circuit. We recommend the right size after inspecting your service.",
+    },
   ],
   "electrical-repairs": [
     {
@@ -74,6 +98,14 @@ export const serviceFaq: Record<string, FaqItem[]> = {
     {
       question: "How quickly can you respond to a repair?",
       answer: "We offer same-day service for most repairs, and our emergency line is answered around the clock so urgent issues are handled fast.",
+    },
+    {
+      question: "Should I try to fix electrical problems myself?",
+      answer: "We do not recommend DIY electrical repairs beyond resetting a breaker. Improper work can create fire hazards and fail inspection. Call a licensed electrician for outlets, panels, and wiring issues.",
+    },
+    {
+      question: "Do you repair storm-related electrical damage?",
+      answer: "Yes. After storms we inspect for surge damage, water intrusion issues, failed outdoor circuits, and unsafe panels, then complete repairs to get your home powered safely again.",
     },
   ],
   "panel-upgrades": [
@@ -93,6 +125,14 @@ export const serviceFaq: Record<string, FaqItem[]> = {
       question: "Do you handle permits and inspections for panel upgrades?",
       answer: "Yes. Panel upgrades are a permitted electrical service, and we handle all permits and inspections with your local building department.",
     },
+    {
+      question: "Can a panel upgrade support a generator or EV charger?",
+      answer: "Yes. We commonly design panel upgrades with future loads in mind, including generator interlocks, EV chargers, pools, and home additions.",
+    },
+    {
+      question: "Do you replace fuse boxes?",
+      answer: "Yes. Converting old fuse panels to modern breaker panels is one of the most important safety upgrades for older Southwest Florida homes.",
+    },
   ],
   "commercial-services": [
     {
@@ -110,6 +150,14 @@ export const serviceFaq: Record<string, FaqItem[]> = {
     {
       question: "Can you work after hours to avoid business disruption?",
       answer: "Yes. We schedule commercial work around your operating hours, including nights and weekends, so your business stays up and running.",
+    },
+    {
+      question: "Do you serve multi-location commercial clients?",
+      answer: "Yes. Because we cover Sarasota through Marco Island, property managers can use one electrical contractor across multiple Southwest Florida locations.",
+    },
+    {
+      question: "Can you help with commercial lighting upgrades for energy savings?",
+      answer: "Absolutely. LED retrofits and control upgrades are a common commercial project that improves light quality while lowering energy and maintenance costs.",
     },
   ],
 };
@@ -132,6 +180,14 @@ export const areaFaq: Record<string, FaqItem[]> = {
       question: "Can you handle electrical work in older Sarasota homes?",
       answer: "Yes. We regularly update the electrical systems of historic homes in neighborhoods like Laurel Park, including rewiring, panel upgrades, and safe lighting installation.",
     },
+    {
+      question: "Do you install EV chargers in Sarasota?",
+      answer: "Yes. We install Level 2 EV chargers for Sarasota homeowners and can upgrade panels when extra capacity is needed.",
+    },
+    {
+      question: "Can you help with hurricane generator prep in Sarasota?",
+      answer: "Yes. We install generator interlocks, evaluate panel capacity, and help Sarasota homes prepare critical circuits for storm season.",
+    },
   ],
   venice: [
     {
@@ -149,6 +205,14 @@ export const areaFaq: Record<string, FaqItem[]> = {
     {
       question: "Do you offer 24/7 emergency service in Venice?",
       answer: "Yes. Our emergency electricians are available around the clock for Venice residents and businesses.",
+    },
+    {
+      question: "Can you update electrical systems in Mediterranean-style Venice homes?",
+      answer: "Yes. We carefully modernize wiring, panels, and lighting in Venice's distinctive architecture while keeping safety and code compliance first.",
+    },
+    {
+      question: "Do you work on Venice Avenue commercial properties?",
+      answer: "Yes. We support Venice restaurants, shops, and offices with lighting, repairs, and after-hours scheduling when needed.",
     },
   ],
   englewood: [
@@ -168,6 +232,14 @@ export const areaFaq: Record<string, FaqItem[]> = {
       question: "Is your work suitable for Florida's coastal environment?",
       answer: "Yes. We use corrosion-resistant and weatherproof materials designed for Englewood's coastal climate.",
     },
+    {
+      question: "Do you serve Manasota Key and Englewood Beach homes?",
+      answer: "Yes. Beach and key properties are a regular part of our Englewood service area, including outdoor power and storm-ready upgrades.",
+    },
+    {
+      question: "Can you upgrade panels in older Englewood houses?",
+      answer: "Yes. Many Englewood homes benefit from modern breaker panels, and we handle upgrades with permits and inspections.",
+    },
   ],
   "port-charlotte": [
     {
@@ -185,6 +257,14 @@ export const areaFaq: Record<string, FaqItem[]> = {
     {
       question: "Can you upgrade older panels in Port Charlotte homes?",
       answer: "Yes. We regularly upgrade aging electrical panels in Port Charlotte to modern 200-amp systems, including permits and inspections.",
+    },
+    {
+      question: "Do you work on canal-front homes in Port Charlotte?",
+      answer: "Yes. We install and repair outdoor circuits, lighting, and panel capacity upgrades commonly needed on canal and waterfront lots.",
+    },
+    {
+      question: "Can you support boat lift or pool equipment power?",
+      answer: "Yes. We evaluate loads and install dedicated circuits so lifts, pools, and outdoor equipment are powered safely.",
     },
   ],
   "punta-gorda": [
@@ -204,6 +284,14 @@ export const areaFaq: Record<string, FaqItem[]> = {
       question: "What services do you provide in Punta Gorda?",
       answer: "We provide lighting installation, electrical repairs, EV charger installation, panel upgrades, and commercial electrical services.",
     },
+    {
+      question: "Do you serve downtown Punta Gorda businesses?",
+      answer: "Yes. We support downtown and harbor-area commercial properties with lighting, repairs, and project work scheduled around business hours.",
+    },
+    {
+      question: "Can you help with surge protection in Punta Gorda?",
+      answer: "Yes. Whole-home and point-of-use surge protection is a smart upgrade for harbor-area homes exposed to storm activity.",
+    },
   ],
   "cape-coral": [
     {
@@ -221,6 +309,14 @@ export const areaFaq: Record<string, FaqItem[]> = {
     {
       question: "Can you install EV chargers and panel upgrades in Cape Coral?",
       answer: "Yes. We install Level 2 EV chargers and perform panel upgrades in Cape Coral, including all permits and inspections.",
+    },
+    {
+      question: "Do you install power for boat lifts in Cape Coral?",
+      answer: "Yes. Boat lift and dock-adjacent power is common in Cape Coral. We install dedicated circuits and safe outdoor electrical infrastructure.",
+    },
+    {
+      question: "Can my Cape Coral panel handle a pool and EV charger?",
+      answer: "Maybe—many homes need a service upgrade first. We calculate loads and recommend the right panel size before adding major equipment.",
     },
   ],
   "fort-myers": [
@@ -240,6 +336,14 @@ export const areaFaq: Record<string, FaqItem[]> = {
       question: "Can you handle commercial work for Fort Myers businesses?",
       answer: "Yes. We serve Fort Myers businesses, offices, and property managers with maintenance plans and commercial electrical projects.",
     },
+    {
+      question: "Do you work in Fort Myers condos and multi-family buildings?",
+      answer: "Yes. We handle unit repairs and coordinate common-area electrical work with associations and property managers.",
+    },
+    {
+      question: "Can you help with River District commercial lighting?",
+      answer: "Yes. We support Fort Myers commercial interiors and exteriors, including lighting upgrades scheduled around business operations.",
+    },
   ],
   "bonita-springs": [
     {
@@ -257,6 +361,14 @@ export const areaFaq: Record<string, FaqItem[]> = {
     {
       question: "What services do you provide in Bonita Springs?",
       answer: "We provide lighting installation, electrical repairs, EV charger installation, panel upgrades, and commercial electrical services.",
+    },
+    {
+      question: "Can you install discreet EV chargers in Bonita Springs garages?",
+      answer: "Yes. We route and mount Level 2 chargers cleanly so they fit finished garages and higher-end home aesthetics.",
+    },
+    {
+      question: "Do you serve Bonita Bay and Barefoot Beach area homes?",
+      answer: "Yes. Gated and coastal communities around Bonita Springs are part of our regular service area.",
     },
   ],
   naples: [
@@ -276,6 +388,14 @@ export const areaFaq: Record<string, FaqItem[]> = {
       question: "What services do you provide in Naples?",
       answer: "We provide lighting installation, electrical repairs, EV charger installation, panel upgrades, and commercial electrical services.",
     },
+    {
+      question: "Do you handle high-end lighting projects in Old Naples or Port Royal?",
+      answer: "Yes. Precision indoor and landscape lighting for luxury Naples homes is a core part of our residential work.",
+    },
+    {
+      question: "Can you coordinate electrical work with Naples remodel timelines?",
+      answer: "Yes. We schedule around other trades and keep communication clear so electrical scopes stay on track during renovations.",
+    },
   ],
   "marco-island": [
     {
@@ -293,6 +413,14 @@ export const areaFaq: Record<string, FaqItem[]> = {
     {
       question: "What services do you provide on Marco Island?",
       answer: "We provide lighting installation, electrical repairs, EV charger installation, panel upgrades, and commercial electrical services.",
+    },
+    {
+      question: "Can you work in Marco Island high-rise condos?",
+      answer: "Yes. We coordinate with building management on access, rules, and capacity constraints common to island condo towers.",
+    },
+    {
+      question: "Do you repair corrosion-related outdoor electrical failures?",
+      answer: "Yes. Salt-air damage to outdoor fixtures, boxes, and connections is common on Marco Island, and we repair or replace those systems with coastal-ready materials.",
     },
   ],
 };
