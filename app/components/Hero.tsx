@@ -36,9 +36,9 @@ export default function Hero() {
           priority
           quality={85}
         />
-        {/* Navy gradient overlays for readability (left-weighted like reference) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-slate-950/30" />
+        {/* Lighter overlays so the photo stays bright while text stays readable */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-900/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-slate-900/15" />
       </div>
 
       {/* Main content */}
@@ -88,7 +88,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom feature bar */}
-      <div className="relative z-10 border-t border-white/10 bg-slate-950/60 backdrop-blur">
+      <div className="relative z-10 border-t border-white/10 bg-slate-900/40 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 grid grid-cols-1 sm:grid-cols-3 gap-5">
           {features.map((feature) => (
             <div key={feature.title} className="flex items-center gap-3">
