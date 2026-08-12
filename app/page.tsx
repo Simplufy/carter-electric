@@ -1,14 +1,13 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  Lightbulb, 
-  Zap, 
-  Car, 
-  Wrench, 
-  Building2, 
+import {
+  Lightbulb,
+  Zap,
+  Car,
+  Wrench,
+  Building2,
   Home as HomeIcon,
   Shield,
   Clock,
@@ -17,12 +16,11 @@ import {
   Star,
   ArrowRight,
   Phone,
-  MapPin,
-  CheckCircle2
+  CheckCircle2,
 } from "lucide-react";
-import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 import AnimatedSection, { AnimatedCard, StaggerContainer, StaggerItem } from "./components/AnimatedSection";
 import Faq from "./components/Faq";
 import { homeFaq } from "./seo-data";
@@ -130,51 +128,12 @@ const testimonials = [
 ];
 
 export default function Home() {
-  const [displayedText, setDisplayedText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [currentAreaIndex, setCurrentAreaIndex] = useState(0);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
   const openChat = () => {
     const w = window as any;
     if (w.leadConnector && w.leadConnector.chatWidget) {
       w.leadConnector.chatWidget.openWidget();
     }
   };
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 0.5;
-    }
-  }, []);
-
-  useEffect(() => {
-    const currentCity = serviceAreas[currentAreaIndex].name;
-    let timeout: NodeJS.Timeout;
-
-    if (!isDeleting) {
-      if (displayedText.length < currentCity.length) {
-        timeout = setTimeout(() => {
-          setDisplayedText(currentCity.slice(0, displayedText.length + 1));
-        }, 80);
-      } else {
-        timeout = setTimeout(() => {
-          setIsDeleting(true);
-        }, 2000);
-      }
-    } else {
-      if (displayedText.length > 0) {
-        timeout = setTimeout(() => {
-          setDisplayedText(displayedText.slice(0, -1));
-        }, 50);
-      } else {
-        setIsDeleting(false);
-        setCurrentAreaIndex((prev) => (prev + 1) % serviceAreas.length);
-      }
-    }
-
-    return () => clearTimeout(timeout);
-  }, [displayedText, isDeleting, currentAreaIndex]);
 
   return (
     <main className="min-h-screen">
@@ -198,111 +157,7 @@ export default function Home() {
         }}
       />
 
-      {/* Hero Section with Video Background */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Video Background */}
-        <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: 'brightness(0.7)' }}
-          poster="/images/hero-poster.jpg"
-        >
-          <source src="/videos/hero-video.mp4" type="video/mp4" />
-        </video>
-        
-        {/* Dark Overlay for text readability */}
-        <div className="absolute inset-0 bg-black/30" />
-        
-        {/* Centered Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            {/* Logo */}
-            <div className="relative w-72 h-44 sm:w-[30rem] sm:h-64 mx-auto mb-4 drop-shadow-2xl">
-              <Image
-                src="/images/carter-electric-logo.png"
-                alt="Carter Electric"
-                fill
-                className="object-contain"
-                priority
-                quality={85}
-              />
-            </div>
-            
-            <h1 
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight"
-              style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}
-            >
-              Southwest Florida's Trusted
-              <br />
-              <span className="text-3xl sm:text-4xl lg:text-5xl">Electrical Contractor</span>
-            </h1>
-            
-            <p 
-              className="text-xl sm:text-2xl lg:text-3xl text-white font-semibold mb-10 max-w-4xl mx-auto text-center flex flex-wrap justify-center items-center gap-x-1"
-              style={{ textShadow: '0 1px 3px rgba(0,0,0,0.4)' }}
-            >
-              <span>Family-owned electrical contractor operating in </span>
-              <span className="text-amber-300 min-w-28">{displayedText}</span>
-              <span className="animate-pulse">|</span>
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={openChat}
-                className="inline-flex items-center justify-center space-x-2 bg-orange-500 hover:bg-orange-700 text-white px-10 py-5 rounded-full font-bold text-xl transition-all hover:shadow-2xl hover:shadow-orange-500/40 drop-shadow-lg"
-                style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}
-              >
-                <span>Get Free Quote</span>
-                <ArrowRight className="w-6 h-6" />
-              </button>
-              <a
-                href="tel:+19413366811"
-                className="inline-flex items-center justify-center space-x-2 bg-white hover:bg-gray-100 text-slate-900 px-10 py-5 rounded-full font-bold text-xl transition-all drop-shadow-lg"
-              >
-                <Phone className="w-6 h-6" />
-                <span>+1 941-336-6811</span>
-              </a>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="flex flex-wrap gap-8 justify-center mt-10">
-              <div 
-                className="flex items-center space-x-2 text-white font-medium text-base"
-                style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}
-              >
-                <Shield className="w-5 h-5" />
-                <span>Licensed & Insured</span>
-              </div>
-              <div 
-                className="flex items-center space-x-2 text-white font-medium text-base"
-                style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}
-              >
-                <Clock className="w-5 h-5" />
-                <span>24/7 Emergency</span>
-              </div>
-              <div 
-                className="flex items-center space-x-2 text-white font-medium text-base"
-                style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}
-              >
-                <MapPin className="w-5 h-5" />
-                <span>Sarasota to Naples</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Bottom Fade to White */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
-      </section>
+      <Hero />
 
       {/* Services Grid (Bento Box) */}
       <section className="py-20 bg-white">
