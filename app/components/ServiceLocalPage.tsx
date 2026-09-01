@@ -175,7 +175,7 @@ export default function ServiceLocalPage({ data }: { data: ServicePageData }) {
                     </div>
                     <div className="flex items-center gap-3 text-slate-300">
                       <MapPin className="w-5 h-5 text-amber-400" />
-                      <span>Sarasota to Naples</span>
+                      <span>Port Charlotte, North Port &amp; Punta Gorda</span>
                     </div>
                   </div>
                   <button
@@ -221,7 +221,7 @@ export default function ServiceLocalPage({ data }: { data: ServicePageData }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-10">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
-              {data.shortName} Across Southwest Florida
+              {data.shortName} in Port Charlotte, North Port &amp; Punta Gorda
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto">{data.areasNote}</p>
           </AnimatedSection>
@@ -242,7 +242,7 @@ export default function ServiceLocalPage({ data }: { data: ServicePageData }) {
       <Faq
         items={faq}
         title={`${data.shortName} FAQs`}
-        subtitle={`Common questions about ${data.shortName.toLowerCase()} in Southwest Florida.`}
+        subtitle={`Common questions about ${data.shortName.toLowerCase()} in Port Charlotte, North Port & Punta Gorda.`}
       />
       <Footer onOpenContact={openChat} />
     </main>

@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 import { AreaSeoLayout, areaSeo, buildMetadata } from "../../seo";
 
-const config = areaSeo["cape-coral"];
+const config = areaSeo["north-port"];
 
 export const metadata = buildMetadata(config);
 
-export default function CapeCoralLayout({ children }: { children: ReactNode }) {
+export default function NorthPortLayout({ children }: { children: ReactNode }) {
   return <AreaSeoLayout config={config}>{children}</AreaSeoLayout>;
 }

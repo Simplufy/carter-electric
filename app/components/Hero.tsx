@@ -19,7 +19,7 @@ const features = [
   {
     icon: Home,
     title: "Family Owned & Local",
-    desc: "Proudly serving Southwest Florida",
+    desc: "Proudly serving Port Charlotte, North Port & Punta Gorda",
   },
 ];
 
@@ -30,7 +30,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/images/hero-bg.jpg"
-          alt="Carter Electric electrician shaking hands with a homeowner in Southwest Florida"
+          alt="Carter Electric electrician shaking hands with a homeowner in Port Charlotte"
           fill
           className="object-cover object-right"
           priority
@@ -60,12 +60,12 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white tracking-tight leading-[1.05] mb-5">
             Electrical Contractor in
             <br />
-            <span className="text-orange-500">Southwest Florida</span>
+            <span className="text-orange-500">Port Charlotte, North Port &amp; Punta Gorda</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-300 max-w-xl mb-8">
             Expert lighting, EV charger installation, panel upgrades and repairs for homes and
-            businesses from Sarasota to Naples.
+            businesses in Port Charlotte, North Port, and Punta Gorda.
           </p>
 
           <QuoteForm />
@@ -81,7 +81,7 @@ export default function Hero() {
               <span className="text-white font-semibold text-sm">5.0 Rating</span>
             </div>
             <span className="text-slate-400 text-sm">
-              Trusted by homeowners across Southwest Florida
+              Trusted by homeowners in Port Charlotte, North Port &amp; Punta Gorda
             </span>
           </div>
         </motion.div>

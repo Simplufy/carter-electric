@@ -8,14 +8,7 @@ export const services = [
 ];
 
 export const serviceAreas = [
-  { name: "Sarasota", slug: "sarasota" },
-  { name: "Venice", slug: "venice" },
-  { name: "Englewood", slug: "englewood" },
   { name: "Port Charlotte", slug: "port-charlotte" },
+  { name: "North Port", slug: "north-port" },
   { name: "Punta Gorda", slug: "punta-gorda" },
-  { name: "Cape Coral", slug: "cape-coral" },
-  { name: "Fort Myers", slug: "fort-myers" },
-  { name: "Bonita Springs", slug: "bonita-springs" },
-  { name: "Naples", slug: "naples" },
-  { name: "Marco Island", slug: "marco-island" },
 ];

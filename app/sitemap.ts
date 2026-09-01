@@ -13,16 +13,9 @@ const routes = [
   "/services/electrical-repairs/",
   "/services/panel-upgrades/",
   "/services/commercial-services/",
-  "/service-areas/sarasota/",
-  "/service-areas/venice/",
-  "/service-areas/englewood/",
   "/service-areas/port-charlotte/",
+  "/service-areas/north-port/",
   "/service-areas/punta-gorda/",
-  "/service-areas/cape-coral/",
-  "/service-areas/fort-myers/",
-  "/service-areas/bonita-springs/",
-  "/service-areas/naples/",
-  "/service-areas/marco-island/",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -33,4 +26,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === "/" ? 1 : route.startsWith("/services") ? 0.9 : 0.8,
   }));
 }
-

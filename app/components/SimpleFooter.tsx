@@ -40,7 +40,7 @@ export default function SimpleFooter() {
         
         <div className="mt-12 pt-8 border-t border-slate-800 text-center">
           <p className="text-slate-500 text-sm">
-            © 2026 Carter Electric of Southwest Florida. All rights reserved.
+            © 2026 Carter Electric. All rights reserved.
           </p>
         </div>
       </div>

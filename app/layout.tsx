@@ -10,11 +10,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.carterelectricflorida.com"),
   title: {
-    default: "Carter Electric of Southwest Florida | Licensed Electrician Services",
+    default: "Carter Electric | Port Charlotte, North Port & Punta Gorda Electrician",
     template: "%s | Carter Electric",
   },
-  description: "Family-owned electrical contractor serving Sarasota, Naples & all of Southwest Florida. Indoor/outdoor lighting, EV chargers, panel upgrades & 24/7 emergency service.",
-  keywords: ["electrician", "electrical services", "Southwest Florida", "Sarasota", "Naples", "lighting installation", "EV charger", "panel upgrade", "electrical repair", "commercial electrical"],
+  description: "Family-owned electrical contractor serving Port Charlotte, North Port & Punta Gorda. Indoor/outdoor lighting, EV chargers, panel upgrades & 24/7 emergency service.",
+  keywords: ["electrician", "electrical services", "Port Charlotte", "North Port", "Punta Gorda", "lighting installation", "EV charger", "panel upgrade", "electrical repair", "commercial electrical"],
   authors: [{ name: "Carter Electric" }],
   creator: "Carter Electric",
   publisher: "Carter Electric",
@@ -33,22 +33,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.carterelectricflorida.com",
-    siteName: "Carter Electric of Southwest Florida",
-    title: "Carter Electric of Southwest Florida | Licensed Electrician Services",
-    description: "Family-owned electrical contractor serving Sarasota, Naples & all of Southwest Florida. Indoor/outdoor lighting, EV chargers, panel upgrades & 24/7 emergency service.",
+    siteName: "Carter Electric",
+    title: "Carter Electric | Port Charlotte, North Port & Punta Gorda Electrician",
+    description: "Family-owned electrical contractor serving Port Charlotte, North Port & Punta Gorda. Indoor/outdoor lighting, EV chargers, panel upgrades & 24/7 emergency service.",
     images: [
       {
         url: "/images/carter-electric-social.png",
         width: 1200,
         height: 630,
-        alt: "Carter Electric - Electrical Services in Southwest Florida",
+        alt: "Carter Electric - Electrical Services in Port Charlotte, North Port & Punta Gorda",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Carter Electric of Southwest Florida",
-    description: "Family-owned electrical contractor serving Sarasota to Naples. Licensed & insured.",
+    title: "Carter Electric | Port Charlotte, North Port & Punta Gorda",
+    description: "Family-owned electrical contractor serving Port Charlotte, North Port & Punta Gorda. Licensed & insured.",
     images: ["/images/carter-electric-social.png"],
     creator: "@carterelectric",
   },
@@ -70,8 +70,8 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Electrician",
-    "name": "Carter Electric of Southwest Florida",
-    "description": "Family-owned electrical contractor serving Sarasota, Naples & all of Southwest Florida.",
+    "name": "Carter Electric",
+    "description": "Family-owned electrical contractor serving Port Charlotte, North Port & Punta Gorda.",
     "url": "https://www.carterelectricflorida.com",
     "telephone": "+1-941-336-6811",
     "email": "contact@carterelectricflorida.com",
@@ -79,22 +79,18 @@ export default function RootLayout({
       "@type": "PostalAddress",
       "addressRegion": "FL",
       "addressCountry": "US",
-      "addressLocality": "Southwest Florida"
+      "addressLocality": "Port Charlotte"
     },
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": "27.0",
-        "longitude": "-82.0"
-      },
-      "geoRadius": "100 km"
-    },
+    "areaServed": [
+      { "@type": "City", "name": "Port Charlotte" },
+      { "@type": "City", "name": "North Port" },
+      { "@type": "City", "name": "Punta Gorda" }
+    ],
     "priceRange": "$$",
     "openingHours": "Mo-Fr 07:00-18:00, Sa 08:00-16:00, 24/7 Emergency",
     "image": "https://www.carterelectricflorida.com/images/carter-electric-social.png",
     "sameAs": [],
-    "keywords": "electrician, electrical services, Southwest Florida, Sarasota, Naples"
+    "keywords": "electrician, electrical services, Port Charlotte, North Port, Punta Gorda"
   };
 
   return (

@@ -24,20 +24,20 @@ export const serviceContent: Record<string, ServicePageData> = {
     shortName: "Indoor Lighting",
     iconHint: "lightbulb",
     heroImage: "/images/IMG_9500.jpeg",
-    heroAlt: "Indoor lighting installation in Southwest Florida home",
+    heroAlt: "Indoor lighting installation in Port Charlotte home",
     heroBlurb:
-      "Transform your home with custom indoor lighting—recessed LEDs, fixtures, dimmers, and smart controls installed by licensed Southwest Florida electricians.",
+      "Transform your home with custom indoor lighting—recessed LEDs, fixtures, dimmers, and smart controls installed by licensed electricians in Port Charlotte, North Port, and Punta Gorda.",
     h1: "Indoor Lighting Installation",
-    introTitle: "Professional Indoor Lighting Services in Southwest Florida",
+    introTitle: "Professional Indoor Lighting Services in Port Charlotte, North Port & Punta Gorda",
     intro: [
-      "Lighting shapes how every room feels and functions. Carter Electric designs and installs indoor lighting for Southwest Florida homes—from Sarasota bungalows to Naples estates—so your space looks better, uses less energy, and works the way you live.",
+      "Lighting shapes how every room feels and functions. Carter Electric designs and installs indoor lighting for homes in Port Charlotte, North Port, and Punta Gorda—so your space looks better, uses less energy, and works the way you live.",
       "We handle recessed and canless LED layouts, chandelier and pendant installs, under-cabinet kitchen lighting, accent lighting for art and architecture, and whole-home dimming or smart control systems. Every project starts with a free consultation focused on your rooms, ceilings, and goals.",
       "Florida homes often have unique ceiling structures, humidity considerations, and open floor plans that need balanced light layers. Our licensed electricians plan circuits cleanly, match fixtures to your style, and complete work to Florida electrical code with permits when required.",
     ],
     sections: [
       {
         title: "Indoor Lighting Solutions We Install",
-        body: "Whether you are remodeling a kitchen in Cape Coral or updating living areas in Venice, we install lighting that is both beautiful and practical.",
+        body: "Whether you are remodeling a kitchen in Port Charlotte or updating living areas in North Port or Punta Gorda, we install lighting that is both beautiful and practical.",
         bullets: [
           "Recessed and canless LED ceiling lighting",
           "Chandeliers, pendants, and statement fixtures",
@@ -48,8 +48,8 @@ export const serviceContent: Record<string, ServicePageData> = {
         ],
       },
       {
-        title: "Serving Homes Across Southwest Florida",
-        body: "We regularly complete indoor lighting projects in Sarasota, Venice, Englewood, Port Charlotte, Punta Gorda, Cape Coral, Fort Myers, Bonita Springs, Naples, and Marco Island. Local knowledge matters—coastal humidity, condo rules, and older home wiring all affect the right approach.",
+        title: "Serving Homes in Port Charlotte, North Port & Punta Gorda",
+        body: "We regularly complete indoor lighting projects in Port Charlotte, North Port, and Punta Gorda. Local knowledge matters—coastal humidity, condo rules, and older home wiring all affect the right approach.",
       },
       {
         title: "When to Upgrade Your Indoor Lighting",
@@ -65,12 +65,12 @@ export const serviceContent: Record<string, ServicePageData> = {
     ],
     whyTitle: "Why Homeowners Choose Carter Electric for Lighting",
     why: [
-      "Licensed & insured Southwest Florida electricians",
+      "Licensed & insured local electricians",
       "Design help, not just fixture hanging",
       "LED-first, energy-efficient recommendations",
       "Clean workmanship in finished homes",
       "Permits and inspections when required",
-      "Service from Sarasota to Marco Island",
+      "Service in Port Charlotte, North Port & Punta Gorda",
     ],
     areasNote: "Looking for an indoor lighting electrician near you? Visit our city pages for local details.",
   },
@@ -82,18 +82,18 @@ export const serviceContent: Record<string, ServicePageData> = {
     heroImage: "/images/service-outdoor.jpg",
     heroAlt: "Outdoor landscape lighting installation",
     heroBlurb:
-      "Professional outdoor and landscape lighting for Southwest Florida homes—security, pathways, lanais, and architectural accents built for coastal weather.",
+      "Professional outdoor and landscape lighting for Port Charlotte, North Port, and Punta Gorda homes—security, pathways, lanais, and architectural accents built for coastal weather.",
     h1: "Outdoor & Landscape Lighting",
-    introTitle: "Outdoor Lighting Built for Southwest Florida",
+    introTitle: "Outdoor Lighting Built for Port Charlotte, North Port & Punta Gorda",
     intro: [
       "Outdoor lighting extends how you use your lanai, pool deck, and yard after sunset—and it is one of the best upgrades for safety and curb appeal. Carter Electric installs weather-ready outdoor lighting systems designed for Gulf Coast humidity, salt air, and storm seasons.",
-      "From low-voltage landscape lighting in Naples to security lighting on Cape Coral canal lots, we design layouts that highlight palms, walkways, entries, and architecture without harsh glare.",
+      "From low-voltage landscape lighting in Punta Gorda to security lighting on Port Charlotte canal lots, we design layouts that highlight palms, walkways, entries, and architecture without harsh glare.",
       "We also repair and upgrade older outdoor systems that have failed from corrosion, damaged wire, or outdated fixtures—replacing them with efficient LEDs and smart or photocell controls.",
     ],
     sections: [
       {
         title: "Outdoor Lighting Services",
-        body: "Every property is different. Beach homes need corrosion-aware materials; inland estates may want layered landscape scenes. We tailor the system to your home and budget.",
+        body: "Every property is different. Waterfront homes need corrosion-aware materials; inland neighborhoods may want layered landscape scenes. We tailor the system to your home and budget.",
         bullets: [
           "Pathway, driveway, and step lighting",
           "Security and motion-assisted lighting",
@@ -105,11 +105,11 @@ export const serviceContent: Record<string, ServicePageData> = {
       },
       {
         title: "Coastal Durability Matters",
-        body: "Southwest Florida outdoor electrical work fails fast when the wrong fixtures are used. We specify weather-rated products, proper sealing, and GFCI protection so your investment lasts through rainy summers and hurricane season.",
+        body: "Outdoor electrical work near Charlotte Harbor fails fast when the wrong fixtures are used. We specify weather-rated products, proper sealing, and GFCI protection so your investment lasts through rainy summers and hurricane season.",
       },
       {
         title: "Where We Install Outdoor Lighting",
-        body: "Carter Electric provides outdoor lighting installation and repair throughout Sarasota, Venice, Englewood, Port Charlotte, Punta Gorda, Cape Coral, Fort Myers, Bonita Springs, Naples, and Marco Island.",
+        body: "Carter Electric provides outdoor lighting installation and repair throughout Port Charlotte, North Port, and Punta Gorda.",
       },
     ],
     processTitle: "How Outdoor Lighting Projects Work",
@@ -126,7 +126,7 @@ export const serviceContent: Record<string, ServicePageData> = {
       "LED efficiency with strong light quality",
       "Licensed electricians—not seasonal crews only",
       "Repair and full redesign options",
-      "Local service across Southwest Florida",
+      "Local service in Port Charlotte, North Port & Punta Gorda",
     ],
     areasNote: "Explore electrician pages for your city to see outdoor and landscape lighting service near you.",
   },
@@ -136,15 +136,15 @@ export const serviceContent: Record<string, ServicePageData> = {
     shortName: "EV Chargers",
     iconHint: "car",
     heroImage: "/images/service-ev.jpg",
-    heroAlt: "EV charger installation for Southwest Florida homes",
+    heroAlt: "EV charger installation for Port Charlotte homes",
     heroBlurb:
-      "Licensed Level 2 EV charger installation for Southwest Florida homes and businesses—Tesla and all major brands, with permits and panel checks.",
+      "Licensed Level 2 EV charger installation for Port Charlotte, North Port, and Punta Gorda homes and businesses—Tesla and all major brands, with permits and panel checks.",
     h1: "EV Charger Installation",
-    introTitle: "Home & Business EV Charger Installation in Southwest Florida",
+    introTitle: "Home & Business EV Charger Installation in Port Charlotte, North Port & Punta Gorda",
     intro: [
-      "Charging at home is the most convenient way to own an electric vehicle. Carter Electric installs Level 2 EV chargers across Southwest Florida with dedicated circuits, clean mounting, and full attention to panel capacity and local code.",
+      "Charging at home is the most convenient way to own an electric vehicle. Carter Electric installs Level 2 EV chargers in Port Charlotte, North Port, and Punta Gorda with dedicated circuits, clean mounting, and full attention to panel capacity and local code.",
       "We install hardwired and plug-in units for Tesla, Ford, Hyundai, Kia, Chevrolet, Rivian, and other brands. If your panel needs an upgrade first, we can handle charger and service work as one coordinated project.",
-      "From Sarasota garages to Naples estates and Cape Coral driveways, our process includes load evaluation, permitting when required, and a final test so you charge safely from day one.",
+      "From Port Charlotte garages to North Port driveways and Punta Gorda homes, our process includes load evaluation, permitting when required, and a final test so you charge safely from day one.",
     ],
     sections: [
       {
@@ -165,7 +165,7 @@ export const serviceContent: Record<string, ServicePageData> = {
       },
       {
         title: "EV Charger Service Areas",
-        body: "We install EV chargers in Sarasota, Venice, Englewood, Port Charlotte, Punta Gorda, Cape Coral, Fort Myers, Bonita Springs, Naples, and Marco Island—including condo situations where building rules and capacity allow.",
+        body: "We install EV chargers in Port Charlotte, North Port, and Punta Gorda—including condo situations where building rules and capacity allow.",
       },
     ],
     processTitle: "EV Charger Installation Steps",
@@ -182,7 +182,7 @@ export const serviceContent: Record<string, ServicePageData> = {
       "Clean garage and exterior installs",
       "Licensed, insured Florida electricians",
       "Permit handling included on required jobs",
-      "Local Southwest Florida service area",
+      "Local service in Port Charlotte, North Port & Punta Gorda",
     ],
     areasNote: "See our service-area pages for EV charger installation in your city.",
   },
@@ -194,11 +194,11 @@ export const serviceContent: Record<string, ServicePageData> = {
     heroImage: "/images/IMG_9504.JPG",
     heroAlt: "Electrical repairs and troubleshooting",
     heroBlurb:
-      "Fast electrical repairs and troubleshooting across Southwest Florida—breakers, outlets, wiring issues, and 24/7 emergency service.",
+      "Fast electrical repairs and troubleshooting in Port Charlotte, North Port, and Punta Gorda—breakers, outlets, wiring issues, and 24/7 emergency service.",
     h1: "Electrical Repairs & Troubleshooting",
-    introTitle: "Reliable Electrical Repair Service in Southwest Florida",
+    introTitle: "Reliable Electrical Repair Service in Port Charlotte, North Port & Punta Gorda",
     intro: [
-      "Electrical problems range from annoying (a dead outlet) to dangerous (burning smells, sparking, partial outages). Carter Electric provides licensed electrical repairs for homes and businesses from Sarasota to Marco Island, with same-day options and 24/7 emergency response.",
+      "Electrical problems range from annoying (a dead outlet) to dangerous (burning smells, sparking, partial outages). Carter Electric provides licensed electrical repairs for homes and businesses in Port Charlotte, North Port, and Punta Gorda, with same-day options and 24/7 emergency response.",
       "Our electricians diagnose root causes—not just symptoms—so you are not calling back next week for the same trip. We carry common parts for breakers, devices, and fixtures and explain findings in plain language.",
       "Coastal Florida homes face humidity, storms, and aging panels that create unique failure patterns. We know what to check first and when a larger upgrade is the safer long-term fix.",
     ],
@@ -220,8 +220,8 @@ export const serviceContent: Record<string, ServicePageData> = {
         body: "Call right away for sparking outlets, buzzing panels, burning odors, repeatedly tripping main breakers, or any situation where you smell or see signs of overheating. Shut off the affected breaker if you can do so safely and contact us for emergency service.",
       },
       {
-        title: "Repair Coverage Across the Region",
-        body: "We provide electrical repair service in Sarasota, Venice, Englewood, Port Charlotte, Punta Gorda, Cape Coral, Fort Myers, Bonita Springs, Naples, and Marco Island.",
+        title: "Repair Coverage Across Our Service Area",
+        body: "We provide electrical repair service in Port Charlotte, North Port, and Punta Gorda.",
       },
     ],
     processTitle: "Our Repair Approach",
@@ -238,7 +238,7 @@ export const serviceContent: Record<string, ServicePageData> = {
       "Upfront pricing before major work",
       "Respect for your home and schedule",
       "Honest advice on repair vs upgrade",
-      "Trusted across Southwest Florida",
+      "Trusted in Port Charlotte, North Port & Punta Gorda",
     ],
     areasNote: "Need an emergency electrician near you? Visit your city's service-area page.",
   },
@@ -250,13 +250,13 @@ export const serviceContent: Record<string, ServicePageData> = {
     heroImage: "/images/service-panel.jpg",
     heroAlt: "Electrical panel upgrade installation",
     heroBlurb:
-      "Electrical panel upgrades and service improvements for Southwest Florida homes—more capacity, safer breakers, and room for EVs, pools, and modern living.",
+      "Electrical panel upgrades and service improvements for Port Charlotte, North Port, and Punta Gorda homes—more capacity, safer breakers, and room for EVs, pools, and modern living.",
     h1: "Panel Upgrades & Rewiring",
-    introTitle: "Electrical Panel Upgrades in Southwest Florida",
+    introTitle: "Electrical Panel Upgrades in Port Charlotte, North Port & Punta Gorda",
     intro: [
-      "Your electrical panel is the heart of the home's power system. If it is outdated, full, or showing heat damage, a panel upgrade is one of the highest-value safety improvements you can make. Carter Electric installs modern panels and service upgrades throughout Southwest Florida.",
+      "Your electrical panel is the heart of the home's power system. If it is outdated, full, or showing heat damage, a panel upgrade is one of the highest-value safety improvements you can make. Carter Electric installs modern panels and service upgrades throughout Port Charlotte, North Port, and Punta Gorda.",
       "Homeowners often need more capacity for EV chargers, pool equipment, hurricane generators, kitchen remodels, and multi-zone A/C. We evaluate your current service, design the right ampacity, and coordinate utility and permit steps when required.",
-      "From older Sarasota bungalows to Cape Coral waterfront homes, we replace aging fuse boxes and undersized breaker panels with cleaner, safer equipment built for today's loads.",
+      "From older Port Charlotte homes to North Port remodels and Punta Gorda historic properties, we replace aging fuse boxes and undersized breaker panels with cleaner, safer equipment built for today's loads.",
     ],
     sections: [
       {
@@ -277,7 +277,7 @@ export const serviceContent: Record<string, ServicePageData> = {
       },
       {
         title: "Panel Upgrades Across Our Service Area",
-        body: "We perform panel upgrades in Sarasota, Venice, Englewood, Port Charlotte, Punta Gorda, Cape Coral, Fort Myers, Bonita Springs, Naples, and Marco Island.",
+        body: "We perform panel upgrades in Port Charlotte, North Port, and Punta Gorda.",
       },
     ],
     processTitle: "Panel Upgrade Process",
@@ -294,7 +294,7 @@ export const serviceContent: Record<string, ServicePageData> = {
       "Permit and inspection experience",
       "EV and generator-ready planning",
       "Licensed Florida electricians only",
-      "Regional coverage Sarasota to Marco Island",
+      "Coverage in Port Charlotte, North Port & Punta Gorda",
     ],
     areasNote: "Learn more about electrical service in your city on our location pages.",
   },
@@ -304,15 +304,15 @@ export const serviceContent: Record<string, ServicePageData> = {
     shortName: "Commercial",
     iconHint: "building",
     heroImage: "/images/service-commercial.jpg",
-    heroAlt: "Commercial electrical services Southwest Florida",
+    heroAlt: "Commercial electrical services Port Charlotte North Port Punta Gorda",
     heroBlurb:
-      "Commercial electrical services for Southwest Florida businesses, property managers, offices, retail, restaurants, and multi-family properties.",
+      "Commercial electrical services for Port Charlotte, North Port, and Punta Gorda businesses, property managers, offices, retail, restaurants, and multi-family properties.",
     h1: "Commercial Electrical Services",
     introTitle: "Commercial & Multi-Family Electrical Contractors",
     intro: [
-      "Businesses and property managers need electrical partners who show up on time, work cleanly around tenants, and document work properly. Carter Electric provides commercial electrical services across Southwest Florida for offices, retail, restaurants, warehouses, HOAs, and multi-family communities.",
+      "Businesses and property managers need electrical partners who show up on time, work cleanly around tenants, and document work properly. Carter Electric provides commercial electrical services in Port Charlotte, North Port, and Punta Gorda for offices, retail, restaurants, warehouses, HOAs, and multi-family communities.",
       "We handle tenant build-outs, lighting retrofits, panel and distribution work, emergency lighting, parking lot lighting, and ongoing maintenance. After-hours scheduling is available when downtime is not an option.",
-      "From Sarasota's commercial corridors to Naples hospitality and Cape Coral retail centers, we bring residential-quality communication with commercial reliability.",
+      "From Port Charlotte commercial corridors to North Port retail and Punta Gorda downtown businesses, we bring residential-quality communication with commercial reliability.",
     ],
     sections: [
       {
@@ -329,11 +329,11 @@ export const serviceContent: Record<string, ServicePageData> = {
       },
       {
         title: "Industries & Property Types",
-        body: "We commonly support professional offices, medical suites, restaurants, retail centers, warehouses, condominium associations, and property management portfolios throughout the region.",
+        body: "We commonly support professional offices, medical suites, restaurants, retail centers, warehouses, condominium associations, and property management portfolios throughout Port Charlotte, North Port, and Punta Gorda.",
       },
       {
         title: "Where We Work",
-        body: "Commercial electrical service is available in Sarasota, Venice, Englewood, Port Charlotte, Punta Gorda, Cape Coral, Fort Myers, Bonita Springs, Naples, and Marco Island.",
+        body: "Commercial electrical service is available in Port Charlotte, North Port, and Punta Gorda.",
       },
     ],
     processTitle: "How Commercial Projects Run",
@@ -350,7 +350,7 @@ export const serviceContent: Record<string, ServicePageData> = {
       "Licensed, insured crews",
       "Clean job sites for tenant-facing spaces",
       "Maintenance plan options",
-      "One contractor across multiple SWFL locations",
+      "One contractor across Port Charlotte, North Port & Punta Gorda",
     ],
     areasNote: "Prefer a contractor who already serves your city? Browse our service-area pages.",
   },

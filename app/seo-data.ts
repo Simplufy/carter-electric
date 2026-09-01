@@ -15,15 +15,15 @@ export const serviceFaq: Record<string, FaqItem[]> = {
     },
     {
       question: "Do you offer smart lighting and dimmer controls?",
-      answer: "Yes. We install smart switches, dimmers, and app-controlled lighting systems so you can set scenes, schedules, and voice controls throughout your Southwest Florida home.",
+      answer: "Yes. We install smart switches, dimmers, and app-controlled lighting systems so you can set scenes, schedules, and voice controls throughout your Port Charlotte, North Port, or Punta Gorda home.",
     },
     {
       question: "Are your lighting installations permitted and up to code?",
       answer: "All of our indoor lighting work is performed by licensed electricians and meets Florida building and electrical code. We pull the necessary permits and schedule inspections when required.",
     },
     {
-      question: "Which Southwest Florida cities do you serve for indoor lighting?",
-      answer: "We install indoor lighting in Sarasota, Venice, Englewood, Port Charlotte, Punta Gorda, Cape Coral, Fort Myers, Bonita Springs, Naples, and Marco Island.",
+      question: "Which cities do you serve for indoor lighting?",
+      answer: "We install indoor lighting in Port Charlotte, North Port, and Punta Gorda.",
     },
     {
       question: "How long does a typical indoor lighting project take?",
@@ -48,12 +48,12 @@ export const serviceFaq: Record<string, FaqItem[]> = {
       answer: "Yes. We repair or replace damaged fixtures, re-run low-voltage wiring, and upgrade older systems to energy-efficient LED lighting.",
     },
     {
-      question: "Will outdoor lighting survive Southwest Florida storms?",
-      answer: "Properly installed weather-rated systems hold up much better than big-box kits. We focus on sealed connections, correct burial depth or routing, GFCI protection, and fixtures suited to Gulf Coast conditions.",
+      question: "Will outdoor lighting survive Gulf Coast storms?",
+      answer: "Properly installed weather-rated systems hold up much better than big-box kits. We focus on sealed connections, correct burial depth or routing, GFCI protection, and fixtures suited to Charlotte Harbor conditions.",
     },
     {
       question: "Do you light lanais, docks approaches, and canal lots?",
-      answer: "Yes. Outdoor living spaces are a big part of Southwest Florida homes. We design safe, attractive lighting for lanais, walkways, entries, and waterfront properties in cities like Cape Coral and Marco Island.",
+      answer: "Yes. Outdoor living spaces are a big part of homes in Port Charlotte, North Port, and Punta Gorda. We design safe, attractive lighting for lanais, walkways, entries, and waterfront properties.",
     },
   ],
   "ev-charger-installation": [
@@ -85,11 +85,11 @@ export const serviceFaq: Record<string, FaqItem[]> = {
   "electrical-repairs": [
     {
       question: "Do you offer 24/7 emergency electrical repair?",
-      answer: "Yes. We provide 24/7 emergency electrical service across Southwest Florida for issues like power outages, sparking outlets, and burning smells.",
+      answer: "Yes. We provide 24/7 emergency electrical service across Port Charlotte, North Port, and Punta Gorda for issues like power outages, sparking outlets, and burning smells.",
     },
     {
       question: "What common electrical problems do you fix?",
-      answer: "We repair tripping breakers, flickering lights, dead outlets, faulty switches, ceiling fan issues, and wiring problems in homes and businesses throughout Southwest Florida.",
+      answer: "We repair tripping breakers, flickering lights, dead outlets, faulty switches, ceiling fan issues, and wiring problems in homes and businesses throughout Port Charlotte, North Port, and Punta Gorda.",
     },
     {
       question: "Are your electricians licensed and insured?",
@@ -131,13 +131,13 @@ export const serviceFaq: Record<string, FaqItem[]> = {
     },
     {
       question: "Do you replace fuse boxes?",
-      answer: "Yes. Converting old fuse panels to modern breaker panels is one of the most important safety upgrades for older Southwest Florida homes.",
+      answer: "Yes. Converting old fuse panels to modern breaker panels is one of the most important safety upgrades for older homes in Port Charlotte, North Port, and Punta Gorda.",
     },
   ],
   "commercial-services": [
     {
       question: "Do you work with property managers and HOAs?",
-      answer: "Yes. We provide electrical maintenance and project services for property management companies, HOAs, and condominium associations across Southwest Florida.",
+      answer: "Yes. We provide electrical maintenance and project services for property management companies, HOAs, and condominium associations in Port Charlotte, North Port, and Punta Gorda.",
     },
     {
       question: "What commercial electrical services do you offer?",
@@ -153,7 +153,7 @@ export const serviceFaq: Record<string, FaqItem[]> = {
     },
     {
       question: "Do you serve multi-location commercial clients?",
-      answer: "Yes. Because we cover Sarasota through Marco Island, property managers can use one electrical contractor across multiple Southwest Florida locations.",
+      answer: "Yes. Because we cover Port Charlotte, North Port, and Punta Gorda, property managers can use one electrical contractor across multiple local properties.",
     },
     {
       question: "Can you help with commercial lighting upgrades for energy savings?",
@@ -163,84 +163,6 @@ export const serviceFaq: Record<string, FaqItem[]> = {
 };
 
 export const areaFaq: Record<string, FaqItem[]> = {
-  sarasota: [
-    {
-      question: "Are you a licensed electrician in Sarasota, FL?",
-      answer: "Yes. Carter Electric is a licensed and insured electrical contractor serving Sarasota homes and businesses, from Downtown to Siesta Key.",
-    },
-    {
-      question: "What neighborhoods in Sarasota do you serve?",
-      answer: "We serve all of Sarasota, including Downtown, Siesta Key, Lido Key, St. Armands Circle, Laurel Park, Southside Village, Gillespie Park, and the Rosemary District.",
-    },
-    {
-      question: "Do you offer emergency electrical service in Sarasota?",
-      answer: "Yes. We provide 24/7 emergency electrical service throughout Sarasota County for urgent issues like outages, sparking, and faulty panels.",
-    },
-    {
-      question: "Can you handle electrical work in older Sarasota homes?",
-      answer: "Yes. We regularly update the electrical systems of historic homes in neighborhoods like Laurel Park, including rewiring, panel upgrades, and safe lighting installation.",
-    },
-    {
-      question: "Do you install EV chargers in Sarasota?",
-      answer: "Yes. We install Level 2 EV chargers for Sarasota homeowners and can upgrade panels when extra capacity is needed.",
-    },
-    {
-      question: "Can you help with hurricane generator prep in Sarasota?",
-      answer: "Yes. We install generator interlocks, evaluate panel capacity, and help Sarasota homes prepare critical circuits for storm season.",
-    },
-  ],
-  venice: [
-    {
-      question: "Are you a licensed electrician in Venice, FL?",
-      answer: "Yes. Carter Electric is licensed and insured, serving Venice homes and businesses throughout Sarasota County.",
-    },
-    {
-      question: "What electrical services do you provide in Venice?",
-      answer: "We offer lighting installation, EV charger installation, electrical repairs, panel upgrades, and commercial electrical services in Venice, FL.",
-    },
-    {
-      question: "Do you serve the islands and beaches near Venice?",
-      answer: "Yes. We serve the Venice area and nearby barrier islands, using coastal-rated materials that stand up to salt air and humidity.",
-    },
-    {
-      question: "Do you offer 24/7 emergency service in Venice?",
-      answer: "Yes. Our emergency electricians are available around the clock for Venice residents and businesses.",
-    },
-    {
-      question: "Can you update electrical systems in Mediterranean-style Venice homes?",
-      answer: "Yes. We carefully modernize wiring, panels, and lighting in Venice's distinctive architecture while keeping safety and code compliance first.",
-    },
-    {
-      question: "Do you work on Venice Avenue commercial properties?",
-      answer: "Yes. We support Venice restaurants, shops, and offices with lighting, repairs, and after-hours scheduling when needed.",
-    },
-  ],
-  englewood: [
-    {
-      question: "Are you a licensed electrician in Englewood, FL?",
-      answer: "Yes. Carter Electric is a licensed, insured electrical contractor serving Englewood and the surrounding coastal communities.",
-    },
-    {
-      question: "Do you handle electrical repairs for Englewood homes?",
-      answer: "Yes. We repair breakers, outlets, switches, lighting, and wiring for Englewood homes, with 24/7 emergency service available.",
-    },
-    {
-      question: "Can you install lighting and EV chargers in Englewood?",
-      answer: "Yes. We install indoor and outdoor lighting, plus residential EV chargers, throughout the Englewood area.",
-    },
-    {
-      question: "Is your work suitable for Florida's coastal environment?",
-      answer: "Yes. We use corrosion-resistant and weatherproof materials designed for Englewood's coastal climate.",
-    },
-    {
-      question: "Do you serve Manasota Key and Englewood Beach homes?",
-      answer: "Yes. Beach and key properties are a regular part of our Englewood service area, including outdoor power and storm-ready upgrades.",
-    },
-    {
-      question: "Can you upgrade panels in older Englewood houses?",
-      answer: "Yes. Many Englewood homes benefit from modern breaker panels, and we handle upgrades with permits and inspections.",
-    },
-  ],
   "port-charlotte": [
     {
       question: "Are you a licensed electrician in Port Charlotte, FL?",
@@ -265,6 +187,32 @@ export const areaFaq: Record<string, FaqItem[]> = {
     {
       question: "Can you support boat lift or pool equipment power?",
       answer: "Yes. We evaluate loads and install dedicated circuits so lifts, pools, and outdoor equipment are powered safely.",
+    },
+  ],
+  "north-port": [
+    {
+      question: "Are you a licensed electrician in North Port, FL?",
+      answer: "Yes. Carter Electric is a licensed and insured electrical contractor serving North Port homes and businesses.",
+    },
+    {
+      question: "What electrical services do you offer in North Port?",
+      answer: "We provide lighting installation, electrical repairs, EV charger installation, panel upgrades, and commercial electrical services in North Port.",
+    },
+    {
+      question: "Do you offer emergency electrical service in North Port?",
+      answer: "Yes. We offer 24/7 emergency electrical service for North Port and nearby communities including Port Charlotte and Punta Gorda.",
+    },
+    {
+      question: "Can you upgrade panels in North Port homes?",
+      answer: "Yes. We regularly upgrade aging electrical panels in North Port to modern 200-amp systems, including permits and inspections.",
+    },
+    {
+      question: "Do you install EV chargers in North Port?",
+      answer: "Yes. We install Level 2 EV chargers for North Port homeowners and can upgrade panels when extra capacity is needed.",
+    },
+    {
+      question: "Can you help with generator prep in North Port?",
+      answer: "Yes. We install generator interlocks, evaluate panel capacity, and help North Port homes prepare critical circuits for storm season.",
     },
   ],
   "punta-gorda": [
@@ -293,146 +241,16 @@ export const areaFaq: Record<string, FaqItem[]> = {
       answer: "Yes. Whole-home and point-of-use surge protection is a smart upgrade for harbor-area homes exposed to storm activity.",
     },
   ],
-  "cape-coral": [
-    {
-      question: "Are you a licensed electrician in Cape Coral, FL?",
-      answer: "Yes. Carter Electric is a licensed and insured electrical contractor serving Cape Coral's waterfront homes and businesses.",
-    },
-    {
-      question: "Do you handle electrical work for waterfront homes?",
-      answer: "Yes. We use corrosion-resistant materials and coastal-grade equipment for Cape Coral's salt-air and canal-front properties.",
-    },
-    {
-      question: "Do you offer emergency electrical service in Cape Coral?",
-      answer: "Yes. We provide 24/7 emergency electrical service throughout Cape Coral and Lee County.",
-    },
-    {
-      question: "Can you install EV chargers and panel upgrades in Cape Coral?",
-      answer: "Yes. We install Level 2 EV chargers and perform panel upgrades in Cape Coral, including all permits and inspections.",
-    },
-    {
-      question: "Do you install power for boat lifts in Cape Coral?",
-      answer: "Yes. Boat lift and dock-adjacent power is common in Cape Coral. We install dedicated circuits and safe outdoor electrical infrastructure.",
-    },
-    {
-      question: "Can my Cape Coral panel handle a pool and EV charger?",
-      answer: "Maybe—many homes need a service upgrade first. We calculate loads and recommend the right panel size before adding major equipment.",
-    },
-  ],
-  "fort-myers": [
-    {
-      question: "Are you a licensed electrician in Fort Myers, FL?",
-      answer: "Yes. Carter Electric is licensed and insured, serving homes and businesses throughout Fort Myers and Lee County.",
-    },
-    {
-      question: "What electrical services do you provide in Fort Myers?",
-      answer: "We offer electrical repairs, lighting installation, EV charger installation, panel upgrades, and commercial electrical services in Fort Myers.",
-    },
-    {
-      question: "Do you offer emergency electrical service in Fort Myers?",
-      answer: "Yes. We provide 24/7 emergency electrical service for Fort Myers residents and businesses.",
-    },
-    {
-      question: "Can you handle commercial work for Fort Myers businesses?",
-      answer: "Yes. We serve Fort Myers businesses, offices, and property managers with maintenance plans and commercial electrical projects.",
-    },
-    {
-      question: "Do you work in Fort Myers condos and multi-family buildings?",
-      answer: "Yes. We handle unit repairs and coordinate common-area electrical work with associations and property managers.",
-    },
-    {
-      question: "Can you help with River District commercial lighting?",
-      answer: "Yes. We support Fort Myers commercial interiors and exteriors, including lighting upgrades scheduled around business operations.",
-    },
-  ],
-  "bonita-springs": [
-    {
-      question: "Are you a licensed electrician in Bonita Springs, FL?",
-      answer: "Yes. Carter Electric is a licensed and insured electrical contractor serving Bonita Springs and Lee County.",
-    },
-    {
-      question: "Do you work on luxury homes in Bonita Springs?",
-      answer: "Yes. We specialize in premium lighting, smart home wiring, and whole-home electrical systems for luxury properties in Bonita Springs.",
-    },
-    {
-      question: "Do you offer emergency electrical service in Bonita Springs?",
-      answer: "Yes. We offer 24/7 emergency electrical service for Bonita Springs homes and businesses.",
-    },
-    {
-      question: "What services do you provide in Bonita Springs?",
-      answer: "We provide lighting installation, electrical repairs, EV charger installation, panel upgrades, and commercial electrical services.",
-    },
-    {
-      question: "Can you install discreet EV chargers in Bonita Springs garages?",
-      answer: "Yes. We route and mount Level 2 chargers cleanly so they fit finished garages and higher-end home aesthetics.",
-    },
-    {
-      question: "Do you serve Bonita Bay and Barefoot Beach area homes?",
-      answer: "Yes. Gated and coastal communities around Bonita Springs are part of our regular service area.",
-    },
-  ],
-  naples: [
-    {
-      question: "Are you a licensed electrician in Naples, FL?",
-      answer: "Yes. Carter Electric is licensed and insured, serving Naples homes, condos, and businesses throughout Collier County.",
-    },
-    {
-      question: "Do you work with condos and HOAs in Naples?",
-      answer: "Yes. We provide electrical maintenance and project services for Naples condominium associations, HOAs, and property managers.",
-    },
-    {
-      question: "Do you offer emergency electrical service in Naples?",
-      answer: "Yes. We provide 24/7 emergency electrical service throughout Naples and Collier County.",
-    },
-    {
-      question: "What services do you provide in Naples?",
-      answer: "We provide lighting installation, electrical repairs, EV charger installation, panel upgrades, and commercial electrical services.",
-    },
-    {
-      question: "Do you handle high-end lighting projects in Old Naples or Port Royal?",
-      answer: "Yes. Precision indoor and landscape lighting for luxury Naples homes is a core part of our residential work.",
-    },
-    {
-      question: "Can you coordinate electrical work with Naples remodel timelines?",
-      answer: "Yes. We schedule around other trades and keep communication clear so electrical scopes stay on track during renovations.",
-    },
-  ],
-  "marco-island": [
-    {
-      question: "Are you a licensed electrician on Marco Island, FL?",
-      answer: "Yes. Carter Electric is licensed and insured, serving Marco Island's coastal homes, condos, and businesses.",
-    },
-    {
-      question: "Do you specialize in coastal home electrical work?",
-      answer: "Yes. We use marine-grade and corrosion-resistant materials suited to Marco Island's salt air and tropical climate.",
-    },
-    {
-      question: "Do you offer emergency electrical service on Marco Island?",
-      answer: "Yes. We offer 24/7 emergency electrical service for Marco Island residents and businesses.",
-    },
-    {
-      question: "What services do you provide on Marco Island?",
-      answer: "We provide lighting installation, electrical repairs, EV charger installation, panel upgrades, and commercial electrical services.",
-    },
-    {
-      question: "Can you work in Marco Island high-rise condos?",
-      answer: "Yes. We coordinate with building management on access, rules, and capacity constraints common to island condo towers.",
-    },
-    {
-      question: "Do you repair corrosion-related outdoor electrical failures?",
-      answer: "Yes. Salt-air damage to outdoor fixtures, boxes, and connections is common on Marco Island, and we repair or replace those systems with coastal-ready materials.",
-    },
-  ],
 };
 
 export const homeFaq: FaqItem[] = [
   {
-    question: "What areas of Florida does Carter Electric serve?",
-    answer: "We serve all of Southwest Florida, from Sarasota and Venice in the north to Naples and Marco Island in the south, including Englewood, Port Charlotte, Punta Gorda, Cape Coral, Fort Myers, and Bonita Springs.",
+    question: "What areas does Carter Electric serve?",
+    answer: "We serve Port Charlotte, North Port, and Punta Gorda.",
   },
   {
     question: "Do you offer free estimates?",
-    answer: "Yes. We provide free, no-obligation quotes for residential and commercial electrical projects across Southwest Florida.",
+    answer: "Yes. We provide free, no-obligation quotes for residential and commercial electrical projects in Port Charlotte, North Port, and Punta Gorda.",
   },
   {
     question: "Are you available for electrical emergencies?",

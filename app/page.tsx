@@ -71,16 +71,9 @@ const services = [
 ];
 
 const serviceAreas = [
-  { name: "Sarasota", slug: "sarasota", description: "Historic charm meets modern electrical solutions" },
-  { name: "Venice", slug: "venice", description: "Beautiful beach town electrical services" },
-  { name: "Englewood", slug: "englewood", description: "Quiet coastal community expertise" },
   { name: "Port Charlotte", slug: "port-charlotte", description: "Growing harbor area specialists" },
+  { name: "North Port", slug: "north-port", description: "Fast-growing community electrical experts" },
   { name: "Punta Gorda", slug: "punta-gorda", description: "Historic waterfront district services" },
-  { name: "Cape Coral", slug: "cape-coral", description: "Canal city electrical experts" },
-  { name: "Fort Myers", slug: "fort-myers", description: "City of palms electrical solutions" },
-  { name: "Bonita Springs", slug: "bonita-springs", description: "Gateway to the gulf services" },
-  { name: "Naples", slug: "naples", description: "Luxury home electrical specialists" },
-  { name: "Marco Island", slug: "marco-island", description: "Island paradise electrical services" },
 ];
 
 const whyChooseUs = [
@@ -102,26 +95,26 @@ const whyChooseUs = [
   {
     icon: Users,
     title: "Family Owned",
-    description: "Local family business treating every customer like family. Bringing 30+ years of electrical experience from Illinois to Southwest Florida.",
+    description: "Local family business treating every customer like family. Bringing 30+ years of electrical experience from Illinois to Port Charlotte, North Port & Punta Gorda.",
   },
 ];
 
 const testimonials = [
   {
     name: "Sarah M.",
-    location: "Sarasota",
+    location: "Port Charlotte",
     text: "Carter Electric installed our outdoor lighting and it completely transformed our backyard. Professional, punctual, and the work is flawless!",
     rating: 5,
   },
   {
     name: "Michael R.",
-    location: "Naples",
+    location: "North Port",
     text: "Best EV charger installation experience. They handled everything from permits to installation. Highly recommend for any electrical work!",
     rating: 5,
   },
   {
     name: "Jennifer L.",
-    location: "Fort Myers",
+    location: "Punta Gorda",
     text: "Our condo association has used Carter Electric for years. Reliable, responsive, and always fairly priced. True professionals.",
     rating: 5,
   },
@@ -214,7 +207,7 @@ export default function Home() {
               The Carter Electric Difference
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-              Since 2026, families and businesses across Southwest Florida have trusted us with their electrical needs.
+              Since 2026, families and businesses in Port Charlotte, North Port, and Punta Gorda have trusted us with their electrical needs.
             </p>
           </AnimatedSection>
 
@@ -240,14 +233,14 @@ export default function Home() {
           <AnimatedSection className="text-center mb-16">
             <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">Service Areas</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
-              Serving All of Southwest Florida
+              Serving Port Charlotte, North Port &amp; Punta Gorda
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-              From Sarasota to Naples, we're your local electrical experts. Click on your area to learn more.
+              Local electrical experts focused on three communities. Click on your area to learn more.
             </p>
           </AnimatedSection>
 
-          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {serviceAreas.map((area, index) => (
               <StaggerItem key={area.slug}>
                 <Link
@@ -276,7 +269,7 @@ export default function Home() {
               Quality Electrical Work
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-              See examples of our professional electrical installations and repairs throughout Southwest Florida.
+              See examples of our professional electrical installations and repairs throughout Port Charlotte, North Port, and Punta Gorda.
             </p>
           </AnimatedSection>
 
@@ -317,7 +310,7 @@ export default function Home() {
               What Our Customers Say
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-              Don't just take our word for it. Here's what homeowners and businesses across Southwest Florida have to say.
+              Don't just take our word for it. Here's what homeowners and businesses in Port Charlotte, North Port, and Punta Gorda have to say.
             </p>
           </AnimatedSection>
 

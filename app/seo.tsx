@@ -3,8 +3,9 @@ import type { ReactNode } from "react";
 import { areaFaq, serviceFaq, type FaqItem } from "./seo-data";
 
 const siteUrl = "https://www.carterelectricflorida.com";
-const siteName = "Carter Electric of Southwest Florida";
+const siteName = "Carter Electric";
 const socialImage = "/images/carter-electric-social.png";
+const servedCities = ["Port Charlotte", "North Port", "Punta Gorda"];
 
 type SeoConfig = {
   title: string;
@@ -26,83 +27,56 @@ type AreaConfig = SeoConfig & {
 
 export const serviceSeo: Record<string, ServiceConfig> = {
   "indoor-lighting": {
-    title: "Indoor Lighting Installation in Southwest Florida",
-    description: "Custom indoor lighting installation for Southwest Florida homes, including recessed lights, fixtures, dimmers, under-cabinet lighting, and LED upgrades.",
+    title: "Indoor Lighting Installation in Port Charlotte, North Port & Punta Gorda",
+    description: "Custom indoor lighting installation for Port Charlotte, North Port, and Punta Gorda homes, including recessed lights, fixtures, dimmers, under-cabinet lighting, and LED upgrades.",
     path: "/services/indoor-lighting/",
-    keywords: ["indoor lighting installation", "recessed lighting", "lighting electrician", "Southwest Florida electrician"],
+    keywords: ["indoor lighting installation", "recessed lighting", "lighting electrician", "Port Charlotte electrician", "North Port electrician", "Punta Gorda electrician"],
     serviceType: "Indoor lighting installation",
     faq: serviceFaq["indoor-lighting"],
   },
   "outdoor-lighting": {
     title: "Outdoor & Landscape Lighting Electrician",
-    description: "Professional outdoor and landscape lighting services for Southwest Florida homes, including security lighting, pathway lights, patio lighting, and LED upgrades.",
+    description: "Professional outdoor and landscape lighting services for Port Charlotte, North Port, and Punta Gorda homes, including security lighting, pathway lights, patio lighting, and LED upgrades.",
     path: "/services/outdoor-lighting/",
-    keywords: ["outdoor lighting", "landscape lighting", "security lighting", "Southwest Florida electrician"],
+    keywords: ["outdoor lighting", "landscape lighting", "security lighting", "Port Charlotte electrician", "North Port electrician", "Punta Gorda electrician"],
     serviceType: "Outdoor and landscape lighting",
     faq: serviceFaq["outdoor-lighting"],
   },
   "ev-charger-installation": {
-    title: "EV Charger Installation in Southwest Florida",
-    description: "Licensed EV charger installation for Southwest Florida homes and businesses, including Level 2 chargers, dedicated circuits, permits, and panel checks.",
+    title: "EV Charger Installation in Port Charlotte, North Port & Punta Gorda",
+    description: "Licensed EV charger installation for Port Charlotte, North Port, and Punta Gorda homes and businesses, including Level 2 chargers, dedicated circuits, permits, and panel checks.",
     path: "/services/ev-charger-installation/",
-    keywords: ["EV charger installation", "Level 2 charger", "Tesla charger installation", "Southwest Florida electrician"],
+    keywords: ["EV charger installation", "Level 2 charger", "Tesla charger installation", "Port Charlotte EV charger", "North Port EV charger", "Punta Gorda EV charger"],
     serviceType: "EV charger installation",
     faq: serviceFaq["ev-charger-installation"],
   },
   "electrical-repairs": {
     title: "Electrical Repairs & Troubleshooting Services",
-    description: "Fast electrical repair and troubleshooting services in Southwest Florida for breakers, outlets, switches, lighting, panels, and urgent electrical issues.",
+    description: "Fast electrical repair and troubleshooting services in Port Charlotte, North Port, and Punta Gorda for breakers, outlets, switches, lighting, panels, and urgent electrical issues.",
     path: "/services/electrical-repairs/",
-    keywords: ["electrical repairs", "emergency electrician", "electrical troubleshooting", "Southwest Florida electrician"],
+    keywords: ["electrical repairs", "emergency electrician", "electrical troubleshooting", "Port Charlotte electrician", "North Port electrician", "Punta Gorda electrician"],
     serviceType: "Electrical repairs and troubleshooting",
     faq: serviceFaq["electrical-repairs"],
   },
   "panel-upgrades": {
-    title: "Electrical Panel Upgrades in Southwest Florida",
-    description: "Electrical panel upgrades, breaker replacements, subpanels, and capacity improvements for Southwest Florida homes and businesses.",
+    title: "Electrical Panel Upgrades in Port Charlotte, North Port & Punta Gorda",
+    description: "Electrical panel upgrades, breaker replacements, subpanels, and capacity improvements for Port Charlotte, North Port, and Punta Gorda homes and businesses.",
     path: "/services/panel-upgrades/",
-    keywords: ["electrical panel upgrade", "breaker panel replacement", "subpanel installation", "Southwest Florida electrician"],
+    keywords: ["electrical panel upgrade", "breaker panel replacement", "subpanel installation", "Port Charlotte panel upgrade", "North Port panel upgrade", "Punta Gorda panel upgrade"],
     serviceType: "Electrical panel upgrades",
     faq: serviceFaq["panel-upgrades"],
   },
   "commercial-services": {
-    title: "Commercial Electrical Services in Southwest Florida",
-    description: "Commercial electrical services for Southwest Florida businesses, property managers, offices, restaurants, retail spaces, and multi-family properties.",
+    title: "Commercial Electrical Services in Port Charlotte, North Port & Punta Gorda",
+    description: "Commercial electrical services for Port Charlotte, North Port, and Punta Gorda businesses, property managers, offices, restaurants, retail spaces, and multi-family properties.",
     path: "/services/commercial-services/",
-    keywords: ["commercial electrician", "business electrical services", "property management electrician", "Southwest Florida electrician"],
+    keywords: ["commercial electrician", "business electrical services", "property management electrician", "Port Charlotte commercial electrician", "North Port commercial electrician", "Punta Gorda commercial electrician"],
     serviceType: "Commercial electrical services",
     faq: serviceFaq["commercial-services"],
   },
 };
 
 export const areaSeo: Record<string, AreaConfig> = {
-  sarasota: {
-    title: "Electrician in Sarasota, FL",
-    description: "Licensed electrician serving Sarasota, FL with lighting installation, EV chargers, electrical repairs, panel upgrades, and commercial electrical services.",
-    path: "/service-areas/sarasota/",
-    keywords: ["electrician Sarasota FL", "Sarasota electrical services", "Sarasota lighting installation"],
-    city: "Sarasota",
-    county: "Sarasota County",
-    faq: areaFaq.sarasota,
-  },
-  venice: {
-    title: "Electrician in Venice, FL",
-    description: "Carter Electric provides Venice, FL electrical services including repairs, lighting, EV charger installation, panel upgrades, and commercial electrical work.",
-    path: "/service-areas/venice/",
-    keywords: ["electrician Venice FL", "Venice electrical services", "Venice FL electrician"],
-    city: "Venice",
-    county: "Sarasota County",
-    faq: areaFaq.venice,
-  },
-  englewood: {
-    title: "Electrician in Englewood, FL",
-    description: "Trusted electrician serving Englewood, FL with residential and commercial electrical repairs, lighting, EV chargers, and panel upgrades.",
-    path: "/service-areas/englewood/",
-    keywords: ["electrician Englewood FL", "Englewood electrical services", "coastal electrical contractor"],
-    city: "Englewood",
-    county: "Sarasota and Charlotte Counties",
-    faq: areaFaq.englewood,
-  },
   "port-charlotte": {
     title: "Electrician in Port Charlotte, FL",
     description: "Licensed electrical services in Port Charlotte, FL for homes and businesses, including lighting, repairs, EV chargers, and panel upgrades.",
@@ -112,6 +86,15 @@ export const areaSeo: Record<string, AreaConfig> = {
     county: "Charlotte County",
     faq: areaFaq["port-charlotte"],
   },
+  "north-port": {
+    title: "Electrician in North Port, FL",
+    description: "Licensed electrician serving North Port, FL with lighting installation, EV chargers, electrical repairs, panel upgrades, and commercial electrical services.",
+    path: "/service-areas/north-port/",
+    keywords: ["electrician North Port FL", "North Port electrical services", "North Port electrician"],
+    city: "North Port",
+    county: "Sarasota County",
+    faq: areaFaq["north-port"],
+  },
   "punta-gorda": {
     title: "Electrician in Punta Gorda, FL",
     description: "Punta Gorda, FL electrician for electrical repairs, historic home electrical updates, lighting, EV charger installation, and panel upgrades.",
@@ -120,51 +103,6 @@ export const areaSeo: Record<string, AreaConfig> = {
     city: "Punta Gorda",
     county: "Charlotte County",
     faq: areaFaq["punta-gorda"],
-  },
-  "cape-coral": {
-    title: "Electrician in Cape Coral, FL",
-    description: "Cape Coral, FL electrical contractor for waterfront homes, lighting, repairs, EV charger installs, panel upgrades, and commercial electrical service.",
-    path: "/service-areas/cape-coral/",
-    keywords: ["electrician Cape Coral FL", "Cape Coral electrical services", "Cape Coral electrician"],
-    city: "Cape Coral",
-    county: "Lee County",
-    faq: areaFaq["cape-coral"],
-  },
-  "fort-myers": {
-    title: "Electrician in Fort Myers, FL",
-    description: "Licensed electrician in Fort Myers, FL serving homes and businesses with electrical repair, lighting, EV chargers, panels, and commercial service.",
-    path: "/service-areas/fort-myers/",
-    keywords: ["electrician Fort Myers FL", "Fort Myers electrical services", "Fort Myers electrician"],
-    city: "Fort Myers",
-    county: "Lee County",
-    faq: areaFaq["fort-myers"],
-  },
-  "bonita-springs": {
-    title: "Electrician in Bonita Springs, FL",
-    description: "Bonita Springs, FL electrician for luxury homes, lighting installation, repairs, EV chargers, panel upgrades, and commercial electrical work.",
-    path: "/service-areas/bonita-springs/",
-    keywords: ["electrician Bonita Springs FL", "Bonita Springs electrical services", "Bonita Springs electrician"],
-    city: "Bonita Springs",
-    county: "Lee County",
-    faq: areaFaq["bonita-springs"],
-  },
-  naples: {
-    title: "Electrician in Naples, FL",
-    description: "Electrical services in Naples, FL for homes, condos, and businesses, including lighting, electrical repairs, EV chargers, and panel upgrades.",
-    path: "/service-areas/naples/",
-    keywords: ["electrician Naples FL", "Naples electrical services", "Naples electrician"],
-    city: "Naples",
-    county: "Collier County",
-    faq: areaFaq.naples,
-  },
-  "marco-island": {
-    title: "Electrician in Marco Island, FL",
-    description: "Marco Island, FL electrician specializing in coastal home electrical services, repairs, lighting, EV chargers, panels, and commercial work.",
-    path: "/service-areas/marco-island/",
-    keywords: ["electrician Marco Island FL", "Marco Island electrical services", "coastal electrician Marco Island"],
-    city: "Marco Island",
-    county: "Collier County",
-    faq: areaFaq["marco-island"],
   },
 };
 
@@ -252,10 +190,10 @@ export function ServiceSeoLayout({ config, children }: { config: ServiceConfig; 
       name: siteName,
       telephone: "+1-941-336-6811",
       url: siteUrl,
-      areaServed: "Southwest Florida",
+      areaServed: servedCities,
     },
     serviceType: config.serviceType,
-    areaServed: ["Sarasota", "Venice", "Englewood", "Port Charlotte", "Punta Gorda", "Cape Coral", "Fort Myers", "Bonita Springs", "Naples", "Marco Island"],
+    areaServed: servedCities,
   };
 
   return (

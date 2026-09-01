@@ -10,7 +10,7 @@ import AnimatedSection, { AnimatedCard } from "../components/AnimatedSection";
 const stats = [
   { value: "18+", label: "Years Experience" },
   { value: "5,000+", label: "Projects Completed" },
-  { value: "10", label: "Cities Served" },
+  { value: "3", label: "Cities Served" },
   { value: "100%", label: "Licensed & Insured" },
 ];
 
@@ -33,7 +33,7 @@ const values = [
   {
     icon: Award,
     title: "Excellence",
-    description: "Our commitment to quality workmanship has earned us a reputation as Southwest Florida's trusted electricians.",
+    description: "Our commitment to quality workmanship has earned us a reputation as trusted electricians in Port Charlotte, North Port, and Punta Gorda.",
   },
 ];
 
@@ -41,7 +41,7 @@ const team = [
   {
     name: "Jeff Carter",
     role: "Founder & Master Electrician",
-    description: "Licensed master electrician with 37 years of experience who started A&J Electric in Sycamore, Illinois in 2009. After 18 successful years, Jeff brought his expertise to Southwest Florida to combine his passion for quality electrical work with his love of scuba diving.",
+    description: "Licensed master electrician with 37 years of experience who started A&J Electric in Sycamore, Illinois in 2009. After 18 successful years, Jeff brought his expertise to Port Charlotte, North Port, and Punta Gorda to combine his passion for quality electrical work with his love of scuba diving.",
   },
   {
     name: "Sarah Carter",
@@ -65,7 +65,7 @@ const milestones = [
   { year: "2012", event: "Expanded service area throughout Northern Illinois" },
   { year: "2015", event: "Achieved Master Electrician certification" },
   { year: "2018", event: "Added EV charger installation services" },
-  { year: "2026", event: "Started Carter Electric of Southwest Florida" },
+  { year: "2026", event: "Started Carter Electric serving Port Charlotte, North Port & Punta Gorda" },
 ];
 
 export default function AboutPage() {
@@ -93,7 +93,7 @@ export default function AboutPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mt-4 mb-6">
-              From Illinois to Southwest Florida
+              From Illinois to Port Charlotte, North Port &amp; Punta Gorda
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               A story of passion, expertise, and following your dreams to the sunshine state
@@ -116,13 +116,13 @@ export default function AboutPage() {
                   <strong>A&J Electric was founded in 2009 in Sycamore, Illinois</strong> by Jeff Carter, a master electrician of 37 years in the trade with a vision of providing honest, reliable electrical services to his community. For 18 successful years, A&J Electric built a reputation for quality workmanship and exceptional customer service throughout Northern Illinois.
                 </p>
                 <p>
-                  But Jeff had a dream beyond the Midwest winters. An avid scuba diving enthusiast, he longed to combine his professional expertise with his passion for underwater exploration. In 2026, Jeff made the life-changing decision to move to Southwest Florida, bringing his decades of electrical experience to the sunshine state.
+                  But Jeff had a dream beyond the Midwest winters. An avid scuba diving enthusiast, he longed to combine his professional expertise with his passion for underwater exploration. In 2026, Jeff made the life-changing decision to move to Florida, bringing his decades of electrical experience to Port Charlotte, North Port, and Punta Gorda.
                 </p>
                 <p>
-                  <strong>Carter Electric of Southwest Florida</strong> was born from this dream - a company that delivers the same top-quality electrical work Jeff perfected in Illinois, while allowing him to spend his free time exploring the beautiful waters of the Gulf Coast.
+                  <strong>Carter Electric</strong> was born from this dream - a company that delivers the same top-quality electrical work Jeff perfected in Illinois, while allowing him to spend his free time exploring the beautiful waters of the Gulf Coast.
                 </p>
                 <p>
-                  Today, we're proud to serve homeowners and businesses from Sarasota to Naples, bringing that same dedication to excellence that made A&J Electric successful for nearly two decades.
+                  Today, we're proud to serve homeowners and businesses in Port Charlotte, North Port, and Punta Gorda, bringing that same dedication to excellence that made A&J Electric successful for nearly two decades.
                 </p>
               </div>
             </AnimatedSection>
@@ -196,14 +196,14 @@ export default function AboutPage() {
             <AnimatedSection>
               <span className="text-orange-500 font-semibold tracking-wider uppercase text-sm">Local Expertise</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">
-                We Know Southwest Florida
+                We Know Port Charlotte, North Port &amp; Punta Gorda
               </h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  Living and working in Southwest Florida means we understand the unique challenges our region presents. From hurricane-season preparedness to salt-air corrosion concerns, we know what it takes to keep your electrical systems running safely year-round.
+                  Living and working here means we understand the unique challenges our communities present. From hurricane-season preparedness to salt-air corrosion near Charlotte Harbor, we know what it takes to keep your electrical systems running safely year-round.
                 </p>
                 <p>
-                  We're familiar with local building codes across all 10 cities we serve, and we have established relationships with local inspectors and permitting offices. This local knowledge translates to smoother projects and faster turnaround times for our customers.
+                  We're familiar with local building codes across the three cities we serve, and we have established relationships with local inspectors and permitting offices. This local knowledge translates to smoother projects and faster turnaround times for our customers.
                 </p>
                 <p>
                   Most importantly, we're your neighbors. When you call Carter Electric, you're not just getting an electrician – you're getting a local business owner who cares about the community we all share.
@@ -211,7 +211,7 @@ export default function AboutPage() {
               </div>
               
               <div className="mt-8 flex flex-wrap gap-3">
-                {['Sarasota', 'Venice', 'Englewood', 'Port Charlotte', 'Punta Gorda', 'Cape Coral', 'Fort Myers', 'Bonita Springs', 'Naples', 'Marco Island'].map((city) => (
+                {['Port Charlotte', 'North Port', 'Punta Gorda'].map((city) => (
                   <span key={city} className="inline-flex items-center gap-1 bg-white px-3 py-1 rounded-full text-sm text-slate-700 shadow-sm">
                     <MapPin className="w-3 h-3 text-orange-500" />
                     {city}
@@ -238,7 +238,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <div className="font-semibold text-slate-900">James D.</div>
-                    <div className="text-slate-500 text-sm">Homeowner in Naples</div>
+                    <div className="text-slate-500 text-sm">Homeowner in Port Charlotte</div>
                   </div>
                 </div>
               </div>
@@ -255,7 +255,7 @@ export default function AboutPage() {
               Ready to Experience the Carter Electric Difference?
             </h2>
             <p className="text-slate-300 text-lg mb-8">
-              Join thousands of satisfied customers across Southwest Florida. We'd love to add you to our family of happy clients.
+              Join satisfied customers across Port Charlotte, North Port, and Punta Gorda. We'd love to add you to our family of happy clients.
             </p>
             <button
               onClick={openChat}

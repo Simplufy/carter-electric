@@ -21,16 +21,9 @@ const GoogleIcon = () => (
 );
 
 const serviceAreas = [
-  { name: "Sarasota", slug: "sarasota" },
-  { name: "Venice", slug: "venice" },
-  { name: "Englewood", slug: "englewood" },
   { name: "Port Charlotte", slug: "port-charlotte" },
+  { name: "North Port", slug: "north-port" },
   { name: "Punta Gorda", slug: "punta-gorda" },
-  { name: "Cape Coral", slug: "cape-coral" },
-  { name: "Fort Myers", slug: "fort-myers" },
-  { name: "Bonita Springs", slug: "bonita-springs" },
-  { name: "Naples", slug: "naples" },
-  { name: "Marco Island", slug: "marco-island" },
 ];
 
 const services = [
@@ -130,7 +123,7 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
                 <MapPin className="w-5 h-5 text-amber-400 mt-0.5" />
                 <div>
                   <p className="font-medium">Service Area</p>
-                  <p className="text-slate-400 text-sm">Southwest Florida<br />Sarasota to Naples</p>
+                  <p className="text-slate-400 text-sm">Port Charlotte<br />North Port &amp; Punta Gorda</p>
                 </div>
               </li>
               <li className="flex items-start space-x-3">
@@ -147,7 +140,7 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} Carter Electric of Southwest Florida. All rights reserved.
+            © {new Date().getFullYear()} Carter Electric. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
             <Link href="/about" className="text-slate-500 hover:text-amber-400 transition-colors">
