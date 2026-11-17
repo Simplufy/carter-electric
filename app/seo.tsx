@@ -219,7 +219,7 @@ export function AreaSeoLayout({ config, children }: { config: AreaConfig; childr
     description: config.description,
     url,
     telephone: "+1-941-336-6811",
-    email: "contact@carterelectricflorida.com",
+    email: "jcarterelectric@aol.com",
     image: `${siteUrl}/images/carter-electric-social.png`,
     areaServed: {
       "@type": "City",

@@ -163,11 +163,11 @@ export default function ServiceLocalPage({ data }: { data: ServicePageData }) {
                       <span>(941) 336-6811</span>
                     </a>
                     <a
-                      href="mailto:contact@carterelectricflorida.com"
+                      href="mailto:jcarterelectric@aol.com"
                       className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors"
                     >
                       <Mail className="w-5 h-5 text-amber-400" />
-                      <span>contact@carterelectricflorida.com</span>
+                      <span>jcarterelectric@aol.com</span>
                     </a>
                     <div className="flex items-center gap-3 text-slate-300">
                       <Clock className="w-5 h-5 text-amber-400" />

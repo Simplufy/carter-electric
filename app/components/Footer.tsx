@@ -114,8 +114,8 @@ export default function Footer({ onOpenContact }: { onOpenContact: () => void })
                 <Mail className="w-5 h-5 text-amber-400 mt-0.5" />
                 <div>
                   <p className="font-medium">Email</p>
-                  <a href="mailto:contact@carterelectricflorida.com" className="text-slate-400 hover:text-amber-400 transition-colors text-sm">
-                    contact@carterelectricflorida.com
+                  <a href="mailto:jcarterelectric@aol.com" className="text-slate-400 hover:text-amber-400 transition-colors text-sm">
+                    jcarterelectric@aol.com
                   </a>
                 </div>
               </li>

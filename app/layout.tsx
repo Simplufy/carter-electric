@@ -74,7 +74,7 @@ export default function RootLayout({
     "description": "Family-owned electrical contractor serving Port Charlotte, North Port & Punta Gorda.",
     "url": "https://www.carterelectricflorida.com",
     "telephone": "+1-941-336-6811",
-    "email": "contact@carterelectricflorida.com",
+    "email": "jcarterelectric@aol.com",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "FL",

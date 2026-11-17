@@ -66,7 +66,7 @@ export default function PrivacyPolicy() {
                 <p className="font-medium text-slate-900 mb-2">For SMS:</p>
                 <p className="text-slate-600 mb-4">Reply STOP to unsubscribe.</p>
                 <p className="font-medium text-slate-900 mb-2">For Email:</p>
-                <p className="text-slate-600">Click the "unsubscribe" link or contact us at contact@carterelectricflorida.com.</p>
+                <p className="text-slate-600">Click the "unsubscribe" link or contact us at jcarterelectric@aol.com.</p>
               </div>
             </div>
 
@@ -74,9 +74,9 @@ export default function PrivacyPolicy() {
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Contact Us</h2>
               <p>If you have questions about this Privacy Policy, please contact us at:</p>
               <div className="mt-4 flex flex-col gap-2">
-                <a href="mailto:contact@carterelectricflorida.com" className="flex items-center gap-2 text-orange-500 hover:text-orange-700">
+                <a href="mailto:jcarterelectric@aol.com" className="flex items-center gap-2 text-orange-500 hover:text-orange-700">
                   <Mail className="w-4 h-4" />
-                  <span>contact@carterelectricflorida.com</span>
+                  <span>jcarterelectric@aol.com</span>
                 </a>
                 <a href="tel:+19413366811" className="flex items-center gap-2 text-orange-500 hover:text-orange-700">
                   <Phone className="w-4 h-4" />

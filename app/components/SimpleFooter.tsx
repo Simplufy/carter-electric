@@ -25,7 +25,7 @@ export default function SimpleFooter() {
           <div>
             <h4 className="font-bold text-lg mb-4">Contact</h4>
             <p className="text-slate-400 text-sm mb-2">+1 941-336-6811</p>
-            <p className="text-slate-400 text-sm">contact@carterelectricflorida.com</p>
+            <p className="text-slate-400 text-sm">jcarterelectric@aol.com</p>
           </div>
           
           <div>

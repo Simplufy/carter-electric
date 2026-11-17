@@ -62,7 +62,7 @@ export default function TermsAndConditions() {
                 
                 <div className="bg-orange-50 p-4 rounded-xl">
                   <p className="font-medium text-slate-900 mb-1">Help</p>
-                  <p className="text-slate-600">If you are experiencing issues with the messaging program, you can reply with the keyword HELP for more assistance, or reach out directly to contact@carterelectricflorida.com.</p>
+                  <p className="text-slate-600">If you are experiencing issues with the messaging program, you can reply with the keyword HELP for more assistance, or reach out directly to jcarterelectric@aol.com.</p>
                 </div>
                 
                 <div className="bg-amber-50 p-4 rounded-xl border-l-4 border-amber-500">
@@ -84,9 +84,9 @@ export default function TermsAndConditions() {
               <h2 className="text-2xl font-bold text-slate-900 mb-4">5. Contact Us</h2>
               <p>If you have questions about these Terms, please contact us at:</p>
               <div className="mt-4 flex flex-col gap-2">
-                <a href="mailto:contact@carterelectricflorida.com" className="flex items-center gap-2 text-orange-500 hover:text-orange-700">
+                <a href="mailto:jcarterelectric@aol.com" className="flex items-center gap-2 text-orange-500 hover:text-orange-700">
                   <Mail className="w-4 h-4" />
-                  <span>contact@carterelectricflorida.com</span>
+                  <span>jcarterelectric@aol.com</span>
                 </a>
                 <a href="tel:+19413366811" className="flex items-center gap-2 text-orange-500 hover:text-orange-700">
                   <Phone className="w-4 h-4" />
